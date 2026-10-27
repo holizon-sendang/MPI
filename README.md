@@ -31,6 +31,10 @@ MPI/
 │   │   ├── index.html
 │   │   ├── script.js
 │   │   └── style.css
+│   ├── b2-bilangan-bulat-sehari-hari/  # Modul aktif
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
 │   └── b4-perbandingan/        # Placeholder status migrasi
 │       └── index.html
 ├── kelas-8/
@@ -46,7 +50,7 @@ Yang dipisah per halaman adalah antar TP, bukan antar sub-bab.
 ### Daftar modul
 
 **Kelas 7 (11):** B.1 Bilangan Bulat *(aktif)*, B.2 Bilangan Bulat dalam
-Kehidupan Sehari-hari, B.3 Bilangan Rasional, Aritmetika Sosial, B.4
+Kehidupan Sehari-hari *(aktif, 14 JP)*, B.3 Bilangan Rasional, Aritmetika Sosial, B.4
 Perbandingan *(sudah ada — migrasi)*, A.1 Bentuk Aljabar, G.1 Garis dan
 Sudut, G.2 Kesebangunan, G.3 Kekongruenan, D.1 Investigasi Data, D.2
 Diagram Batang dan Lingkaran.

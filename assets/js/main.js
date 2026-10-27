@@ -65,4 +65,23 @@
       el.style.display = '';
     });
   } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
+
+  /* Progres sederhana: tampilkan skor terbaik B.2 bila ada di localStorage */
+  try {
+    var best2 = localStorage.getItem('mpi-b2-quiz-best');
+    document.querySelectorAll('[data-b2-best]').forEach(function (el) {
+      if (best2 !== null) {
+        el.textContent = 'Skor terbaik kuis B.2: ' + best2 + '/10';
+        el.style.display = '';
+      }
+    });
+    var visited2 = JSON.parse(localStorage.getItem('mpi-b2-visited') || '[]');
+    document.querySelectorAll('[data-b2-progress]').forEach(function (el) {
+      var pct2 = Math.round((visited2.length / 6) * 100);
+      el.textContent = visited2.length === 0
+        ? 'B.2: Belum mulai'
+        : 'Progres B.2: ' + visited2.length + ' dari 6 sub-bab (' + pct2 + '%)';
+      el.style.display = '';
+    });
+  } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
 })();
