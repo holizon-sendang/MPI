@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="B.1 Bilangan Bulat — Matematika SMP Kelas 7. Membandingkan, mengurutkan, dan operasi hitung bilangan bulat dengan simulasi interaktif." />
+<link rel="icon" href="data:," />
+<title>B.1 Bilangan Bulat — Kelas 7 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">B.1 · KELAS 7 · 10 JP · BILANGAN</span>
+    <h1>Bilangan Bulat</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menjelaskan, menyatakan, membandingkan, mengurutkan, dan menentukan hasil operasi hitung (penjumlahan, pengurangan, perkalian, dan pembagian) bilangan bulat.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> membaca bilangan bulat di garis bilangan, membandingkan dan mengurutkan, menjumlah dan mengurang (termasuk bilangan negatif), mengalikan dan membagi dengan aturan tanda, lalu menyelesaikan operasi hitung campuran.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mengenal</a>
+    <a href="#sub2" data-sub="sub2">2 · Membandingkan</a>
+    <a href="#sub3" data-sub="sub3">3 · Jumlah &amp; Kurang</a>
+    <a href="#sub4" data-sub="sub4">4 · Kali &amp; Bagi</a>
+    <a href="#sub5" data-sub="sub5">5 · Campuran</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+
+<!-- ================= SUB-BAB 1 ================= -->
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Mengenal Bilangan Bulat</h2>
+    <p>Bilangan bulat adalah bilangan yang tidak punya bagian pecahan atau desimal: …, −3, −2, −1, 0, 1, 2, 3, … Bilangan positif ada di kanan 0, bilangan negatif ada di kiri 0.</p>
+  </div>
+
+  <div class="grid-3">
+    <div class="mini-card"><span class="icon-box ib-teal">°C</span><h3>Suhu di bawah nol</h3><p>Suhu −3°C berarti 3 derajat di bawah 0°C. Di dataran tinggi Dieng, suhu pagi bisa di bawah nol.</p></div>
+    <div class="mini-card"><span class="icon-box ib-amber">▲</span><h3>Ketinggian</h3><p>Permukaan laut adalah 0. Puncak gunung +3.000 m, dasar laut −200 m (200 m di bawah permukaan laut).</p></div>
+    <div class="mini-card"><span class="icon-box ib-coral">Rp</span><h3>Hutang dan uang</h3><p>Uang Rp10.000 ditulis +10.000, hutang Rp10.000 ditulis −10.000. Tanda minus di sini bukan operasi, melainkan posisi.</p></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Garis bilangan interaktif</h3>
+    <p class="muted">Geser penanda di bawah ini. Perhatikan bilangan yang terpilih, <strong>lawannya</strong> (bilangan yang jaraknya sama dari 0, tapi di sisi berlawanan), dan jaraknya ke 0.</p>
+    <div class="numline" aria-hidden="false">
+      <div class="numline-track">
+        <span class="numline-marker" id="nlMarker"></span>
+        <span class="numline-zero" style="left:50%"></span>
+      </div>
+      <div class="numline-ticks" id="nlTicks"></div>
+    </div>
+    <label class="f-label" for="nlSlider" style="margin-top:16px">Pilih bilangan (dari −10 sampai 10)</label>
+    <input type="range" id="nlSlider" min="-10" max="10" step="1" value="3" aria-describedby="nlHasil" />
+    <div class="result-box" id="nlHasil" aria-live="polite">
+      <div class="big-numline" id="nlValue">3</div>
+      <p id="nlDetail">Lawannya −3 · Jarak ke 0 adalah 3 langkah · Posisi: 3 langkah di kanan 0</p>
+    </div>
+    <div class="steps">
+      <strong>Coba pikirkan:</strong> bilangan −7 dan 7 sama-sama berjarak 7 langkah dari 0, tapi arahnya berlawanan. Itulah mengapa 7 disebut lawan dari −7, dan sebaliknya.
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Cek cepat: lawan bilangan</h3>
+    <p class="muted">Lawan dari −7 adalah…</p>
+    <div class="qa-controls">
+      <label class="f-label" for="nlQuizInput" style="position:absolute;left:-9999px">Jawabanmu</label>
+      <input type="number" id="nlQuizInput" placeholder="Tulis angkanya" />
+      <button class="btn btn-primary" type="button" id="nlQuizBtn">Cek Jawaban</button>
+    </div>
+    <div class="feedback" id="nlQuizFb" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= SUB-BAB 2 ================= -->
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Membandingkan dan Mengurutkan</h2>
+    <p>Di garis bilangan, bilangan yang letaknya <strong>lebih ke kanan selalu lebih besar</strong>. Jadi 2 &gt; −5, dan −1 &gt; −4, karena −1 lebih dekat ke kanan daripada −4.</p>
+  </div>
+
+  <div class="card">
+    <h3>Alat banding: mana yang lebih besar?</h3>
+    <p class="muted">Pilih dua bilangan, lalu pilih tanda yang menurutmu benar. Tanda &gt; dibaca “lebih dari”, &lt; dibaca “kurang dari”, dan = dibaca “sama dengan”.</p>
+    <div class="grid-2">
+      <div>
+        <label class="f-label" for="cmpA">Bilangan pertama</label>
+        <input type="number" id="cmpA" value="-4" min="-100" max="100" />
+      </div>
+      <div>
+        <label class="f-label" for="cmpB">Bilangan kedua</label>
+        <input type="number" id="cmpB" value="2" min="-100" max="100" />
+      </div>
+    </div>
+    <p style="margin-top:14px"><strong>Pilih tandanya:</strong></p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap" role="group" aria-label="Pilih tanda perbandingan">
+      <button class="btn btn-ghost" type="button" data-cmp="&gt;">&gt;</button>
+      <button class="btn btn-ghost" type="button" data-cmp="&lt;">&lt;</button>
+      <button class="btn btn-ghost" type="button" data-cmp="=">=</button>
+    </div>
+    <p class="muted" style="margin-top:10px">Pilihanmu: <strong id="cmpPicked">belum memilih</strong></p>
+    <button class="btn btn-primary" type="button" id="cmpCheck">Cek Jawaban</button>
+    <div class="feedback" id="cmpFb" aria-live="polite"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: urutkan dari yang terkecil</h3>
+    <p class="muted">Urutkan bilangan <strong>−3, 5, −8, 0</strong> dari yang terkecil sampai terbesar. Pilih satu bilangan di tiap kotak, tanpa mengulang.</p>
+    <div class="grid-4">
+      <div><label class="f-label" for="sort1">Paling kecil (ke-1)</label>
+        <select id="sort1"><option value="">— pilih —</option><option>-8</option><option>-3</option><option>0</option><option>5</option></select></div>
+      <div><label class="f-label" for="sort2">Ke-2</label>
+        <select id="sort2"><option value="">— pilih —</option><option>-8</option><option>-3</option><option>0</option><option>5</option></select></div>
+      <div><label class="f-label" for="sort3">Ke-3</label>
+        <select id="sort3"><option value="">— pilih —</option><option>-8</option><option>-3</option><option>0</option><option>5</option></select></div>
+      <div><label class="f-label" for="sort4">Paling besar (ke-4)</label>
+        <select id="sort4"><option value="">— pilih —</option><option>-8</option><option>-3</option><option>0</option><option>5</option></select></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="sortCheck" style="margin-top:14px">Cek Urutan</button>
+    <div class="feedback" id="sortFb" aria-live="polite"></div>
+    <p class="note" style="margin-top:14px"><strong>Ingat:</strong> bilangan negatif yang angkanya paling besar justru paling kecil. −8 &lt; −3, karena −8 letaknya lebih jauh ke kiri.</p>
+  </div>
+</section>
+
+<!-- ================= SUB-BAB 3 ================= -->
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Penjumlahan dan Pengurangan</h2>
+    <p>Menjumlah bilangan positif berarti bergerak ke kanan, menjumlah bilangan negatif berarti bergerak ke kiri. Mengurang sama dengan menjumlah lawannya: a − b = a + (−b).</p>
+  </div>
+
+  <div class="card">
+    <h3>Simulator suhu</h3>
+    <p class="muted">Suhu awal berubah karena cuaca. Geser kedua pengatur di bawah ini, lalu lihat suhu akhirnya dan langkahnya di garis bilangan.</p>
+    <label class="f-label" for="suhuAwal">Suhu awal: <span id="suhuAwalVal">−2°C</span></label>
+    <input type="range" id="suhuAwal" min="-10" max="10" step="1" value="-2" />
+    <label class="f-label" for="suhuUbah" style="margin-top:10px">Perubahan suhu: <span id="suhuUbahVal">turun 5°C (−5)</span></label>
+    <input type="range" id="suhuUbah" min="-10" max="10" step="1" value="-5" />
+    <div class="thermo" style="margin-top:16px">
+      <div class="thermo-bar"><span class="thermo-dot" id="suhuDot" style="left:25%"></span></div>
+      <span class="thermo-val cold" id="suhuHasil">−7°C</span>
+    </div>
+    <p class="muted" id="suhuLangkah" aria-live="polite" style="margin-top:10px">Dari −2°C, bergerak 5 langkah ke kiri (karena −5), sampai di −7°C.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Chip positif dan negatif</h3>
+    <p class="muted">Satu chip biru bernilai +1, satu chip merah bernilai −1. Satu pasangan biru-merah bernilai 0, jadi bisa dihapus bersama. Sisa chip setelah dipasangkan adalah hasilnya.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-primary" type="button" id="chipAddPos">+ Tambah chip +1</button>
+      <button class="btn btn-ghost" type="button" id="chipAddNeg">+ Tambah chip −1</button>
+      <button class="btn btn-amber" type="button" id="chipPair">Pasangkan &amp; Hapus Pasangan</button>
+      <button class="btn btn-ghost" type="button" id="chipReset">Atur Ulang</button>
+    </div>
+    <div class="chips" id="chipArea" style="margin-top:14px" aria-live="polite"><span class="muted">Belum ada chip. Tambahkan chip untuk membuat soal, misalnya 2 chip +1 dan 3 chip −1 untuk 2 + (−3).</span></div>
+    <p style="margin-top:12px">Chip +1: <strong id="chipPosCount">0</strong> · Chip −1: <strong id="chipNegCount">0</strong> · Sisa (hasil): <strong class="chip-count" id="chipSisa">0</strong></p>
+    <p class="muted" id="chipPenjelasan">Contoh: 2 + (−3). Tambah 2 chip biru dan 3 chip merah, pasangkan 2 pasang, tersisa 1 chip merah, jadi hasilnya −1.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator langkah demi langkah</h3>
+    <p class="muted">Tulis dua bilangan dan pilih operasinya. Kalkulator menunjukkan langkah bergerak di garis bilangan, bukan cuma hasilnya.</p>
+    <div class="grid-2">
+      <div>
+        <label class="f-label" for="calcA">Bilangan pertama (a)</label>
+        <input type="number" id="calcA" value="-5" />
+      </div>
+      <div>
+        <label class="f-label" for="calcB">Bilangan kedua (b)</label>
+        <input type="number" id="calcB" value="3" />
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="calcOp">Operasi</label>
+      <select id="calcOp">
+        <option value="+">Penjumlahan (a + b)</option>
+        <option value="-">Pengurangan (a − b)</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" type="button" id="calcBtn" style="margin-top:14px">Hitung dengan Langkah</button>
+    <div class="result-box" id="calcHasilBox" style="margin-top:14px" aria-live="polite">
+      <div class="res-big" id="calcHasil">−5 + 3 = −2</div>
+      <p id="calcLangkah">Mulai dari −5, bergerak 3 langkah ke kanan (karena +3), sampai di −2.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUB-BAB 4 ================= -->
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Perkalian dan Pembagian</h2>
+    <p>Aturan tandanya sederhana: <strong>tanda sama → positif, tanda berbeda → negatif</strong>. Perkalian berulang juga menjelaskan ini: (−3) × 2 berarti −3 ditambah −3, hasilnya −6.</p>
+  </div>
+
+  <div class="card">
+    <h3>Tabel pola tanda</h3>
+    <div class="table-scroll">
+      <table class="sign-table">
+        <thead><tr><th>Operasi</th><th>Tanda bilangan</th><th>Hasil</th><th>Contoh</th></tr></thead>
+        <tbody>
+          <tr><td>Perkalian / Pembagian</td><td>+ dan +</td><td class="sign-pos">Positif (+)</td><td class="num">4 × 3 = 12</td></tr>
+          <tr><td>Perkalian / Pembagian</td><td>− dan −</td><td class="sign-pos">Positif (+)</td><td class="num">(−4) × (−3) = 12</td></tr>
+          <tr><td>Perkalian / Pembagian</td><td>+ dan −</td><td class="sign-neg">Negatif (−)</td><td class="num">4 × (−3) = −12</td></tr>
+          <tr><td>Perkalian / Pembagian</td><td>− dan +</td><td class="sign-neg">Negatif (−)</td><td class="num">(−4) × 3 = −12</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Explorer kali dan bagi</h3>
+    <p class="muted">Masukkan dua bilangan bulat. Untuk pembagian, hasilnya harus bilangan bulat; kalau tidak habis dibagi, explorer akan memberitahumu.</p>
+    <div class="grid-2">
+      <div>
+        <label class="f-label" for="exA">Bilangan pertama (a)</label>
+        <input type="number" id="exA" value="-6" />
+      </div>
+      <div>
+        <label class="f-label" for="exB">Bilangan kedua (b)</label>
+        <input type="number" id="exB" value="3" />
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="exOp">Operasi</label>
+      <select id="exOp">
+        <option value="x">Perkalian (a × b)</option>
+        <option value=":">Pembagian (a : b)</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" type="button" id="exBtn" style="margin-top:14px">Hitung</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite">
+      <div class="res-big" id="exHasil">(−6) × 3 = −18</div>
+      <p id="exAlasan">Tanda berbeda (− dan +), jadi hasilnya negatif. Nilai mutlaknya 6 × 3 = 18.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan cepat: kali dan bagi</h3>
+    <p class="muted">Jawab satu per satu dengan tombol Cek di tiap soal. Pembahasan langkahnya muncul setelah kamu menjawab.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="-12" data-explain="Tanda berbeda, jadi negatif. 4 × 3 = 12, hasilnya −12."><span class="qa-q">1) (−4) × 3 = …</span><div class="qa-controls"><label class="f-label" for="q4-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" id="q4-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="-30" data-explain="Tanda berbeda, jadi negatif. 5 × 6 = 30, hasilnya −30."><span class="qa-q">2) 5 × (−6) = …</span><div class="qa-controls"><label class="f-label" for="q4-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" id="q4-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="14" data-explain="Tanda sama (keduanya negatif), jadi positif. 7 × 2 = 14."><span class="qa-q">3) (−7) × (−2) = …</span><div class="qa-controls"><label class="f-label" for="q4-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" id="q4-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="-6" data-explain="Tanda berbeda, jadi negatif. 36 : 6 = 6, hasilnya −6."><span class="qa-q">4) (−36) : 6 = …</span><div class="qa-controls"><label class="f-label" for="q4-4" style="position:absolute;left:-9999px">Jawaban soal 4</label><input type="number" id="q4-4" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="-6" data-explain="Tanda berbeda, jadi negatif. 42 : 7 = 6, hasilnya −6."><span class="qa-q">5) 42 : (−7) = …</span><div class="qa-controls"><label class="f-label" for="q4-5" style="position:absolute;left:-9999px">Jawaban soal 5</label><input type="number" id="q4-5" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUB-BAB 5 ================= -->
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Operasi Hitung Campuran</h2>
+    <p>Kalau ada beberapa operasi sekaligus, ikuti urutannya: <strong>1) yang di dalam kurung dulu, 2) perkalian dan pembagian (dari kiri ke kanan), 3) penjumlahan dan pengurangan (dari kiri ke kanan)</strong>.</p>
+  </div>
+
+  <div class="card">
+    <div class="formula"><div class="big">( ) → × dan : → + dan −</div><p>Dari kiri ke kanan di dalam tiap tingkat yang sama.</p></div>
+    <p style="margin-top:14px"><strong>Contoh:</strong> 12 + (−5) × 3. Kerjakan (−5) × 3 dulu = −15, baru 12 + (−15) = −3. Kalau dijumlah dulu, hasilnya salah.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: hitung dengan urutan yang benar</h3>
+    <p class="muted">Tulis jawaban akhirnya, lalu tekan Cek. Pembahasan langkahnya muncul setelah kamu menjawab.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="-3" data-explain="Kali dulu: (−5) × 3 = −15. Lalu 12 + (−15) = −3."><span class="qa-q">1) 12 + (−5) × 3 = …</span><div class="qa-controls"><label class="f-label" for="q5-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" id="q5-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="-2" data-explain="Kali dulu: (−3) × 2 = −6. Lalu (−8) − (−6) = −8 + 6 = −2."><span class="qa-q">2) (−8) − (−3) × 2 = …</span><div class="qa-controls"><label class="f-label" for="q5-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" id="q5-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="-16" data-explain="Kurung dulu: 15 − 7 = 8. Lalu 8 × (−2) = −16."><span class="qa-q">3) (15 − 7) × (−2) = …</span><div class="qa-controls"><label class="f-label" for="q5-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" id="q5-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="4" data-explain="Bagi dulu: −20 : 4 = −5. Lalu −5 + 9 = 4."><span class="qa-q">4) −20 : 4 + 9 = …</span><div class="qa-controls"><label class="f-label" for="q5-4" style="position:absolute;left:-9999px">Jawaban soal 4</label><input type="number" id="q5-4" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="-8" data-explain="Kali dulu: 6 × (−3) = −18. Lalu −18 − (−10) = −18 + 10 = −8."><span class="qa-q">5) 6 × (−3) − (−10) = …</span><div class="qa-controls"><label class="f-label" for="q5-5" style="position:absolute;left:-9999px">Jawaban soal 5</label><input type="number" id="q5-5" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUB-BAB 6 ================= -->
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa membandingkan dan mengurutkan bilangan bulat.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menjumlah, mengurang, mengalikan, dan membagi bilangan bulat.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menyelesaikan operasi hitung campuran dengan urutan yang benar.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh bilangan bulat dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Contoh: suhu kulkas −5°C, hutang Rp20.000 ditulis −20.000, …"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung membagi bilangan negatif, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman B.1</h3>
+    <ul>
+      <li>Bilangan bulat: …, −3, −2, −1, 0, 1, 2, 3, …</li>
+      <li>Semakin ke kanan di garis bilangan, semakin besar nilainya.</li>
+      <li>a − b = a + (−b). Mengurang sama dengan menjumlah lawannya.</li>
+      <li>Tanda sama → positif, tanda berbeda → negatif (kali dan bagi).</li>
+      <li>Urutan operasi: kurung → kali/bagi → tambah/kurang, dari kiri ke kanan.</li>
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: B.2 Bilangan Bulat dalam Kehidupan Sehari-hari (Segera)</p>
+    <p>MPI Matematika SMP — B.1 Bilangan Bulat, Kelas 7, 10 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

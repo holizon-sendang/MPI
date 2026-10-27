@@ -1,0 +1,91 @@
+/* B.1 Bilangan Bulat — style.css (khusus modul ini saja)
+   Base: ../../assets/css/main.css. Palet Biru Samudra tidak diubah di sini. */
+
+/* Navigasi sub-bab: menempel di bawah topnav, bisa digeser horizontal di HP */
+.subnav{position:sticky;top:57px;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.subnav-inner{max-width:var(--wrap);margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.85rem;font-weight:700;padding:9px 13px;min-height:var(--tap);display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);white-space:nowrap}
+.subnav a:hover{border-color:var(--teal);color:var(--teal)}
+.subnav a.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.subnav a.done::after{content:"✓";font-weight:800}
+.subnav a.done{border-color:var(--teal)}
+
+/* Header modul */
+.module-hero{padding-top:clamp(24px,5vw,40px)}
+.tp-box{background:var(--teal);color:#fff;border-radius:16px;padding:16px 18px}
+.tp-box p{margin:0;opacity:.95}
+.tp-box strong{font-size:1.05rem}
+
+/* Garis bilangan */
+.numline{position:relative;padding:26px 4px 8px;background:var(--card2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.numline-track{position:relative;height:4px;background:var(--line);border-radius:99px;margin:0 14px}
+.numline-track::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(90deg,var(--coral),var(--amber),var(--teal));opacity:.35;border-radius:99px}
+.numline-ticks{position:relative;display:flex;justify-content:space-between;margin:8px 14px 0;font-size:.72rem;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.numline-ticks span{flex:1;text-align:center}
+.numline-ticks span:first-child{text-align:left}
+.numline-ticks span:last-child{text-align:right}
+.numline-marker{position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:var(--teal);border:3px solid #fff;box-shadow:0 2px 8px rgba(15,23,42,.35);transition:left .2s ease}
+.numline-zero{position:absolute;top:-5px;width:2px;height:14px;background:var(--ink);opacity:.4}
+.big-numline{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;line-height:1.1;color:var(--teal);font-variant-numeric:tabular-nums}
+
+/* Chip positif / negatif */
+.chips{display:flex;flex-wrap:wrap;gap:8px;min-height:52px;align-items:center;background:var(--card2);border:1px dashed var(--line);border-radius:14px;padding:12px}
+.chip{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.95rem;color:#fff;flex:0 0 auto}
+.chip-pos{background:var(--teal)}
+.chip-neg{background:var(--coral)}
+.chip-paired{opacity:.3;text-decoration:line-through}
+.chip-count{font-size:2rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+
+/* Simulator suhu */
+.thermo{display:flex;align-items:center;gap:14px}
+.thermo-bar{flex:1;height:16px;background:linear-gradient(90deg,#60A5FA,#F59E0B,#E85D3F);border-radius:99px;position:relative}
+.thermo-dot{position:absolute;top:50%;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--ink);transform:translate(-50%,-50%);transition:left .25s ease}
+.thermo-val{font-size:clamp(1.5rem,5vw,2rem);font-weight:800;min-width:86px;text-align:center;font-variant-numeric:tabular-nums}
+.thermo-val.cold{color:#2563EB}
+.thermo-val.hot{color:#E85D3F}
+
+/* Latihan ber-input jawaban */
+.qa-row{display:flex;flex-direction:column;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.qa-row:last-child{border-bottom:0}
+.qa-q{font-weight:700;font-size:1.05rem;font-variant-numeric:tabular-nums}
+.qa-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.qa-controls input{max-width:180px;flex:1 1 140px}
+.qa-explain{font-size:.93rem;color:var(--muted);display:none}
+.qa-explain.show{display:block}
+.qa-row.ok .qa-q{color:var(--teal)}
+.qa-row.no .qa-q{color:var(--coral)}
+
+/* Kuis */
+.quiz-q{font-size:clamp(1.15rem,3.4vw,1.4rem);font-weight:800;line-height:1.3;margin:8px 0 16px;font-variant-numeric:tabular-nums}
+.quiz-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700;color:var(--muted)}
+.quiz-result{text-align:center}
+.check-line{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.check-line:last-child{border-bottom:0}
+.check-line input{width:24px;height:24px;flex:0 0 auto;accent-color:var(--teal);margin-top:2px}
+
+/* Tabel pola tanda */
+.sign-table td:first-child,.sign-table th:first-child{font-weight:700}
+.sign-pos{color:var(--teal);font-weight:800}
+.sign-neg{color:var(--coral);font-weight:800}
+
+/* Jarak antar kartu latihan di HP */
+.stack{display:grid;gap:16px}
+.stack>*{min-width:0}
+
+@media (min-width:768px){
+  .qa-row{flex-direction:row;align-items:flex-start}
+  .qa-q{flex:1 1 42%}
+  .qa-controls{flex:1 1 58%}
+  .qa-explain{flex-basis:100%}
+}
+@media (max-width:480px){
+  .subnav{top:53px}
+  .subnav-inner{padding:8px 16px}
+  .chip{width:36px;height:36px}
+  .thermo-val{min-width:72px}
+}
+@media (min-width:1440px){
+  .chip{width:48px;height:48px;font-size:1.05rem}
+  .subnav a{font-size:.95rem;padding:12px 18px}
+}
