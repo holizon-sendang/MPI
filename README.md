@@ -35,6 +35,10 @@ MPI/
 │   │   ├── index.html
 │   │   ├── script.js
 │   │   └── style.css
+│   ├── b3-bilangan-rasional/   # Modul aktif
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
 │   └── b4-perbandingan/        # Placeholder status migrasi
 │       └── index.html
 ├── kelas-8/
@@ -50,10 +54,15 @@ Yang dipisah per halaman adalah antar TP, bukan antar sub-bab.
 ### Daftar modul
 
 **Kelas 7 (11):** B.1 Bilangan Bulat *(aktif)*, B.2 Bilangan Bulat dalam
-Kehidupan Sehari-hari *(aktif, 14 JP)*, B.3 Bilangan Rasional, Aritmetika Sosial, B.4
-Perbandingan *(sudah ada — migrasi)*, A.1 Bentuk Aljabar, G.1 Garis dan
-Sudut, G.2 Kesebangunan, G.3 Kekongruenan, D.1 Investigasi Data, D.2
-Diagram Batang dan Lingkaran.
+Kehidupan Sehari-hari *(aktif, 14 JP)*, B.3 Bilangan Rasional *(aktif, 22 JP)*,
+Aritmetika Sosial, B.4 Perbandingan *(sudah ada — migrasi)*, A.1 Bentuk
+Aljabar, G.1 Garis dan Sudut, G.2 Kesebangunan, G.3 Kekongruenan, D.1
+Investigasi Data, D.2 Diagram Batang dan Lingkaran.
+
+Catatan alokasi JP: ATP tabel TP menulis B.3 = 22 JP, sedangkan tabel
+distribusi ATP menulis Bilangan Rasional = 16 JP. Modul ini memakai 22 JP
+(tabel TP), konsisten dengan keputusan yang sama pada B.2 (tabel TP 14 JP
+vs distribusi B.1+B.2 = 18 JP).
 
 **Kelas 8 (11):** B.5 Bilangan Berpangkat, B.6 Bentuk Akar, B.7 Bentuk Baku,
 G.4 Teorema Pythagoras, A.2 Persamaan Linear Satu Variabel, A.3

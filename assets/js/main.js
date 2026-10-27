@@ -84,4 +84,23 @@
       el.style.display = '';
     });
   } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
+
+  /* Progres sederhana: tampilkan skor terbaik B.3 bila ada di localStorage */
+  try {
+    var best3 = localStorage.getItem('mpi-b3-quiz-best');
+    document.querySelectorAll('[data-b3-best]').forEach(function (el) {
+      if (best3 !== null) {
+        el.textContent = 'Skor terbaik kuis B.3: ' + best3 + '/10';
+        el.style.display = '';
+      }
+    });
+    var visited3 = JSON.parse(localStorage.getItem('mpi-b3-visited') || '[]');
+    document.querySelectorAll('[data-b3-progress]').forEach(function (el) {
+      var pct3 = Math.round((visited3.length / 6) * 100);
+      el.textContent = visited3.length === 0
+        ? 'B.3: Belum mulai'
+        : 'Progres B.3: ' + visited3.length + ' dari 6 sub-bab (' + pct3 + '%)';
+      el.style.display = '';
+    });
+  } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
 })();
