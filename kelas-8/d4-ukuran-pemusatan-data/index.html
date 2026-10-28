@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="D.4 Ukuran Pemusatan Data — Matematika SMP Kelas 8. Menentukan dan menafsirkan rata-rata (mean), median, modus, dan jangkauan (range) suatu data." />
+<link rel="icon" href="data:," />
+<title>D.4 Ukuran Pemusatan Data — Kelas 8 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html">Kelas 7</a>
+      <a href="index.html" class="active" aria-current="page">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">D.4 · KELAS 8 · 8 JP · DATA DAN PELUANG</span>
+    <h1>Ukuran Pemusatan Data</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menentukan dan menafsirkan rata-rata (mean), median, modus, dan jangkauan (range) suatu data serta menyelesaikan permasalahan kontekstual yang berkaitan dengan pemusatan data.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> menghitung dan menafsirkan mean, median, modus, dan range serta memilih ukuran yang tepat untuk menggambarkan data.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 8</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mean</a>
+    <a href="#sub2" data-sub="sub2">2 · Median</a>
+    <a href="#sub3" data-sub="sub3">3 · Modus & Range</a>
+    <a href="#sub4" data-sub="sub4">4 · Diagram Batang</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Cerita</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Rata-rata (Mean)</h2>
+    <p>Mean adalah jumlah semua data dibagi banyaknya data. Mean menggambarkan "nilai tipikal" suatu kelompok — misalnya rata-rata nilai ulangan kelasmu. Rumus: <strong>mean = (jumlah data) : (banyak data)</strong>.</p>
+  </div>
+
+<div class="grid-3"><div class="mini-card"><span class="icon-box ib-teal">📝</span><h3>Nilai ulangan</h3><p>Nilai 7, 8, 9 → mean = (7+8+9):3 = 8.</p></div><div class="mini-card"><span class="icon-box ib-amber">📏</span><h3>Tinggi badan</h3><p>Tinggi 150, 160, 155 cm → mean = 155 cm.</p></div><div class="mini-card"><span class="icon-box ib-coral">💰</span><h3>Uang saku</h3><p>Uang saku seminggu dirata-rata untuk melihat kebiasaan jajan.</p></div></div><div class="card"><h3>Kalkulator mean, median, modus, dan range</h3><p class="muted">Kelemahan mean: mudah tertarik nilai ekstrem. Gaji 9 orang Rp3 juta dan 1 orang Rp30 juta → mean Rp5,7 juta, padahal hampir semua bergaji Rp3 juta.</p><p class="muted">Tulis datamu dipisah koma, lalu hitung keempat ukurannya sekaligus.</p><label class="f-label" for="stData">Data (pisahkan dengan koma)</label><input type="text" id="stData" value="4, 6, 8, 10" /><button class="btn btn-primary" type="button" id="stBtn" style="margin-top:14px">Hitung Ukurannya</button><div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="stHasil" style="font-size:1.2rem"></div><p id="stKet"></p></div></div>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Median (Nilai Tengah)</h2>
+    <p>Median adalah nilai tengah setelah data <strong>diurutkan</strong>. Kalau banyak data ganjil, mediannya suku tengah. Kalau genap, mediannya rata-rata dua suku tengah. Median tidak terpengaruh nilai ekstrem.</p>
+  </div>
+
+<div class="card"><h3>Contoh median</h3><p>Data 3, 7, 9, 11, 15 → sudah urut, mediannya <strong>9</strong> (suku ke-3 dari 5).</p><p>Data 2, 4, 6, 8 → mediannya (4 + 6) : 2 = <strong>5</strong>.</p><p>Data 3, 100, 5, 4, 6 → urutkan dulu: 3, 4, 5, 6, 100. Mediannya <strong>5</strong>, sedangkan mean-nya 23,6 — median jauh lebih mewakili!</p><p class="muted">Gunakan kalkulator di Sub-bab 1 untuk mencoba data-data ini.</p></div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Modus dan Jangkauan (Range)</h2>
+    <p><strong>Modus</strong> adalah data yang paling sering muncul. Data bisa tidak punya modus, punya satu modus, atau punya lebih dari satu. <strong>Range</strong> (jangkauan) adalah selisih data terbesar dan terkecil: range = maks − min.</p>
+  </div>
+
+<div class="card"><h3>Kumpulan data siap pakai</h3><p class="muted">Pilih kumpulan data dari kehidupan nyata dan lihat keempat ukurannya beserta tafsirannya.</p><div style="margin-top:4px"><label class="f-label" for="presetSel">Pilih data</label><select id="presetSel"><option value="nilai">Nilai ulangan: 7, 8, 6, 9, 8, 7, 10, 8</option><option value="tinggi">Tinggi badan (cm): 150, 155, 160, 158, 152, 165, 157</option><option value="jual">Penjualan kantin per hari: 12, 15, 10, 18, 14, 20, 11</option></select></div><button class="btn btn-primary" type="button" id="presetBtn" style="margin-top:14px">Tampilkan Ukurannya</button><div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="presetHasil" style="font-size:1.1rem"></div><p id="presetKet"></p></div></div><div class="card" style="margin-top:16px"><h3>Latihan: mean, median, modus, range</h3><p class="muted">Jawab satu per satu dengan tombol Cek di tiap soal. Pembahasan langkahnya muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="7" data-explain="Mean = (4+6+8+10):4 = 28:4 = 7."><span class="qa-q">1) Data 4, 6, 8, 10. Mean-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q106" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q106" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="6" data-explain="Mean = 30:5 = 6."><span class="qa-q">2) Data 2, 4, 6, 8, 10. Mean-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q107" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q107" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="9" data-explain="Sudah urut, suku tengahnya 9."><span class="qa-q">3) Data 3, 7, 9, 11, 15. Median-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q108" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q108" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="5" data-explain="Median = (4+6):2 = 5."><span class="qa-q">4) Data 2, 4, 6, 8. Median-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q109" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q109" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="5" data-explain="Angka 5 muncul 3 kali, paling sering."><span class="qa-q">5) Data 3, 5, 5, 7, 5. Modus-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q110" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q110" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Diagram Batang Interaktif</h2>
+    <p>Diagram batang membuat data mudah dibaca sekilas. Tambahkan datamu sendiri dan perhatikan bagaimana mean, median, modus, dan range ikut berubah.</p>
+  </div>
+
+<div class="card"><h3>Bangun diagram batangmu</h3><p class="muted">Coba tambahkan nilai 2 (sangat rendah): mean turun drastis, tapi median hampir tidak berubah. Itulah beda mean dan median!</p><p class="muted">Data awal: nilai 5 siswa (7, 8, 8, 9, 8). Tambahkan nilai baru dan lihat statistiknya berubah.</p><div class="bars" id="sbBars"></div><div class="bar-labels" id="sbLabels"></div><div class="grid-2" style="margin-top:14px"><div><label class="f-label" for="sbVal">Tambah nilai</label><input type="number" id="sbVal" value="10" /></div><div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap"><button class="btn btn-primary" type="button" id="sbAdd">Tambah Data</button><button class="btn btn-ghost" type="button" id="sbReset">Atur Ulang</button></div></div><div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="sbHasil" style="font-size:1.1rem"></div></div></div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Ukuran Pemusatan dalam Kehidupan Sehari-hari</h2>
+    <p>Memilih ukuran yang tepat itu penting: mean untuk data yang merata, median untuk data dengan nilai ekstrem, modus untuk data yang paling sering muncul (misalnya ukuran sepatu terlaris).</p>
+  </div>
+
+<div class="card"><h3>Cerita: ukuran sepatu terlaris</h3><p>Toko sepatu mencatat ukuran yang terjual: 38, 39, 40, 40, 41, 40, 39, 40. Mean-nya 39,6, mediannya 40, modusnya 40. Untuk stok, yang paling berguna adalah <strong>modus (40)</strong> — ukuran yang paling laris.</p></div><div class="card" style="margin-top:16px"><h3>Latihan: soal cerita pemusatan data</h3><p class="muted">Jawab satu per satu dengan tombol Cek di tiap soal. Pembahasan langkahnya muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="8" data-explain="Mean = 40:5 = 8."><span class="qa-q">1) Nilai 7, 8, 8, 9, 8. Mean-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q111" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q111" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="7" data-explain="Angka 7 muncul 2 kali, paling sering."><span class="qa-q">2) Ukuran sepatu 6, 7, 7, 8, 9. Modus-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q112" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q112" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="10" data-explain="Range = 25 − 15 = 10."><span class="qa-q">3) Suhu 15, 18, 20, 22, 25°C. Range-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q113" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q113" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="80" data-explain="Suku tengahnya 80."><span class="qa-q">4) Nilai 60, 70, 80, 90, 100. Median-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q114" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q114" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="8" data-explain="Mean = 24:3 = 8."><span class="qa-q">5) Data 4, 8, 12. Mean-nya …</span><div class="qa-controls"><label class="f-label" for="d4-q115" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="d4-q115" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div>
+</section>
+
+
+<!-- ================= SUB-BAB 6 ================= -->
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menghitung mean, median, modus, dan range suatu data.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menafsirkan apa arti keempat ukuran itu untuk suatu data.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa memilih ukuran pemusatan yang tepat untuk suatu situasi.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh penerapan materi ini dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contoh nyatamu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung di bagian …, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman D.4</h3>
+    <ul>
+      <li>Mean = jumlah data : banyak data. Median = nilai tengah setelah data diurutkan.</li>
+      <li>Modus = data yang paling sering muncul. Range = data terbesar − data terkecil.</li>
+      <li>Median lebih tahan terhadap nilai ekstrem daripada mean.</li>
+      <li>Modus berguna untuk data kategori atau yang paling laris/sering.</li>
+      <li>Selalu urutkan data dulu sebelum mencari median dan range.</li>
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 8</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 8</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../../kelas-9/a7-sistem-persamaan-linear-dua-variabel/index.html">A.7 Sistem Persamaan Linear Dua Variabel (Kelas 9)</a> (Segera)</p>
+    <p>MPI Matematika SMP — D.4 Ukuran Pemusatan Data, Kelas 8, 8 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

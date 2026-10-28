@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="A.7 Sistem Persamaan Linear Dua Variabel — Matematika SMP Kelas 9. Memodelkan dan menyelesaikan SPLDV dengan grafik, substitusi, eliminasi, dan campuran." />
+<link rel="icon" href="data:," />
+<title>A.7 Sistem Persamaan Linear Dua Variabel — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">A.7 · KELAS 9 · 18 JP</span>
+    <h1>Sistem Persamaan Linear Dua Variabel</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Mengidentifikasi, memodelkan dan menentukan penyelesaian sistem persamaan linier dua variabel dengan metode (grafik, substitusi, eliminasi, dan campuran) serta menyelesaikan permasalahan kontekstual yang terkait.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> mengenali SPLDV dari soal cerita, menggambar dan membaca titik potong dua garis, menyelesaikan SPLDV dengan substitusi, eliminasi, dan campuran, lalu memakai SPLDV untuk masalah harga, tiket, dan campuran barang.</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mengenal</a>
+    <a href="#sub2" data-sub="sub2">2 · Grafik</a>
+    <a href="#sub3" data-sub="sub3">3 · Substitusi</a>
+    <a href="#sub4" data-sub="sub4">4 · Eliminasi</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Cerita</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Mengenal SPLDV</h2><p>Dua persamaan linear yang dicari jawabannya bersama-sama disebut sistem persamaan linear dua variabel (SPLDV). Contoh dari kantin sekolah: 2 buku + 1 pensil = Rp9.000 dan 1 buku + 1 pensil = Rp6.000.</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">x, y</span><h3>Dua variabel</h3><p>Variabelnya biasanya x dan y, misalnya x = harga buku dan y = harga pensil.</p></div><div class="mini-card"><span class="icon-box ib-teal">2</span><h3>Dua persamaan</h3><p>Satu persamaan saja tidak cukup: ada banyak pasangan (x, y) yang memenuhi. Dua persamaan membatasi jawabannya.</p></div><div class="mini-card"><span class="icon-box ib-coral">✓</span><h3>Satu penyelesaian</h3><p>Penyelesaian adalah pasangan (x, y) yang memenuhi <strong>kedua</strong> persamaan sekaligus.</p></div></div><div class="card" style="margin-top:16px"><h3>Cek pasangan: apakah ini penyelesaiannya?</h3><p class="muted">Sistemnya: x + y = 7 dan 2x − y = 5. Masukkan pasangan (x, y), lalu cek apakah keduanya terpenuhi.</p><div class="grid-2"><div><label class="f-label" for="cekX">Nilai x</label><input type="number" id="cekX" value="4" /></div><div><label class="f-label" for="cekY">Nilai y</label><input type="number" id="cekY" value="3" /></div></div><button class="btn btn-primary" type="button" id="cekBtn" style="margin-top:14px">Cek Pasangan</button><div class="feedback" id="cekFb" aria-live="polite"></div></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Memahami</span><h2 id="judul-sub2">SPLDV dengan Grafik</h2><p>Setiap persamaan linear adalah sebuah garis. Penyelesaian SPLDV adalah titik tempat kedua garis itu berpotongan — di titik itulah kedua persamaan benar sekaligus.</p></div><div class="card"><h3>Jelajahi garis y = 7 − x</h3><p class="muted">Geser x dan lihat titik yang terbentuk. Semua titik di garis ini memenuhi x + y = 7.</p><label class="f-label" for="glX">Nilai x: <span id="glXVal">x = 0</span></label><input type="range" id="glX" min="-5" max="12" step="1" value="0" /><div class="result-box" style="margin-top:12px"><div class="res-big" id="glHasil">Titik (0, 7) ada di garis y = 7 − x, karena 0 + 7 = 7.</div></div><p class="muted" style="margin-top:10px">Garis kedua, 2x − y = 5, memotong garis ini di (4, 3). Itulah penyelesaian sistemnya.</p></div><div class="card" style="margin-top:16px"><h3>Tiga kemungkinan posisi dua garis</h3><div class="table-scroll"><table><thead><tr><th>Posisi garis</th><th>Banyak penyelesaian</th><th>Contoh</th></tr></thead><tbody><tr><td>Berpotongan</td><td>1 penyelesaian</td><td class="num">x + y = 7 dan 2x − y = 5</td></tr><tr><td>Sejajar</td><td>0 (tidak ada)</td><td class="num">x + y = 2 dan x + y = 5</td></tr><tr><td>Berimpit</td><td>Tak hingga</td><td class="num">x + y = 2 dan 2x + 2y = 4</td></tr></tbody></table></div></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Mengaplikasi</span><h2 id="judul-sub3">Metode Substitusi dan Grafik</h2><p>Substitusi berarti mengganti satu variabel dengan ungkapan dari persamaan lain. Contoh: dari x + y = 7 diperoleh y = 7 − x; gantikan y itu ke 2x − y = 5, menjadi 2x − (7 − x) = 5, jadi 3x = 12 dan x = 4, lalu y = 3.</p></div><div class="card"><h3>Solver SPLDV interaktif</h3><p class="muted">Tulis sistem a₁x + b₁y = c₁ dan a₂x + b₂y = c₂. Solver menghitung penyelesaiannya dan menunjukkan langkah eliminasinya.</p><div class="grid-3"><div><label class="f-label" for="sA1">a₁</label><input type="number" id="sA1" value="1" /></div><div><label class="f-label" for="sB1">b₁</label><input type="number" id="sB1" value="1" /></div><div><label class="f-label" for="sC1">c₁</label><input type="number" id="sC1" value="7" /></div></div><div class="grid-3" style="margin-top:10px"><div><label class="f-label" for="sA2">a₂</label><input type="number" id="sA2" value="2" /></div><div><label class="f-label" for="sB2">b₂</label><input type="number" id="sB2" value="-1" /></div><div><label class="f-label" for="sC2">c₂</label><input type="number" id="sC2" value="5" /></div></div><button class="btn btn-primary" type="button" id="solveBtn" style="margin-top:14px">Selesaikan</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="solveHasil">x = 4, y = 3</div><p id="solveLangkah">Coba ubah koefisiennya, lalu tekan Selesaikan.</p></div></div><div class="card" style="margin-top:16px"><div class="formula"><div class="big">y = 7 − x → 2x − (7 − x) = 5</div><p>Substitusi: ganti y, selesaikan x, lalu hitung y.</p></div></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Metode Eliminasi dan Campuran</h2><p>Eliminasi menghilangkan satu variabel dengan menyamakan koefisiennya. Campuran memakai eliminasi untuk satu variabel, lalu substitusi untuk variabel lainnya — cara ini paling sering dipakai di soal cerita.</p></div><div class="card"><h3>Pilih metode, baca kapan memakainya</h3><p class="muted">Tekan salah satu metode di bawah ini.</p><div class="pill-row"><button class="btn btn-ghost" type="button" data-met="grafik" aria-pressed="false">Grafik</button><button class="btn btn-ghost" type="button" data-met="substitusi" aria-pressed="false">Substitusi</button><button class="btn btn-ghost" type="button" data-met="eliminasi" aria-pressed="false">Eliminasi</button><button class="btn btn-ghost" type="button" data-met="campuran" aria-pressed="false">Campuran</button></div><div class="result-box" style="margin-top:14px"><p id="metHasil" style="margin:0">Pilih satu metode untuk melihat penjelasan dan kapan metode itu paling cocok.</p></div></div><div class="card" style="margin-top:16px"><h3>Contoh eliminasi</h3><p>Sistem: x + 3y = 14 dan x + y = 6. Kurangkan kedua persamaan: (x + 3y) − (x + y) = 14 − 6, jadi 2y = 8 dan y = 4. Substitusikan y = 4 ke x + y = 6, diperoleh x = 2. Penyelesaiannya (2, 4).</p><div class="steps"><strong>Ingat:</strong> saat mengurangkan, perhatikan tanda minus di depan kurung — semua suku di persamaan kedua berubah tanda.</div></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">SPLDV dalam Soal Cerita</h2><p>Langkah soal cerita: 1) misalkan variabelnya, 2) tulis dua persamaan dari kalimat soal, 3) selesaikan, 4) jawab sesuai pertanyaan dan cek kembali ke soal.</p></div><div class="card"><h3>Pemodelan: harga buku dan pensil</h3><p class="muted">2 buku + 1 pensil = Rp9.000 dan 1 buku + 1 pensil = Rp6.000. Misal x = harga 1 buku, y = harga 1 pensil. Model mana yang benar?</p><div class="pill-row"><button class="btn btn-ghost" type="button" data-model="salah">x + y = 9.000 dan x + y = 6.000</button><button class="btn btn-ghost" type="button" data-model="benar">2x + y = 9.000 dan x + y = 6.000</button><button class="btn btn-ghost" type="button" data-model="salah">2x + 2y = 9.000 dan x + y = 6.000</button></div><div class="feedback" id="modelFb" aria-live="polite"></div></div><div class="card" style="margin-top:16px"><h3>Latihan: tentukan nilai yang ditanya</h3><p class="muted">Selesaikan tiap sistem, lalu tulis nilai yang ditanya. Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="7" data-explain="Jumlahkan: 2x = 14, jadi x = 7 (dan y = 3)."><span class="qa-q">1) x + y = 10 dan x − y = 4. Nilai x = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="3" data-explain="Kurangkan: x = 4, lalu y = 7 − 4 = 3."><span class="qa-q">2) 2x + y = 11 dan x + y = 7. Nilai y = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="6" data-explain="Kurangkan: 3y = 9, jadi y = 3, lalu x = 3 + 3 = 6."><span class="qa-q">3) x + 2y = 12 dan x − y = 3. Nilai x = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="2" data-explain="Jumlahkan: 4x = 12, jadi x = 3, lalu y = 5 − 3 = 2."><span class="qa-q">4) 3x − y = 7 dan x + y = 5. Nilai y = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="1" data-explain="Dari persamaan kedua x = 6 − y; substitusi memberi y = 5, lalu x = 1."><span class="qa-q">5) 2x + 3y = 17 dan x + y = 6. Nilai x = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa mengenali dan memodelkan SPLDV dari soal cerita.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menyelesaikan SPLDV dengan grafik, substitusi, eliminasi, dan campuran.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa memakai SPLDV untuk menyelesaikan masalah kontekstual.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Sistem Persamaan Linear Dua Variabel dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman A.7</h3>
+    <ul>
+['SPLDV adalah dua persamaan linear dengan dua variabel yang dicari penyelesaiannya bersama-sama.', 'Penyelesaian SPLDV adalah pasangan (x, y) yang memenuhi kedua persamaan sekaligus.', 'Metode grafik: penyelesaian adalah titik potong kedua garis.', 'Metode substitusi: ganti satu variabel dengan ungkapan dari persamaan lain.', 'Metode eliminasi: samakan koefisien, lalu jumlahkan atau kurangkan kedua persamaan.', 'Metode campuran: eliminasi untuk satu variabel, substitusi untuk variabel lainnya.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../g5-jaring-jaring-bangun-ruang/index.html">G.5 Jaring-jaring Bangun Ruang</a> (Aktif)</p>
+    <p>MPI Matematika SMP — A.7 Sistem Persamaan Linear Dua Variabel, Kelas 9, 18 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="G.6 Transformasi Geometri — Matematika SMP Kelas 9. Translasi, refleksi, rotasi, dan dilatasi pada koordinat Kartesius." />
+<link rel="icon" href="data:," />
+<title>G.6 Transformasi Geometri — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">G.6 · KELAS 9 · 18 JP</span>
+    <h1>Transformasi Geometri</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menjelaskan dan menerapkan karakteristik transformasi geometri (translasi, refleksi, rotasi, dan dilatasi) dengan menggunakan koordinat kartesius serta menyelesaikan permasalahan kontekstual yang terkait.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> melakukan translasi, refleksi, rotasi, dan dilatasi pada titik dan bangun; membaca bayangan pada koordinat Kartesius; dan memakai transformasi pada motif batik, peta, dan desain.</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mengenal</a>
+    <a href="#sub2" data-sub="sub2">2 · Translasi</a>
+    <a href="#sub3" data-sub="sub3">3 · Refleksi</a>
+    <a href="#sub4" data-sub="sub4">4 · Rotasi & Dilatasi</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Kontekstual</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Mengenal Transformasi Geometri</h2><p>Transformasi geometri adalah cara memindahkan atau mengubah bangun di bidang: digeser, dicerminkan, diputar, atau diperbesar/diperkecil. Motif batik, lantai keramik, dan animasi gim semuanya memakai transformasi.</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">→</span><h3>Translasi</h3><p>Digeser: bentuk dan ukuran tetap, posisi berubah.</p></div><div class="mini-card"><span class="icon-box ib-teal">◐</span><h3>Refleksi</h3><p>Dicerminkan: seperti bayangan di cermin, kiri-kanan bertukar.</p></div><div class="mini-card"><span class="icon-box ib-coral">⟳</span><h3>Rotasi &amp; dilatasi</h3><p>Diputar mengelilingi pusat; diperbesar atau diperkecil dengan faktor skala.</p></div></div><div class="card" style="margin-top:16px"><h3>Peta titik interaktif</h3><p class="muted">Pilih transformasi, lalu lihat titik A(2, 3) dan bayangannya A′ di grid Kartesius. Titik biru = asal, titik oranye = bayangan.</p><label class="f-label" for="trJenis2">Pilih transformasi untuk titik A(2, 3)</label><select id="trJenis2"><option value="translasi">Translasi (3, −2)</option><option value="refx">Refleksi sumbu x</option><option value="refy">Refleksi sumbu y</option><option value="rot90">Rotasi 90° berlawanan jarum jam</option><option value="dilatasi">Dilatasi faktor 2</option></select><svg id="trSvg" viewBox="0 0 300 300" width="300" height="300" style="margin:12px auto;max-width:100%" role="img" aria-label="Grid Kartesius dengan titik asal dan bayangan"></svg><p class="muted" id="trCap"></p><button class="btn btn-primary" type="button" id="trShow">Gambar Ulang</button></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Mengaplikasi</span><h2 id="judul-sub2">Translasi: Pergeseran</h2><p>Translasi menggeser setiap titik sejauh (a, b): x bertambah a, y bertambah b. Arahnya: a positif ke kanan, a negatif ke kiri; b positif ke atas, b negatif ke bawah.</p></div><div class="card"><div class="formula"><div class="big">(x, y) → (x + a, y + b)</div><p>Translasi oleh vektor (a, b).</p></div><p style="margin-top:14px"><strong>Contoh:</strong> bidak catur di (3, 4) digeser 2 langkah ke kanan dan 1 langkah ke bawah: (3 + 2, 4 − 1) = (5, 3).</p></div><div class="card" style="margin-top:16px"><h3>Kalkulator transformasi titik</h3><p class="muted">Isi titik asal dan parameternya, lalu tekan Hitung Bayangan.</p><label class="f-label" for="trJenis">Pilih transformasi</label><select id="trJenis"><option value="translasi">Translasi (a, b)</option><option value="refx">Refleksi sumbu x</option><option value="refy">Refleksi sumbu y</option><option value="refxy">Refleksi garis y = x</option><option value="rot90">Rotasi 90° berlawanan jarum jam</option><option value="rot180">Rotasi 180°</option><option value="dilatasi">Dilatasi (faktor k = a)</option></select><div class="grid-2" style="margin-top:12px"><div><label class="f-label" for="trX">x</label><input type="number" id="trX" value="2" /></div><div><label class="f-label" for="trY">y</label><input type="number" id="trY" value="3" /></div><div><label class="f-label" for="trA">a (pergeseran x / faktor k)</label><input type="number" id="trA" value="3" /></div><div><label class="f-label" for="trB">b (pergeseran y)</label><input type="number" id="trB" value="-2" /></div></div><button class="btn btn-primary" type="button" id="trBtn" style="margin-top:14px">Hitung Bayangan</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="trHasil">(2, 3) → (5, 1)</div><p id="trDetail">Translasi (3, −2): x′ = 2 + 3 = 5; y′ = 3 − 2 = 1.</p></div></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Mengaplikasi</span><h2 id="judul-sub3">Refleksi: Pencerminan</h2><p>Refleksi memantulkan titik terhadap sebuah garis cermin. Jarak titik ke cermin sama dengan jarak bayangan ke cermin, dan bayangannya berlawanan arah.</p></div><div class="card"><div class="table-scroll"><table><thead><tr><th>Cermin</th><th>Bayangan (x, y) →</th><th>Yang berubah</th></tr></thead><tbody><tr><td>Sumbu x</td><td class="num">(x, −y)</td><td>Tanda y</td></tr><tr><td>Sumbu y</td><td class="num">(−x, y)</td><td>Tanda x</td></tr><tr><td>Garis y = x</td><td class="num">(y, x)</td><td>Koordinat bertukar</td></tr><tr><td>Garis y = −x</td><td class="num">(−y, −x)</td><td>Bertukar dan bertanda negatif</td></tr><tr><td>Titik asal O</td><td class="num">(−x, −y)</td><td>Kedua tanda</td></tr></tbody></table></div></div><div class="card" style="margin-top:16px"><h3>Refleksi di sekitar kita</h3><p>Bayangan gedung di air danau, motif batik parang yang simetris, dan huruf pada ambulans yang dibaca lewat kaca spion — semuanya refleksi. Coba kalkulator di sub-bab 2 dengan mode refleksi untuk titik (5, 7).</p></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Rotasi dan Dilatasi</h2><p>Rotasi memutar titik mengelilingi pusat (biasanya titik asal O) sejauh sudut tertentu. Dilatasi memperbesar atau memperkecil bangun dengan faktor skala k terhadap pusat.</p></div><div class="card"><div class="formula"><div class="big">Rotasi 90° CCW: (x, y) → (−y, x)</div><p>Rotasi 180°: (x, y) → (−x, −y) · Dilatasi k: (x, y) → (kx, ky)</p></div><p style="margin-top:14px"><strong>Contoh rotasi:</strong> jarum jam berputar searah jarum jam (90° searah = (x, y) → (y, −x)). <strong>Contoh dilatasi:</strong> foto diperbesar 2 kali: titik (2, 3) menjadi (4, 6). Jika k = ½, bangun mengecil setengahnya.</p></div><div class="card" style="margin-top:16px"><h3>Kongruen vs sebangun</h3><p>Translasi, refleksi, dan rotasi menghasilkan bangun yang <strong>kongruen</strong> (bentuk dan ukuran sama). Dilatasi menghasilkan bangun yang <strong>sebangun</strong> (bentuk sama, ukuran berubah sebanding).</p></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">Transformasi dalam Kehidupan Nyata</h2><p>Desainer batik memakai refleksi untuk motif simetris, arsitek memakai translasi untuk pola lantai, dan aplikasi peta memakai dilatasi saat kamu mencubit layar untuk memperbesar.</p></div><div class="card"><h3>Latihan: tentukan koordinat bayangan</h3><p class="muted">Tulis nilai x atau y yang ditanya (angka saja). Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="6" data-explain="x′ = 2 + 4 = 6 (dan y′ = 3 − 1 = 2)."><span class="qa-q">1) Translasi (2, 3) oleh (4, −1): nilai x′ = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="5" data-explain="Refleksi sumbu x: (x, y) → (x, −y), jadi y′ = 5."><span class="qa-q">2) Refleksi sumbu x dari (3, −5): nilai y′ = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="-2" data-explain="Rotasi 90° CCW: (x, y) → (−y, x), jadi x′ = −2 (dan y′ = 4)."><span class="qa-q">3) Rotasi 90° berlawanan jarum jam dari (4, 2): nilai x′ = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="6" data-explain="Dilatasi faktor 3: (2, −1) → (6, −3)."><span class="qa-q">4) Dilatasi faktor 3 dari (2, −1): nilai x′ = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="2" data-explain="Refleksi y = x menukar koordinat: (5, 2) → (2, 5)."><span class="qa-q">5) Refleksi garis y = x dari (5, 2): nilai x′ = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menentukan bayangan titik oleh translasi dan refleksi.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menentukan bayangan titik oleh rotasi dan dilatasi.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa memakai transformasi geometri pada masalah kontekstual.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Transformasi Geometri dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman G.6</h3>
+    <ul>
+['Translasi (a, b): (x, y) → (x + a, y + b).', 'Refleksi sumbu x: (x, y) → (x, −y); sumbu y: (x, y) → (−x, y); garis y = x: (x, y) → (y, x).', 'Rotasi 90° berlawanan jarum jam: (x, y) → (−y, x); rotasi 180°: (x, y) → (−x, −y).', 'Dilatasi faktor k terhadap O: (x, y) → (kx, ky).', 'Translasi, refleksi, dan rotasi tidak mengubah bentuk dan ukuran (kongruen).', 'Dilatasi mengubah ukuran sebanding dengan faktor skala, bentuk tetap.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../d5-ruang-sampel-dan-peluang/index.html">D.5 Ruang Sampel dan Peluang</a> (Aktif)</p>
+    <p>MPI Matematika SMP — G.6 Transformasi Geometri, Kelas 9, 18 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

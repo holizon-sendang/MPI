@@ -103,4 +103,54 @@
       el.style.display = '';
     });
   } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
+
+  /* Progres modul lain (27 modul): satu pola untuk semuanya */
+  var MODUL_LAIN = [
+    { key: 'arithsos', label: 'Aritmetika Sosial' },
+    { key: 'b4', label: 'B.4' },
+    { key: 'a1', label: 'A.1' },
+    { key: 'g1', label: 'G.1' },
+    { key: 'g2', label: 'G.2' },
+    { key: 'g3', label: 'G.3' },
+    { key: 'd1', label: 'D.1' },
+    { key: 'd2', label: 'D.2' },
+    { key: 'b5', label: 'B.5' },
+    { key: 'b6', label: 'B.6' },
+    { key: 'b7', label: 'B.7' },
+    { key: 'g4', label: 'G.4' },
+    { key: 'a2', label: 'A.2' },
+    { key: 'a3', label: 'A.3' },
+    { key: 'a4', label: 'A.4' },
+    { key: 'a5', label: 'A.5' },
+    { key: 'a6', label: 'A.6' },
+    { key: 'd3', label: 'D.3' },
+    { key: 'd4', label: 'D.4' },
+    { key: 'a7', label: 'A.7' },
+    { key: 'g5', label: 'G.5' },
+    { key: 'p1', label: 'P.1' },
+    { key: 'p2', label: 'P.2' },
+    { key: 'p3', label: 'P.3' },
+    { key: 'g6', label: 'G.6' },
+    { key: 'd5', label: 'D.5' },
+    { key: 'd6', label: 'D.6' }
+  ];
+  MODUL_LAIN.forEach(function (m) {
+    try {
+      var bestM = localStorage.getItem('mpi-' + m.key + '-quiz-best');
+      document.querySelectorAll('[data-' + m.key + '-best]').forEach(function (el) {
+        if (bestM !== null) {
+          el.textContent = 'Skor terbaik kuis ' + m.label + ': ' + bestM + '/10';
+          el.style.display = '';
+        }
+      });
+      var visitedM = JSON.parse(localStorage.getItem('mpi-' + m.key + '-visited') || '[]');
+      document.querySelectorAll('[data-' + m.key + '-progress]').forEach(function (el) {
+        var pctM = Math.round((visitedM.length / 6) * 100);
+        el.textContent = visitedM.length === 0
+          ? m.label + ': Belum mulai'
+          : 'Progres ' + m.label + ': ' + visitedM.length + ' dari 6 sub-bab (' + pctM + '%)';
+        el.style.display = '';
+      });
+    } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
+  });
 })();

@@ -334,11 +334,11 @@
      1) 9  2) -4,-1,0,3  3) 2  4) -7  5) -12
      6) 4  7) -7  8) -8  9) 4  10) -1 */
   var QUIZ = [
-    { q: 'Lawan dari −9 adalah …', options: ['9', '−9', '0', '1/9'], answer: 0, why: 'Lawan dari −9 adalah 9, karena jarak keduanya ke 0 sama, 9 langkah, tapi arahnya berlawanan.' },
+    { q: 'Lawan dari −9 adalah …', options: ['1/9', '−9', '0', '9'], answer: 3, why: 'Lawan dari −9 adalah 9, karena jarak keduanya ke 0 sama, 9 langkah, tapi arahnya berlawanan.' },
     { q: 'Urutan bilangan −4, −1, 0, 3 dari yang terkecil adalah …', options: ['−4, −1, 0, 3', '−1, −4, 0, 3', '3, 0, −1, −4', '−4, 0, −1, 3'], answer: 0, why: 'Semakin ke kiri semakin kecil: −4 < −1 < 0 < 3.' },
     { q: '−6 + 8 = …', options: ['−14', '−2', '2', '14'], answer: 2, why: 'Mulai dari −6, bergerak 8 langkah ke kanan, sampai di 2.' },
-    { q: '5 − 12 = …', options: ['7', '−7', '−17', '17'], answer: 1, why: '5 − 12 = 5 + (−12) = −7.' },
-    { q: '(−3) × 4 = …', options: ['12', '−12', '−7', '7'], answer: 1, why: 'Tanda berbeda, jadi negatif. 3 × 4 = 12, hasilnya −12.' },
+    { q: '5 − 12 = …', options: ['7', '17', '−17', '−7'], answer: 3, why: '5 − 12 = 5 + (−12) = −7.' },
+    { q: '(−3) × 4 = …', options: ['12', '7', '−7', '−12'], answer: 3, why: 'Tanda berbeda, jadi negatif. 3 × 4 = 12, hasilnya −12.' },
     { q: '(−24) : (−6) = …', options: ['−4', '4', '−30', '30'], answer: 1, why: 'Tanda sama (keduanya negatif), jadi positif. 24 : 6 = 4.' },
     { q: 'Suhu −2°C turun 5°C menjadi …', options: ['3°C', '−3°C', '−7°C', '7°C'], answer: 2, why: '−2 + (−5) = −7, jadi suhunya −7°C.' },
     { q: '−10 + (−4) − (−6) = …', options: ['−20', '−8', '0', '8'], answer: 1, why: '−10 + (−4) = −14, lalu −14 − (−6) = −14 + 6 = −8.' },

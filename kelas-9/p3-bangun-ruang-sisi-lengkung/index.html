@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="P.3 Bangun Ruang Sisi Lengkung — Matematika SMP Kelas 9. Luas permukaan dan volume tabung, kerucut, dan bola." />
+<link rel="icon" href="data:," />
+<title>P.3 Bangun Ruang Sisi Lengkung — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">P.3 · KELAS 9 · 18 JP</span>
+    <h1>Bangun Ruang Sisi Lengkung</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menentukan luas permukaan dan volume bangun ruang sisi lengkung dan menyelesaikan masalah yang terkait.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> menghitung luas permukaan dan volume tabung, kerucut, dan bola; memakai garis pelukis kerucut; dan menyelesaikan masalah nyata seperti kaleng, topi ulang tahun, dan bola.</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Tabung</a>
+    <a href="#sub2" data-sub="sub2">2 · Kerucut</a>
+    <a href="#sub3" data-sub="sub3">3 · Bola</a>
+    <a href="#sub4" data-sub="sub4">4 · Gabungan</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Nyata</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Tabung</h2><p>Tabung adalah prisma yang alasnya lingkaran: kaleng susu, gelas, dan pipa air. Luas permukaannya terdiri dari dua lingkaran dan satu persegi panjang (selimut).</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">🥫</span><h3>Kaleng</h3><p>Kaleng susu adalah tabung: dua lingkaran dan selimut persegi panjang.</p></div><div class="mini-card"><span class="icon-box ib-teal">🥤</span><h3>Gelas</h3><p>Gelas tanpa tutup: luas permukaannya selimut + satu alas saja.</p></div><div class="mini-card"><span class="icon-box ib-coral">🛢️</span><h3>Drum</h3><p>Volume drum menentukan berapa liter air atau minyak yang muat.</p></div></div><div class="card" style="margin-top:16px"><h3>Kalkulator tabung, kerucut, dan bola</h3><p class="muted">Pilih bangunnya, isi jari-jari dan tinggi (cm), lalu tekan Hitung. Dipakai π = 3,14.</p><label class="f-label" for="brBangun">Pilih bangun</label><select id="brBangun"><option value="tabung">Tabung</option><option value="kerucut">Kerucut</option><option value="bola">Bola</option></select><div class="grid-2" style="margin-top:12px"><div><label class="f-label" for="brR">Jari-jari r (cm)</label><input type="number" id="brR" value="7" /></div><div id="rowT"><label class="f-label" for="brT">Tinggi t (cm)</label><input type="number" id="brT" value="10" /></div></div><button class="btn btn-primary" type="button" id="brBtn" style="margin-top:14px">Hitung</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="brHasil">Lp = 747,70 · V = 1538,60</div><p id="brLangkah">Tabung r = 7 cm, t = 10 cm dengan π = 3,14.</p></div></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Memahami</span><h2 id="judul-sub2">Kerucut</h2><p>Kerucut punya satu alas lingkaran dan selimut berbentuk juring. Garis pelukis (s) adalah garis dari puncak ke tepi alas: s = √(r² + t²). Volume kerucut sepertiga volume tabung dengan alas dan tinggi yang sama.</p></div><div class="card"><div class="formula"><div class="big">V kerucut = ⅓πr²t &nbsp;·&nbsp; Lp = πr(r + s)</div><p>s = garis pelukis = √(r² + t²).</p></div><p style="margin-top:14px"><strong>Contoh:</strong> topi ulang tahun berbentuk kerucut r = 7 cm, t = 24 cm. Garis pelukis s = √(49 + 576) = √625 = 25 cm. Luas kertas yang dibutuhkan = πr(r + s) = 22/7 × 7 × 32 = 704 cm².</p></div><div class="card" style="margin-top:16px"><h3>Mengapa ⅓?</h3><p>Isi sebuah kerucut dengan pasir, lalu tuangkan ke tabung yang alas dan tingginya sama: dibutuhkan tepat tiga kerucut untuk memenuhi tabung itu. Itulah asal faktor ⅓.</p></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Memahami</span><h2 id="judul-sub3">Bola</h2><p>Bola tidak punya rusuk maupun titik sudut — permukaannya melengkung seluruhnya. Luas permukaan bola sama dengan empat kali luas lingkaran dengan jari-jari yang sama.</p></div><div class="card"><div class="formula"><div class="big">Lp bola = 4πr² &nbsp;·&nbsp; V bola = 4/3 πr³</div><p>Ingat: r³ berarti r × r × r.</p></div></div><div class="card" style="margin-top:16px"><h3>Geser jari-jari bola</h3><p class="muted">Perhatikan: kalau jari-jari dikali 2, volume menjadi 8 kali lipat (2³ = 8).</p><label class="f-label" for="bolaR">Jari-jari: <span id="bolaRVal">r = 7 cm</span></label><input type="range" id="bolaR" min="1" max="14" step="1" value="7" /><div class="result-box" style="margin-top:12px"><div class="res-big" id="bolaHasil">Volume bola = 1436,03 cm³</div></div></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Bangun Gabungan Sisi Lengkung</h2><p>Es krim (kerucut + setengah bola), tabung dengan tutup setengah bola, atau lilin berbentuk gabungan — pecah menjadi bagian-bagiannya, hitung satu per satu, lalu jumlahkan. Hati-hati: sisi yang menempel di dalam tidak dihitung dalam luas permukaan!</p></div><div class="card"><h3>Contoh: es krim</h3><p>Cone es krim: kerucut r = 3 cm, t = 4 cm, ditambah setengah bola r = 3 cm di atasnya. Volume = V kerucut + ½ V bola = (⅓ × 3,14 × 9 × 4) + (½ × 4/3 × 3,14 × 27) = 37,68 + 56,52 = 94,2 cm³.</p><div class="steps"><strong>Perhatian luas permukaan:</strong> alas kerucut yang tertutup bola tidak dihitung — hanya selimut kerucut dan permukaan setengah bola yang terlihat.</div></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">Soal Nyata: Kaleng, Topi, dan Bola</h2><p>Sebuah pabrik membuat kaleng dari seng. Berapa seng yang dibutuhkan? Sebuah bola sepak dibuat dari kulit — berapa luas kulitnya? Jawabannya memakai luas permukaan dan volume.</p></div><div class="card"><h3>Latihan: hitung luas permukaan dan volume</h3><p class="muted">Tulis jawaban akhirnya (angka saja). Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="1540" data-explain="V = 22/7 × 49 × 10 = 1540 cm³."><span class="qa-q">1) Volume tabung r = 7 cm, t = 10 cm (π = 22/7) = … cm³</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="748" data-explain="Lp = 2 × 22/7 × 7 × 17 = 748 cm²."><span class="qa-q">2) Luas permukaan tabung r = 7 cm, t = 10 cm (π = 22/7) = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="113.04" data-explain="V = 4/3 × 3,14 × 27 = 113,04 cm³."><span class="qa-q">3) Volume bola r = 3 cm (π = 3,14) = … cm³</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="1232" data-explain="V = ⅓ × 22/7 × 49 × 24 = 1232 cm³."><span class="qa-q">4) Volume kerucut r = 7 cm, t = 24 cm (π = 22/7) = … cm³</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="1256" data-explain="Lp = 4 × 3,14 × 100 = 1256 cm²."><span class="qa-q">5) Luas permukaan bola r = 10 cm (π = 3,14) = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menghitung luas permukaan dan volume tabung.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menghitung luas permukaan dan volume kerucut dan bola.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menyelesaikan masalah kontekstual bangun ruang sisi lengkung.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Bangun Ruang Sisi Lengkung dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman P.3</h3>
+    <ul>
+['Tabung: Lp = 2πr(r + t); V = πr²t.', 'Kerucut: Lp = πr(r + s) dengan s = √(r² + t²); V = ⅓πr²t.', 'Bola: Lp = 4πr²; V = 4/3 πr³.', 'Volume kerucut = ⅓ volume tabung dengan alas dan tinggi yang sama.', 'Tabung tanpa tutup: Lp = 2πrt + πr².', 'Periksa satuan dan pilih π = 22/7 atau 3,14 sesuai jari-jarinya.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../g6-transformasi-geometri/index.html">G.6 Transformasi Geometri</a> (Aktif)</p>
+    <p>MPI Matematika SMP — P.3 Bangun Ruang Sisi Lengkung, Kelas 9, 18 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

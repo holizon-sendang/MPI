@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="G.2 Kesebangunan — Matematika SMP Kelas 7. Syarat dua bangun sebangun, kesebangunan segitiga, dan soal cerita." />
+<link rel="icon" href="data:," />
+<title>G.2 Kesebangunan — Kelas 7 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">G.2 · KELAS 7 · 6 JP · GEOMETRI</span>
+    <h1>Kesebangunan</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Mengidentifikasi dan menentukan sifat dan syarat dua benda sebangun (termasuk kesebangunan segitiga) dan menyelesaikan permasalahan kontekstual yang terkait.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> memeriksa syarat sebangun, memasangkan sisi yang bersesuaian, menghitung sisi yang belum diketahui, dan mengukur tinggi pohon dari bayangannya.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../g1-garis-dan-sudut/index.html">← G.1 Garis dan Sudut</a>
+      <a class="btn btn-ghost" href="../index.html">Daftar Modul Kelas 7</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Apa itu Sebangun</a>
+    <a href="#sub2" data-sub="sub2">2 · Syarat Sebangun</a>
+    <a href="#sub3" data-sub="sub3">3 · Segitiga Sebangun</a>
+    <a href="#sub4" data-sub="sub4">4 · Hitung Sisi</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Cerita</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Apa Itu Sebangun? Bentuk Sama, Ukuran Boleh Beda</h2>
+    <p>Dua bangun dikatakan <strong>sebangun</strong> kalau bentuknya sama persis, hanya ukurannya berbeda — seperti foto yang diperbesar atau diperkecil. Semua sudutnya sama besar, dan sisi-sisi yang bersesuaian sebanding (perbandingannya selalu sama).</p>
+  </div>
+<div class="card">
+    <h3>Slider skala: perbesar persegi panjang</h3>
+    <p class="muted">Geser pengalinya dan perhatikan: ukuran berubah, tapi bentuknya tetap persegi panjang yang sama dan sudutnya tetap 90°.</p>
+    <label class="f-label" for="skRange">Pengali ukuran: <span id="skVal">×1.5</span></label>
+    <input type="range" id="skRange" min="0.5" max="3" step="0.5" value="1.5" />
+    <div class="angle-viz"><svg id="skSvg" width="320" height="150" viewBox="0 0 320 150" role="img" aria-label="Persegi panjang asli dan hasil perbesaran"></svg></div>
+    <div class="result-box" style="margin-top:8px" aria-live="polite">
+      <div class="res-big" id="skHasil">Perbandingan sisi = 1 : 1.5 — tetap sebangun</div>
+      <p id="skLangkah">Semua sisi dikali 1.5: 6 × 1.5 = 9 cm dan 4 × 1.5 = 6 cm. Sudut-sudutnya tetap 90°, jadi bangunnya sebangun.</p>
+    </div>
+  </div>
+  <div class="grid-3" style="margin-top:16px">
+    <div class="mini-card"><span class="icon-box ib-teal">≅ bentuk</span><h3>Bentuk sama</h3><p>Foto asli dan foto yang diperbesar bentuknya sama — tidak ada yang “melar”.</p></div>
+    <div class="mini-card"><span class="icon-box ib-amber">∠ sama</span><h3>Sudut sama besar</h3><p>Semua sudut yang bersesuaian sama besar, berapapun perbesarannya.</p></div>
+    <div class="mini-card"><span class="icon-box ib-coral">a : b</span><h3>Sisi sebanding</h3><p>Perbandingan sisi yang bersesuaian selalu sama, misalnya 1 : 2 untuk semua sisi.</p></div>
+  </div>
+  <p class="note" style="margin-top:16px"><strong>Bukan sebangun:</strong> persegi panjang yang hanya dilebarkan ke satu arah (misalnya 4×6 menjadi 4×9) bentuknya berubah — sudutnya tetap 90° tapi sisinya tidak sebanding.</p>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Syarat Dua Bangun Sebangun</h2>
+    <p>Untuk memastikan dua bangun sebangun, cukup periksa dua syarat: <strong>(1)</strong> sudut-sudut yang bersesuaian sama besar, dan <strong>(2)</strong> sisi-sisi yang bersesuaian sebanding. Kalau satu syarat gagal, bangunnya tidak sebangun.</p>
+  </div>
+<div class="card">
+    <h3>Latihan: pilih jawaban yang benar</h3>
+    <p class="muted">Baca soalnya, lalu ketuk jawaban yang paling tepat.</p>
+    <div class="stack">
+      <div class="model-box" data-explain="Dua syarat sebangun: sudut-sudut yang bersesuaian sama besar DAN sisi-sisi yang bersesuaian sebanding. “Bentuk dan ukuran sama persis” itu syarat kongruen, bukan sebangun."><p><strong>A.</strong> Syarat dua bangun sebangun adalah …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal A"><button class="btn btn-ghost model-opt" type="button">Sudut sama, sisi bebas</button><button class="btn btn-ghost model-opt" type="button">Sisi sama, sudut bebas</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Sudut sama dan sisi bersesuaian sebanding</button><button class="btn btn-ghost model-opt" type="button">Bentuk dan ukuran sama persis</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Perbandingan sisinya: 4 : 6 = 2 : 3 dan 6 : 9 = 2 : 3. Sisi-sisinya sebanding dan sudutnya sama (90°), jadi sebangun."><p><strong>B.</strong> Persegi panjang 4 cm × 6 cm dan persegi panjang 6 cm × 9 cm. Apakah keduanya sebangun?</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal B"><button class="btn btn-ghost model-opt" type="button">Tidak</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Ya</button><button class="btn btn-ghost model-opt" type="button">Tidak bisa ditentukan</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Sudut-sudutnya sama semua. Pada segitiga, sudut yang sama menjamin sisi-sisinya sebanding — jadi pasti sebangun, berapapun ukuran sisinya."><p><strong>C.</strong> Segitiga dengan sudut 30°, 60°, 90° dan segitiga lain dengan sudut 30°, 60°, 90°. Apakah keduanya sebangun?</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal C"><button class="btn btn-ghost model-opt" type="button">Tidak</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Ya</button><button class="btn btn-ghost model-opt" type="button">Hanya jika sisinya sama</button></div><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Pasangan sisi bersesuaian</h3>
+    <p class="muted">Pada dua bangun sebangun, sisi yang bersesuaian adalah sisi yang “menghadap” sudut yang sama. Urutan hurufnya penting: kalau segitiga ABC sebangun dengan DEF, maka AB bersesuaian dengan DE, BC dengan EF, dan CA dengan FD.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Segitiga ABC</th><th>Segitiga DEF</th><th>Pasangan</th></tr></thead>
+        <tbody>
+          <tr><td>AB = 4 cm</td><td>DE = 8 cm</td><td>AB ↔ DE</td></tr>
+          <tr><td>BC = 5 cm</td><td>EF = 10 cm</td><td>BC ↔ EF</td></tr>
+          <tr><td>CA = 6 cm</td><td>FD = 12 cm</td><td>CA ↔ FD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Perbandingan skala:</strong> 4 : 8 = 5 : 10 = 6 : 12 = 1 : 2. Semua sisi dikali 2.</p>
+  </div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Kesebangunan Segitiga</h2>
+    <p>Segitiga istimewa: kalau dua sudutnya sama dengan dua sudut segitiga lain, segitiganya pasti sebangun — karena sudut ketiga otomatis sama (jumlah sudut segitiga 180°). Inilah syarat <strong>sudut-sudut</strong> (AA) yang paling sering dipakai.</p>
+  </div>
+<div class="formula"><div class="big">Dua sudut sama → segitiga sebangun</div><p>Kalau ∠A = ∠D dan ∠B = ∠E, maka ∠C = ∠F otomatis, dan sisi-sisinya sebanding.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator sisi segitiga sebangun</h3>
+    <p class="muted">Segitiga ABC sebangun dengan DEF. Isi satu pasang sisi yang bersesuaian (AB dan DE), lalu isi sisi lain yang diketahui (BC) untuk mencari pasangannya (EF).</p>
+    <div class="grid-3">
+      <div><label class="f-label" for="sgA">AB (cm)</label><input type="number" id="sgA" value="4" /></div>
+      <div><label class="f-label" for="sgAp">DE (cm)</label><input type="number" id="sgAp" value="8" /></div>
+      <div><label class="f-label" for="sgB">BC (cm)</label><input type="number" id="sgB" value="5" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="sgBtn" style="margin-top:14px">Hitung EF</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="sgHasil">Sisi yang dicari = 10 cm</div><p id="sgLangkah">Skala perbandingan = 8 ÷ 4 = 2. Sisi bersesuaian = 5 × 2 = 10 cm.</p></div>
+  </div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Menghitung Panjang Sisi yang Belum Diketahui</h2>
+    <p>Rumus praktisnya satu saja: <strong>sisi yang dicari = sisi yang diketahui × skala</strong>. Skalanya didapat dari sepasang sisi bersesuaian yang sama-sama diketahui. Hati-hati memasangkan sisinya — sisi terpendek dengan sisi terpendek, terpanjang dengan terpanjang.</p>
+  </div>
+<div class="card">
+    <h3>Latihan bertingkat: sisi sebangun</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (cm, tanpa satuan).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="6" data-explain="Skala 2, jadi sisi besar = 3 × 2 = 6 cm."><span class="qa-q">1) Dua persegi sebangun dengan skala 1 : 2. Sisi persegi kecil 3 cm. Sisi persegi besar = … cm</span><div class="qa-controls"><label class="f-label" for="h2-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="h2-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="15" data-explain="Skala = 12 ÷ 4 = 3, jadi EF = 5 × 3 = 15 cm."><span class="qa-q">2) Segitiga ABC sebangun dengan DEF. AB = 4 cm bersesuaian dengan DE = 12 cm. Jika BC = 5 cm, EF = … cm</span><div class="qa-controls"><label class="f-label" for="h2-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="h2-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="12" data-explain="Skala = 4 ÷ 3, jadi lebar besar = 9 × 4 ÷ 3 = 12 cm."><span class="qa-q">3) Dua persegi panjang sebangun dengan perbandingan sisi 3 : 4. Lebar yang kecil 9 cm. Lebar yang besar = … cm</span><div class="qa-controls"><label class="f-label" for="h2-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="h2-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Tips memasangkan sisi:</strong> urutkan sisi tiap segitiga dari terpendek ke terpanjang, lalu pasangkan yang seurutan — itu pasti pasangan yang bersesuaian.</p>
+  </div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Soal Cerita: Foto, Bayangan, dan Tinggi Pohon</h2>
+    <p>Kesebangunan dipakai untuk mengukur yang tidak bisa diukur langsung: tinggi pohon dari bayangannya, tinggi gedung dari foto, lebar sungai dari segitiga sebangun. Sinar matahari yang sejajar membuat segitiga tongkat dan segitiga pohon sebangun.</p>
+  </div>
+<div class="card">
+    <h3>Kalkulator tinggi dari bayangan</h3>
+    <p class="muted">Tancapkan tongkat, ukur tinggi dan bayangannya, lalu ukur bayangan pohon. Kalkulator mencari tinggi pohonnya.</p>
+    <div class="grid-3">
+      <div><label class="f-label" for="byT">Tinggi tongkat (m)</label><input type="number" id="byT" value="2" /></div>
+      <div><label class="f-label" for="byB">Bayangan tongkat (m)</label><input type="number" id="byB" value="3" /></div>
+      <div><label class="f-label" for="byBp">Bayangan pohon (m)</label><input type="number" id="byBp" value="6" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="byBtn" style="margin-top:14px">Hitung Tinggi Pohon</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="byHasil">Tinggi pohon = 4 m</div><p id="byLangkah">Segitiga tongkat dan segitiga pohon sebangun (sinar matahari sejajar). Perbandingan tinggi : bayangan = 2 : 3, jadi tinggi pohon = 2 × 6 ÷ 3 = 4 m.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: soal cerita</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="18" data-explain="Skala = 12 ÷ 4 = 3, jadi tinggi = 6 × 3 = 18 cm."><span class="qa-q">1) Sebuah foto berukuran 4 cm × 6 cm diperbesar sehingga lebarnya 12 cm. Tinggi foto setelah diperbesar = … cm</span><div class="qa-controls"><label class="f-label" for="h2-4" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="h2-4" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="6" data-explain="Tinggi pohon = 1,5 × 8 ÷ 2 = 6 m."><span class="qa-q">2) Sebuah tongkat 1,5 m mempunyai bayangan 2 m. Pada saat yang sama, bayangan sebuah pohon 8 m. Tinggi pohon itu = … m</span><div class="qa-controls"><label class="f-label" for="h2-5" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="h2-5" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="40" data-explain="Keliling sebanding dengan skala: 20 × 2 = 40 cm."><span class="qa-q">3) Dua bangun sebangun dengan skala 1 : 2. Keliling bangun kecil 20 cm. Keliling bangun besar = … cm</span><div class="qa-controls"><label class="f-label" for="h2-6" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="h2-6" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+<div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menjelaskan syarat dua bangun sebangun.</label></div><div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menentukan sisi bersesuaian dan menghitung panjang sisi yang belum diketahui.</label></div><div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menyelesaikan soal cerita kesebangunan seperti foto dan bayangan.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Satu contoh yang kutemui hari ini:</label>
+      <textarea id="refContoh" placeholder="Contoh: foto yang diperbesar, bayangan pohon, denah rumah, …"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih tertukar memasangkan sisi yang bersesuaian, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman</h3>
+    <ul><li>Sebangun: bentuk sama, sudut-sudut sama besar, sisi-sisi bersesuaian sebanding.</li><li>Pada segitiga, dua sudut yang sama sudah cukup untuk menjamin sebangun.</li><li>Sisi yang dicari = sisi yang diketahui × skala; skala didapat dari sepasang sisi bersesuaian yang diketahui.</li><li>Keliling bangun sebangun sebanding dengan skala; luasnya sebanding dengan kuadrat skala.</li><li>Sinar matahari yang sejajar membuat segitiga benda dan segitiga bayangannya sebangun.</li></ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../g1-garis-dan-sudut/index.html">← G.1 Garis dan Sudut</a> · <a href="../index.html">Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../g3-kekongruenan/index.html">G.3 Kekongruenan</a></p>
+    <p>MPI Matematika SMP — G.2 Kesebangunan, Kelas 7, 6 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

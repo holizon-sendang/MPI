@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="A.5 Relasi dan Fungsi — Matematika SMP Kelas 8. Menjelaskan, menentukan dan menyajikan relasi dan fungsi serta menyelesaikan permasalahan kontekstual." />
+<link rel="icon" href="data:," />
+<title>A.5 Relasi dan Fungsi — Kelas 8 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html">Kelas 7</a>
+      <a href="index.html" class="active" aria-current="page">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">A.5 · KELAS 8 · 14 JP · ALJABAR</span>
+    <h1>Relasi dan Fungsi</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menjelaskan, menentukan dan menyajikan relasi dan fungsi serta menyelesaikan permasalahan kontekstual yang terkait.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> membedakan relasi dan fungsi, menentukan domain-kodomain-range, menghitung nilai fungsi, dan menyajikan fungsi dalam tabel, grafik, dan rumus.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 8</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Relasi</a>
+    <a href="#sub2" data-sub="sub2">2 · Fungsi</a>
+    <a href="#sub3" data-sub="sub3">3 · Menyajikan</a>
+    <a href="#sub4" data-sub="sub4">4 · Nilai Fungsi</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Cerita</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Mengenal Relasi</h2>
+    <p>Relasi adalah hubungan antara anggota dua himpunan. Himpunan pertama disebut <strong>domain</strong> (daerah asal), himpunan kedua disebut <strong>kodomain</strong> (daerah kawan). Relasi bisa disajikan dengan diagram panah, himpunan pasangan berurutan, atau grafik Kartesius.</p>
+  </div>
+
+<div class="grid-3"><div class="mini-card"><span class="icon-box ib-teal">→</span><h3>Diagram panah</h3><p>Panah dari domain ke kodomain menunjukkan siapa berelasi dengan siapa.</p></div><div class="mini-card"><span class="icon-box ib-amber">{ }</span><h3>Pasangan berurutan</h3><p>Relasi ditulis {(Ani, Matematika), (Budi, IPA)} — urutan penting: (a, b) ≠ (b, a).</p></div><div class="mini-card"><span class="icon-box ib-coral">✚</span><h3>Grafik Kartesius</h3><p>Pasangan (x, y) digambar sebagai titik. Domain di sumbu x, kodomain di sumbu y.</p></div></div><div class="card"><h3>Penjelajah relasi</h3><p class="muted">Pilih sebuah relasi dan lihat domain, kodomain, serta apakah ia juga fungsi.</p><div style="margin-top:4px"><label class="f-label" for="rcSel">Pilih relasi</label><select id="rcSel"><option value="r1">Relasi "suka pelajaran"</option><option value="r2">Relasi "berada di kelas"</option><option value="r3">Relasi "mempunyai hobi"</option></select></div><button class="btn btn-primary" type="button" id="rcBtn" style="margin-top:14px">Tampilkan Relasi</button><div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="rcHasil" style="font-size:1.1rem"></div><p id="rcKet"></p></div></div>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Fungsi: Relasi yang Istimewa</h2>
+    <p>Fungsi adalah relasi yang <strong>setiap anggota domainnya punya tepat satu pasangan</strong> di kodomain. Kalau ada satu anggota domain yang punya dua pasangan — atau tidak punya pasangan — itu bukan fungsi.</p>
+  </div>
+
+<div class="card"><h3>Penguji fungsi</h3><p class="muted">Ingat: kodomain boleh punya anggota yang tidak terpakai. Yang dilarang adalah domain yang pasangannya ganda atau kosong.</p><p class="muted">Pilih himpunan pasangan berurutan dan uji: fungsi atau bukan?</p><div style="margin-top:4px"><label class="f-label" for="ftSel">Himpunan pasangan berurutan</label><select id="ftSel"><option value="f1">{(1, 2), (2, 4), (3, 6)}</option><option value="f2">{(1, 2), (1, 3), (2, 4)}</option><option value="f3">{(1, 5), (2, 5), (3, 5)}</option><option value="f4">{(2, 1), (2, 2), (3, 1)}</option></select></div><button class="btn btn-primary" type="button" id="ftBtn" style="margin-top:14px">Uji Apakah Fungsi</button><div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="ftHasil" style="font-size:1.1rem"></div><p id="ftKet"></p></div></div><div class="card" style="margin-top:16px"><h3>Domain, kodomain, range</h3><p><strong>Domain</strong> = daerah asal (himpunan pertama). <strong>Kodomain</strong> = daerah kawan (himpunan kedua). <strong>Range</strong> (daerah hasil) = anggota kodomain yang benar-benar menjadi pasangan.</p><p class="muted">Contoh: f = {(1, 2), (2, 4), (3, 6)} dengan kodomain {2, 4, 6, 8}. Domain = {1, 2, 3}, range = {2, 4, 6} — 8 tidak dipakai.</p></div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Menyajikan Fungsi</h2>
+    <p>Fungsi bisa disajikan dalam tiga bentuk: <strong>rumus</strong> (f(x) = 2x + 3), <strong>tabel</strong> (daftar pasangan x dan f(x)), dan <strong>grafik</strong> (titik-titik di bidang Kartesius). Ketiganya menyampaikan informasi yang sama.</p>
+  </div>
+
+<div class="card"><h3>Mesin fungsi f(x) = ax + b</h3><p class="muted">Atur a dan b, masukkan x, dan lihat hasilnya beserta tabel nilainya.</p><div class="grid-3"><div><label class="f-label" for="fmA">a</label><input type="number" id="fmA" value="2" /></div><div><label class="f-label" for="fmB">b</label><input type="number" id="fmB" value="3" /></div><div><label class="f-label" for="fmX">x</label><input type="number" id="fmX" value="5" /></div></div><button class="btn btn-primary" type="button" id="fmBtn" style="margin-top:14px">Hitung f(x)</button><div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="fmHasil"></div></div><div class="table-scroll" id="fmTabel" style="margin-top:14px"></div></div><div class="card" style="margin-top:16px"><h3>Latihan: nilai fungsi f(x) = 2x + 3</h3><p class="muted">Jawab satu per satu dengan tombol Cek di tiap soal. Pembahasan langkahnya muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="13" data-explain="f(5) = 2×5 + 3 = 13."><span class="qa-q">1) f(5) = …</span><div class="qa-controls"><label class="f-label" for="a5-q81" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q81" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="3" data-explain="f(0) = 2×0 + 3 = 3."><span class="qa-q">2) f(0) = …</span><div class="qa-controls"><label class="f-label" for="a5-q82" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q82" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="-1" data-explain="f(−2) = 2×(−2) + 3 = −1."><span class="qa-q">3) f(−2) = …</span><div class="qa-controls"><label class="f-label" for="a5-q83" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q83" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="23" data-explain="f(10) = 2×10 + 3 = 23."><span class="qa-q">4) f(10) = …</span><div class="qa-controls"><label class="f-label" for="a5-q84" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q84" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="11" data-explain="f(4) = 2×4 + 3 = 11."><span class="qa-q">5) f(4) = …</span><div class="qa-controls"><label class="f-label" for="a5-q85" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q85" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Nilai Fungsi dan Daerah Hasil</h2>
+    <p>Nilai fungsi f(a) diperoleh dengan mengganti x dengan a pada rumus. Daerah hasil (range) adalah kumpulan semua nilai f(x) untuk x di domain. Contoh: f(x) = 2x dengan domain {1, 2, 3} → range {2, 4, 6}.</p>
+  </div>
+
+<div class="card"><h3>Contoh menentukan range</h3><p>Fungsi f(x) = 5 − 2x, domain {−1, 0, 1, 2}.</p><p>f(−1) = 5 − 2(−1) = 7 · f(0) = 5 · f(1) = 3 · f(2) = 1.</p><p>Jadi range-nya {7, 5, 3, 1}.</p><p class="muted">Gunakan mesin fungsi di Sub-bab 3 untuk memeriksa: atur a = −2, b = 5, lalu coba x = −1, 0, 1, 2.</p></div><div class="card" style="margin-top:16px"><h3>Notasi fungsi</h3><p>f : x → 2x + 3 dibaca “fungsi f memetakan x ke 2x + 3”. f(4) = 11 dibaca “nilai fungsi f di x = 4 adalah 11”.</p></div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Fungsi dalam Kehidupan Sehari-hari</h2>
+    <p>Ongkos taksi, tarif parkir, biaya kirim paket, dan gaji lembur semuanya fungsi: masukannya (jarak, jam, berat) menentukan tepat satu keluaran (biaya).</p>
+  </div>
+
+<div class="card"><h3>Cerita: ongkos taksi</h3><p>Tarif awal Rp5.000 ditambah Rp3.000 per km. Fungsinya f(x) = 3.000x + 5.000, dengan x jarak dalam km. Perjalanan 10 km: f(10) = 3.000×10 + 5.000 = Rp35.000.</p></div><div class="card" style="margin-top:16px"><h3>Latihan: ongkos taksi f(x) = 3.000x + 5.000 (rupiah)</h3><p class="muted">Jawab satu per satu dengan tombol Cek di tiap soal. Pembahasan langkahnya muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="35000" data-explain="f(10) = 3.000×10 + 5.000 = 35.000."><span class="qa-q">1) Jarak 10 km. Ongkosnya Rp…</span><div class="qa-controls"><label class="f-label" for="a5-q86" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q86" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="20000" data-explain="f(5) = 3.000×5 + 5.000 = 20.000."><span class="qa-q">2) Jarak 5 km. Ongkosnya Rp…</span><div class="qa-controls"><label class="f-label" for="a5-q87" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q87" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="26000" data-explain="f(7) = 3.000×7 + 5.000 = 26.000."><span class="qa-q">3) Jarak 7 km. Ongkosnya Rp…</span><div class="qa-controls"><label class="f-label" for="a5-q88" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q88" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="50000" data-explain="f(15) = 3.000×15 + 5.000 = 50.000."><span class="qa-q">4) Jarak 15 km. Ongkosnya Rp…</span><div class="qa-controls"><label class="f-label" for="a5-q89" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q89" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="14000" data-explain="f(3) = 3.000×3 + 5.000 = 14.000."><span class="qa-q">5) Jarak 3 km. Ongkosnya Rp…</span><div class="qa-controls"><label class="f-label" for="a5-q90" style="position:absolute;left:-9999px">Jawaban soal</label><input type="number" id="a5-q90" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div>
+</section>
+
+
+<!-- ================= SUB-BAB 6 ================= -->
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa membedakan relasi dan fungsi.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menentukan domain, kodomain, dan range suatu fungsi.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menghitung nilai fungsi dan menyajikannya dalam tabel dan rumus.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh penerapan materi ini dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contoh nyatamu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung di bagian …, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman A.5</h3>
+    <ul>
+      <li>Relasi: hubungan antara anggota domain dan kodomain.</li>
+      <li>Fungsi: relasi yang setiap anggota domainnya punya tepat satu pasangan.</li>
+      <li>Domain = daerah asal, kodomain = daerah kawan, range = daerah hasil.</li>
+      <li>Fungsi disajikan sebagai rumus f(x), tabel, diagram panah, atau grafik.</li>
+      <li>Nilai fungsi f(a) diperoleh dengan mengganti x dengan a pada rumus.</li>
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 8</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 8</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../a6-persamaan-garis-lurus/index.html">A.6 Persamaan Garis Lurus</a> (Aktif)</p>
+    <p>MPI Matematika SMP — A.5 Relasi dan Fungsi, Kelas 8, 14 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

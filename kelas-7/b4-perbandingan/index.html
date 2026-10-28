@@ -4,13 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="B.4 Perbandingan — Matematika SMP Kelas 7. Modul ini sudah ada sebelumnya dan akan dimigrasikan ke template Biru Samudra." />
+<meta name="description" content="B.4 Perbandingan — Matematika SMP Kelas 7. Rasio, perbandingan senilai dan berbalik nilai, serta skala peta." />
 <link rel="icon" href="data:," />
 <title>B.4 Perbandingan — Kelas 7 · MPI Matematika SMP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <a class="skip-link" href="#utama">Lewati ke konten utama</a>
@@ -28,54 +29,272 @@
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero module-hero">
   <div class="wrap">
     <span class="eyebrow">B.4 · KELAS 7 · 14 JP · BILANGAN</span>
     <h1>Perbandingan</h1>
     <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menjelaskan, membedakan, membandingkan, dan menentukan rasio (skala, proporsi, dan laju perubahan) serta menyelesaikan permasalahan kontekstual yang terkait.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="../b1-bilangan-bulat/index.html">Pelajari dulu B.1 Bilangan Bulat →</a>
-      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 7</a>
-      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> menyederhanakan rasio dengan FPB, membedakan perbandingan senilai dan berbalik nilai lewat simulasi, memakai skala peta untuk jarak sebenarnya, dan menyelesaikan soal cerita jumlah dan selisih.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../aritmetika-sosial/index.html">← Aritmetika Sosial</a>
+      <a class="btn btn-ghost" href="../index.html">Daftar Modul Kelas 7</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
     </div>
   </div>
 </header>
 
-<main id="utama">
-  <section aria-labelledby="status">
-    <div class="wrap">
-      <div class="card">
-        <span class="pill pill-amber">Status: Sudah ada — migrasi</span>
-        <h2 id="status" style="margin-top:12px">Modul ini sudah ada, sedang dimigrasikan</h2>
-        <p>Modul Perbandingan sudah pernah dibuat sebelumnya sebagai media interaktif tersendiri (dengan Laboratorium Apel &amp; Jeruk, kalkulator penyederhana perbandingan, simulasi perbandingan senilai dan berbalik nilai, serta kalkulator skala peta). Modul itu <strong>belum hilang</strong> — isinya akan dipindahkan ke template baru ini supaya tampilannya konsisten dengan modul B.1 dan modul-modul berikutnya.</p>
-        <p><strong>Yang berubah saat migrasi:</strong> palet warna menjadi Biru Samudra (#2563EB), navigasi sub-bab dan progress bar mengikuti template B.1, serta kuis dan refleksi memakai format yang sama. <strong>Yang tidak berubah:</strong> isi dan kunci jawaban matematikanya.</p>
-        <p class="note"><strong>Sementara itu:</strong> kamu bisa mulai dari modul B.1 Bilangan Bulat yang sudah aktif, atau kembali ke daftar modul Kelas 7.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn btn-primary" href="../b1-bilangan-bulat/index.html">Buka B.1 Bilangan Bulat →</a>
-          <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 7</a>
-        </div>
-      </div>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Rasio</a>
+    <a href="#sub2" data-sub="sub2">2 · Senilai</a>
+    <a href="#sub3" data-sub="sub3">3 · Berbalik Nilai</a>
+    <a href="#sub4" data-sub="sub4">4 · Skala Peta</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Cerita</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
 
-      <div class="sec-head" style="margin-top:28px">
-        <span class="sec-num">Isi modul lama — gambaran singkat</span>
-        <h2>Yang akan kamu temukan setelah migrasi</h2>
-      </div>
-      <div class="grid-2">
-        <div class="mini-card"><span class="icon-box ib-teal">1</span><h3>Rasio dan penyederhanaan</h3><p>Memahami rasio a : b, menyederhanakan dengan FPB, dan membandingkan dua rasio.</p></div>
-        <div class="mini-card"><span class="icon-box ib-amber">2</span><h3>Perbandingan senilai</h3><p>Jika satu besaran naik, besaran lain ikut naik dengan kelipatan yang sama. Contoh: harga buku dan jumlah buku.</p></div>
-        <div class="mini-card"><span class="icon-box ib-coral">3</span><h3>Perbandingan berbalik nilai</h3><p>Jika satu besaran naik, besaran lain justru turun. Contoh: jumlah pekerja dan waktu pengerjaan.</p></div>
-        <div class="mini-card"><span class="icon-box ib-blue">4</span><h3>Skala peta</h3><p>Menghitung jarak sebenarnya dari jarak pada peta dan skala, serta sebaliknya.</p></div>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Rasio: Membandingkan Dua Besaran</h2>
+    <p>Perbandingan (rasio) adalah cara membandingkan dua besaran dengan membagi yang satu dengan yang lain. Di keranjang ada apel dan jeruk — perbandingan apel terhadap jeruk ditulis <strong>a : b</strong> dan dibaca “a banding b”. Urutannya tidak boleh tertukar!</p>
+  </div>
+<div class="card">
+    <h3>Laboratorium Apel &amp; Jeruk</h3>
+    <p class="muted">Geser banyak apel dan jeruk, lalu perhatikan perbandingan dan bentuk sederhananya. Batang menunjukkan besarnya masing-masing.</p>
+    <label class="f-label" for="apelRange">Apel: <span id="apelVal">12</span></label>
+    <input type="range" id="apelRange" min="1" max="24" step="1" value="12" />
+    <div class="dot-row" id="apelDots" style="margin:8px 0 4px"></div>
+    <div class="ratio-bar"><span id="apelBar" style="width:50%;background:var(--coral)"></span></div>
+    <label class="f-label" for="jerukRange" style="margin-top:14px">Jeruk: <span id="jerukVal">8</span></label>
+    <input type="range" id="jerukRange" min="1" max="24" step="1" value="8" />
+    <div class="dot-row" id="jerukDots" style="margin:8px 0 4px"></div>
+    <div class="ratio-bar"><span id="jerukBar" style="width:33%;background:var(--amber)"></span></div>
+    <div class="result-box" style="margin-top:16px" aria-live="polite">
+      <div class="res-big" id="ratioBig">12 : 8 = 3 : 2</div>
+      <p id="ratioText">Sebagai pecahan: 12/8 = 3/2. Artinya setiap 3 apel, ada 2 jeruk. FPB dari 12 dan 8 adalah 4.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator penyederhana perbandingan</h3>
+    <p class="muted">Isi dua bilangan, kalkulator membaginya dengan FPB dan menunjukkan langkahnya.</p>
+    <div class="grid-2">
+      <div><label class="f-label" for="simpA">Bilangan pertama</label><input type="number" id="simpA" value="18" /></div>
+      <div><label class="f-label" for="simpB">Bilangan kedua</label><input type="number" id="simpB" value="24" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="simpBtn" style="margin-top:14px">Sederhanakan</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="simpResult">18 : 24 → 3 : 4</div><p id="simpFpb">FPB dari 18 dan 24 adalah 6</p></div>
+    <div class="steps" id="simpSteps" style="margin-top:14px"></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: sederhanakan perbandingan</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="7" data-explain="Faktor 14 = 1, 2, 7, 14; faktor 21 = 1, 3, 7, 21. Faktor persekutuan terbesarnya 7."><span class="qa-q">1) Perbandingan siswa laki-laki dan perempuan di kelas 7A adalah 14 : 21. FPB dari 14 dan 21 adalah …</span><div class="qa-controls"><label class="f-label" for="b4-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="b4-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="3" data-explain="FPB dari 36 dan 48 adalah 12. 36 ÷ 12 = 3 dan 48 ÷ 12 = 4, jadi 3 : 4."><span class="qa-q">2) Sederhanakan 36 : 48. Suku pertamanya (setelah disederhanakan) adalah …</span><div class="qa-controls"><label class="f-label" for="b4-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="b4-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="4" data-explain="FPB dari 18 dan 24 adalah 6. 18 ÷ 6 = 3 dan 24 ÷ 6 = 4, jadi 3 : 4."><span class="qa-q">3) Di keranjang ada 18 apel dan 24 jeruk. Perbandingan apel : jeruk yang paling sederhana, suku keduanya adalah …</span><div class="qa-controls"><label class="f-label" for="b4-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="b4-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Perbandingan Senilai: Naik Bareng, Turun Bareng</h2>
+    <p>Dua besaran dikatakan <strong>senilai</strong> kalau yang satu naik, yang lain ikut naik dengan kelipatan yang sama — dan sebaliknya. Harga 1 buku Rp6.000, maka 2 buku Rp12.000, 3 buku Rp18.000, dan seterusnya. Grafiknya berupa garis lurus yang melewati titik (0,0).</p>
+  </div>
+<div class="card">
+    <h3>Simulasi: harga buku</h3>
+    <p class="muted">Geser jumlah buku dan perhatikan total harganya, grafiknya, dan tabelnya. Perhatikan: kalau bukunya 2 kali lipat, harganya juga 2 kali lipat.</p>
+    <label class="f-label" for="bukuRange">Jumlah buku: <span id="bukuVal">5 buku</span></label>
+    <input type="range" id="bukuRange" min="0" max="10" step="1" value="5" />
+    <div class="result-box" style="margin-top:14px" aria-live="polite">
+      <div class="res-big" id="bukuTotal">Rp30.000</div>
+      <p id="bukuCalc">5 × Rp6.000 = Rp30.000</p>
+    </div>
+    <svg id="senilaiChart" class="chart-svg" width="320" height="190" viewBox="0 0 320 190" role="img" aria-label="Grafik harga buku terhadap jumlah buku" style="margin-top:14px"></svg>
+    <div class="table-scroll" style="margin-top:14px">
+      <table id="bukuTable"><thead><tr><th>Jumlah buku</th><th class="num">Harga</th></tr></thead><tbody></tbody></table>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Ciri senilai:</strong> perbandingan harga : banyak buku selalu sama, yaitu 6.000 : 1. Rumusnya: nilai yang dicari = (diketahui ÷ pembanding) × pembanding baru.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: senilai</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (untuk rupiah, tanpa “Rp” dan tanpa titik).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="84000" data-explain="Harga 1 kg = 48.000 ÷ 4 = Rp12.000. Maka 7 kg = 7 × 12.000 = Rp84.000."><span class="qa-q">1) 4 kg beras harganya Rp48.000. Harga 7 kg beras yang sama = Rp …</span><div class="qa-controls"><label class="f-label" for="b4-4" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="b4-4" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="150" data-explain="Kecepatan = 90 ÷ 1,5 = 60 km/jam. Dalam 2,5 jam: 2,5 × 60 = 150 km."><span class="qa-q">2) Sebuah mobil menempuh 90 km dalam 1,5 jam dengan kecepatan tetap. Jarak yang ditempuh dalam 2,5 jam = … km</span><div class="qa-controls"><label class="f-label" for="b4-5" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="b4-5" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="5" data-explain="30 kue adalah 30 ÷ 12 = 2,5 kali lipatnya. Tepung = 2 × 2,5 = 5 gelas."><span class="qa-q">3) Resep kue membutuhkan 2 gelas tepung untuk 12 kue. Untuk membuat 30 kue, tepung yang dibutuhkan = … gelas</span><div class="qa-controls"><label class="f-label" for="b4-6" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="b4-6" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Perbandingan Berbalik Nilai: Yang Satu Naik, yang Lain Turun</h2>
+    <p>Dua besaran dikatakan <strong>berbalik nilai</strong> kalau yang satu naik, yang lain justru turun. Makin banyak pekerja, makin cepat pekerjaan selesai — tapi hasil kali keduanya selalu tetap. Inilah kebalikan dari perbandingan senilai, dan keduanya paling sering tertukar!</p>
+  </div>
+<div class="card">
+    <h3>Simulasi: pekerja dan waktu</h3>
+    <p class="muted">Sebuah pekerjaan membutuhkan total 60 hari-pekerja. Geser jumlah pekerja dan perhatikan lamanya pekerjaan — grafiknya melengkung turun, bukan garis lurus.</p>
+    <label class="f-label" for="pekerjaRange">Jumlah pekerja: <span id="pekerjaVal">6 orang</span></label>
+    <input type="range" id="pekerjaRange" min="2" max="20" step="1" value="6" />
+    <div class="result-box" style="margin-top:14px" aria-live="polite">
+      <div class="res-big" id="pekerjaHari">10 hari</div>
+      <p id="pekerjaCalc">60 ÷ 6 pekerja = 10 hari · hasil kali selalu tetap: 6 × 10 = 60</p>
+    </div>
+    <svg id="berbalikChart" class="chart-svg" width="320" height="190" viewBox="0 0 320 190" role="img" aria-label="Grafik lama pengerjaan terhadap jumlah pekerja" style="margin-top:14px"></svg>
+    <p class="note" style="margin-top:14px"><strong>Ciri berbalik nilai:</strong> hasil kali kedua besaran selalu tetap (pekerja × hari = 60). Rumusnya: nilai yang dicari = total tetap ÷ besaran baru.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: berbalik nilai</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="8" data-explain="Total kerja = 6 × 12 = 72 hari-pekerja. Lama hari = 72 ÷ 9 = 8 hari."><span class="qa-q">1) 6 pekerja dapat menyelesaikan pengecatan rumah dalam 12 hari. Jika pekerjanya menjadi 9 orang, pekerjaan selesai dalam … hari</span><div class="qa-controls"><label class="f-label" for="b4-7" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="b4-7" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="12" data-explain="Total pakan = 20 × 15 = 300 hari-ekor. Lama = 300 ÷ 25 = 12 hari."><span class="qa-q">2) Persediaan pakan cukup untuk 20 ekor ayam selama 15 hari. Jika ayamnya menjadi 25 ekor, persediaan itu cukup selama … hari</span><div class="qa-controls"><label class="f-label" for="b4-8" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="b4-8" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="3" data-explain="Jarak tetap = 60 × 4 = 240 km. Waktu = 240 ÷ 80 = 3 jam."><span class="qa-q">3) Sebuah mobil menempuh perjalanan dalam 4 jam dengan kecepatan 60 km/jam. Jika kecepatannya 80 km/jam, waktu tempuhnya menjadi … jam</span><div class="qa-controls"><label class="f-label" for="b4-9" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="b4-9" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Skala Peta: Jarak Kecil di Kertas, Jarak Besar di Dunia</h2>
+    <p>Skala peta 1 : 500.000 artinya 1 cm di peta mewakili 500.000 cm (5 km) di dunia nyata. Skala adalah perbandingan antara jarak di peta dan jarak sebenarnya — dan keduanya harus dalam satuan yang sama sebelum dibagi.</p>
+  </div>
+<div class="formula"><div class="big">Skala = Jarak peta ÷ Jarak sebenarnya</div><p>1 km = 100.000 cm. Ubah dulu ke cm sebelum menghitung.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator skala peta</h3>
+    <p class="muted">Pilih yang ingin dicari, isi dua bilangan yang diketahui. Kalkulator menghitung sisanya beserta langkahnya.</p>
+    <div>
+      <label class="f-label" for="skalaMode">Yang dicari</label>
+      <select id="skalaMode"><option value="sebenarnya">Jarak sebenarnya</option><option value="peta">Jarak di peta</option><option value="skala">Skala peta</option></select>
+    </div>
+    <div class="grid-3" style="margin-top:14px">
+      <div id="fieldPeta"><label class="f-label" for="inPeta">Jarak di peta (cm)</label><input type="number" id="inPeta" value="8" /></div>
+      <div id="fieldSebenarnya"><label class="f-label" for="inSebenarnya">Jarak sebenarnya (km)</label><input type="number" id="inSebenarnya" value="40" /></div>
+      <div id="fieldSkala"><label class="f-label" for="inSkala">Skala (1 : …)</label><input type="number" id="inSkala" value="500000" /></div>
+    </div>
+    <div class="result-box" style="margin-top:14px" aria-live="polite">
+      <div class="res-big" id="skalaResult">40 km</div>
+      <p><span id="skalaResLabel">JARAK SEBENARNYA</span> · <span id="skalaExplain">8 cm × 500.000 = 4.000.000 cm = 40 km</span></p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: skala</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (km atau cm sesuai soal, tanpa satuan).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="40" data-explain="Jarak sebenarnya = 8 × 500.000 = 4.000.000 cm = 40 km."><span class="qa-q">1) Pada peta berskala 1 : 500.000, jarak dua kota adalah 8 cm. Jarak sebenarnya kedua kota itu = … km</span><div class="qa-controls"><label class="f-label" for="b4-10" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="b4-10" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="4" data-explain="12 km = 1.200.000 cm; 1.200.000 ÷ 300.000 = 4 cm."><span class="qa-q">2) Jarak sebenarnya dua desa adalah 12 km. Jika digambar dengan skala 1 : 300.000, jarak kedua desa pada peta = … cm</span><div class="qa-controls"><label class="f-label" for="b4-11" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="b4-11" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="15" data-explain="Jarak sebenarnya = 6 × 250.000 = 1.500.000 cm = 15 km."><span class="qa-q">3) Pada peta berskala 1 : 250.000, jarak dua tempat adalah 6 cm. Jarak sebenarnya = … km</span><div class="qa-controls"><label class="f-label" for="b4-12" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="b4-12" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Soal Cerita Campuran: Senilai atau Berbalik?</h2>
+    <p>Kunci soal cerita perbandingan ada pada satu pertanyaan: <strong>kalau besaran pertama naik, besaran kedua ikut naik atau malah turun?</strong> Ikut naik → senilai. Malah turun → berbalik nilai. Kalau sudah bisa membedakannya, separuh soal sudah selesai.</p>
+  </div>
+<div class="card">
+    <h3>Latihan: pilih jawaban yang benar</h3>
+    <p class="muted">Baca soalnya, lalu ketuk jawaban yang paling tepat. Penjelasan muncul setelah kamu memilih.</p>
+    <div class="stack">
+      <div class="model-box" data-explain="FPB dari 14 dan 21 adalah 7. 14 ÷ 7 = 2 dan 21 ÷ 7 = 3, jadi 2 : 3."><p><strong>A.</strong> Perbandingan siswa laki-laki dan perempuan di kelas 7A adalah 14 : 21. Bentuk paling sederhananya adalah …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal A"><button class="btn btn-ghost model-opt" type="button">7 : 3</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">2 : 3</button><button class="btn btn-ghost model-opt" type="button">3 : 2</button><button class="btn btn-ghost model-opt" type="button">14 : 7</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Selisih bagian = 7 − 4 = 3 bagian = Rp30.000, jadi 1 bagian = Rp10.000. Uang Sinta = 7 × Rp10.000 = Rp70.000."><p><strong>B.</strong> Perbandingan uang Rina : Sinta adalah 4 : 7. Selisih uang mereka Rp30.000. Uang Sinta adalah …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal B"><button class="btn btn-ghost model-opt" type="button">Rp40.000</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Rp70.000</button><button class="btn btn-ghost model-opt" type="button">Rp75.000</button><button class="btn btn-ghost model-opt" type="button">Rp110.000</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="7 bagian = 42 tahun, jadi 1 bagian = 6 tahun. Umur Anak = 2 × 6 = 12 tahun."><p><strong>C.</strong> Perbandingan umur Ayah : Anak adalah 7 : 2. Jika umur Ayah 42 tahun, umur Anak adalah …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal C"><button class="btn btn-ghost model-opt" type="button">10 tahun</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">12 tahun</button><button class="btn btn-ghost model-opt" type="button">14 tahun</button><button class="btn btn-ghost model-opt" type="button">21 tahun</button></div><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: hitung sendiri</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="25" data-explain="Jumlah bagian = 5 + 3 = 8 bagian = 40 butir, jadi 1 bagian = 5 butir. Kelereng Andi = 5 × 5 = 25 butir."><span class="qa-q">1) Perbandingan kelereng Andi : Budi = 5 : 3. Jumlah kelereng mereka 40 butir. Kelereng Andi = … butir</span><div class="qa-controls"><label class="f-label" for="b4-13" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="b4-13" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="40000" data-explain="Selisih bagian = 3 bagian = Rp30.000, jadi 1 bagian = Rp10.000. Uang Rina = 4 × Rp10.000 = Rp40.000."><span class="qa-q">2) Perbandingan uang Rina : Sinta adalah 4 : 7. Selisih uang mereka Rp30.000. Uang Rina = Rp …</span><div class="qa-controls"><label class="f-label" for="b4-14" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="b4-14" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Cara cepat soal “jumlah diketahui”:</strong> jumlahkan dulu semua bagiannya, bagi jumlah sebenarnya dengan jumlah bagian, lalu kalikan dengan bagian yang ditanyakan.</p>
+  </div>
+</section>
+
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+<div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
       </div>
     </div>
-  </section>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menulis, menyederhanakan, dan membandingkan rasio dengan FPB.</label></div><div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa membedakan perbandingan senilai dan berbalik nilai serta menyelesaikan soal ceritanya.</label></div><div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa memakai skala peta untuk menghitung jarak sebenarnya dan jarak pada peta.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Satu contoh yang kutemui hari ini:</label>
+      <textarea id="refContoh" placeholder="Contoh: harga 3 buku Rp18.000, skala peta di buku atlas, pekerja mengecat kelas, …"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih tertukar senilai dan berbalik nilai, mau mengulang simulasi pekerja…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman</h3>
+    <ul><li>Rasio a : b membandingkan dua besaran; menyederhanakannya = membagi keduanya dengan FPB.</li><li>Perbandingan senilai: satu naik, yang lain ikut naik (hasil bagi tetap). Perbandingan berbalik nilai: satu naik, yang lain turun (hasil kali tetap).</li><li>Skala = jarak peta ÷ jarak sebenarnya. Samakan dulu satuannya: 1 km = 100.000 cm.</li><li>Soal “jumlah diketahui”: jumlahkan bagiannya dulu, cari nilai 1 bagian, lalu kalikan dengan bagian yang ditanyakan.</li><li>Soal “selisih diketahui”: selisihkan bagiannya dulu, cari nilai 1 bagian, lalu kalikan.</li></ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
 </main>
 
 <footer>
   <div class="wrap">
-    <p><a href="../index.html">← Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a></p>
+    <p><a href="../aritmetika-sosial/index.html">← Aritmetika Sosial</a> · <a href="../index.html">Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../a1-bentuk-aljabar/index.html">A.1 Bentuk Aljabar</a></p>
     <p>MPI Matematika SMP — B.4 Perbandingan, Kelas 7, 14 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
   </div>
 </footer>
 <script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

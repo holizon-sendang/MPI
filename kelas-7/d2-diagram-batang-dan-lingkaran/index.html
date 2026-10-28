@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="D.2 Diagram Batang dan Lingkaran — Matematika SMP Kelas 7. Membaca dan membuat diagram batang dan lingkaran, sudut pusat, serta estimasi." />
+<link rel="icon" href="data:," />
+<title>D.2 Diagram Batang dan Lingkaran — Kelas 7 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">D.2 · KELAS 7 · 8 JP · DATA & PELUANG</span>
+    <h1>Diagram Batang dan Lingkaran</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menggunakan, menyajikan, membuat, dan menginterpretasi diagram batang dan diagram lingkaran serta melakukan estimasi berdasarkan data.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> membaca dan membuat diagram batang, membaca dan membuat diagram lingkaran, menghitung sudut pusat dari persen, dan mengestimasi berdasarkan data.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../d1-investigasi-data/index.html">← D.1 Investigasi Data</a>
+      <a class="btn btn-ghost" href="../index.html">Daftar Modul Kelas 7</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Baca Batang</a>
+    <a href="#sub2" data-sub="sub2">2 · Buat Batang</a>
+    <a href="#sub3" data-sub="sub3">3 · Baca Lingkaran</a>
+    <a href="#sub4" data-sub="sub4">4 · Buat Lingkaran</a>
+    <a href="#sub5" data-sub="sub5">5 · Estimasi</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Membaca Diagram Batang</h2>
+    <p>Diagram batang menyajikan data sebagai batang-batang tegak: makin tinggi batangnya, makin besar nilainya. Sumbu mendatar menunjukkan kategori, sumbu tegak menunjukkan banyaknya (frekuensi). Sekali lihat, kamu langsung tahu mana yang terbanyak, mana yang tersedikit, dan berapa selisihnya.</p>
+  </div>
+<div class="card">
+    <h3>Pembuat diagram batang</h3>
+    <p class="muted">Data hobi 40 siswa kelas 7. Ubah angkanya dan perhatikan batangnya ikut berubah — batang tertinggi selalu menunjukkan kategori terbanyak.</p>
+    <div class="grid-2">
+      <div><label class="f-label" for="bar0">Membaca (siswa)</label><input type="number" id="bar0" value="12" /></div>
+      <div><label class="f-label" for="bar1">Olahraga (siswa)</label><input type="number" id="bar1" value="8" /></div>
+      <div><label class="f-label" for="bar2">Musik (siswa)</label><input type="number" id="bar2" value="15" /></div>
+      <div><label class="f-label" for="bar3">Menonton (siswa)</label><input type="number" id="bar3" value="5" /></div>
+    </div>
+    <svg id="barSvg" class="chart-svg" width="320" height="190" viewBox="0 0 320 190" role="img" aria-label="Diagram batang hobi siswa" style="margin-top:16px"></svg>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="barHasil">Total: 40 siswa · Terbanyak: Musik (15 siswa)</div><p id="barLangkah">Batang yang paling tinggi menunjukkan kategori dengan nilai terbesar. Ubah angkanya dan perhatikan batangnya ikut berubah.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Cara membaca diagram batang</h3>
+    <ol class="langkah">
+      <li>Baca judul dan sumbu-sumbunya: apa kategorinya, apa satuannya.</li>
+      <li>Cari batang tertinggi (nilai terbesar) dan batang terpendek (nilai terkecil).</li>
+      <li>Bandingkan tinggi batang untuk melihat selisih antarkategori.</li>
+      <li>Jumlahkan semua batang kalau ditanya totalnya.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Mengaplikasi</span>
+    <h2 id="judul-sub2">Membuat Diagram Batang</h2>
+    <p>Membuat diagram batang itu empat langkah: tentukan kategori dan nilainya, gambar sumbu dengan skala yang sama, gambar batang setinggi nilainya, lalu beri judul dan label. Skala sumbu harus <strong>konsisten</strong> — kalau tidak, batangmu berbohong.</p>
+  </div>
+<div class="card">
+    <h3>Latihan bertingkat: membaca diagram batang</h3>
+    <p class="muted">Sebuah diagram batang menunjukkan penjualan buku: Senin 15, Selasa 20, Rabu 25. Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="25" data-explain="Batang tertinggi adalah Rabu dengan 25 buku."><span class="qa-q">1) Penjualan terbanyak dalam tiga hari itu adalah … buku</span><div class="qa-controls"><label class="f-label" for="e2-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="e2-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="60" data-explain="Total = 15 + 20 + 25 = 60 buku."><span class="qa-q">2) Total penjualan selama tiga hari adalah … buku</span><div class="qa-controls"><label class="f-label" for="e2-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="e2-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="10" data-explain="Selisih = 25 − 15 = 10 buku."><span class="qa-q">3) Selisih penjualan Rabu dan Senin adalah … buku</span><div class="qa-controls"><label class="f-label" for="e2-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="e2-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Jebakan skala:</strong> kalau sumbu tegak dimulai dari 20, bukan 0, perbedaan antarbatang terlihat jauh lebih besar dari sebenarnya. Selalu periksa dari mana sumbunya dimulai.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Langkah membuat diagram batang</h3>
+    <ol class="langkah">
+      <li>Siapkan tabel data: kategori dan nilainya.</li>
+      <li>Gambar sumbu mendatar (kategori) dan sumbu tegak (nilai) dengan skala yang sama rata.</li>
+      <li>Gambar tiap batang setinggi nilainya, dengan lebar yang sama dan jarak yang sama.</li>
+      <li>Beri judul diagram dan label pada tiap sumbu.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Membaca Diagram Lingkaran</h2>
+    <p>Diagram lingkaran menyajikan data sebagai juring-juring: makin besar juringnya, makin besar bagiannya dari keseluruhan. Seluruh lingkaran adalah 100% (360°). Juring setengah lingkaran berarti 50%, seperempat lingkaran berarti 25%.</p>
+  </div>
+<div class="card">
+    <h3>Penjelajah diagram lingkaran</h3>
+    <p class="muted">Geser persen bagian A (amber) dan perhatikan juringnya membesar atau mengecil. Sudut pusatnya selalu persen × 360°.</p>
+    <label class="f-label" for="pieRange">Bagian A: <span id="pieVal">25%</span></label>
+    <input type="range" id="pieRange" min="0" max="100" step="5" value="25" />
+    <div class="pie-wrap" style="margin-top:14px">
+      <svg id="pieSvg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="Diagram lingkaran dua bagian"></svg>
+      <ul class="bar-legend">
+        <li><span><i style="background:#F59E0B"></i>Bagian A</span><strong id="pieLegA">25%</strong></li>
+        <li><span><i style="background:#2563EB"></i>Bagian B</span><strong id="pieLegB">75%</strong></li>
+      </ul>
+    </div>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="pieHasil">Bagian A: 25% = sudut pusat 90°</div><p id="pieLangkah">Sudut pusat = persen × 360° = 25% × 360° = 90°. Sisa 75% untuk bagian B, sudutnya 270°.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Patokan cepat yang wajib dihafal</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Bagian</th><th class="num">Persen</th><th class="num">Sudut pusat</th></tr></thead>
+        <tbody>
+          <tr><td>Setengah lingkaran</td><td class="num">50%</td><td class="num">180°</td></tr>
+          <tr><td>Seperempat lingkaran</td><td class="num">25%</td><td class="num">90°</td></tr>
+          <tr><td>Seperlima lingkaran</td><td class="num">20%</td><td class="num">72°</td></tr>
+          <tr><td>Sepersepuluh lingkaran</td><td class="num">10%</td><td class="num">36°</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Membuat Diagram Lingkaran: dari Persen ke Sudut Pusat</h2>
+    <p>Untuk menggambar diagram lingkaran, tiap bagian diubah dulu menjadi <strong>sudut pusat</strong>: sudut pusat = persen × 360°. Bagian 20% menjadi juring 72°, bagian 30% menjadi 108°, dan seterusnya. Jumlah semua sudut pusat harus tepat 360° — kalau tidak, ada yang salah hitung.</p>
+  </div>
+<div class="formula"><div class="big">Sudut pusat = persen × 360°</div><p>Atau dari banyaknya: persen = banyak ÷ total × 100%, lalu kalikan 360°.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator sudut pusat</h3>
+    <p class="muted">Pilih yang ingin dicari: dari persen langsung ke sudut pusat, atau dari banyak dan total dulu.</p>
+    <div>
+      <label class="f-label" for="spMode">Yang dicari</label>
+      <select id="spMode"><option value="sudut">Sudut pusat (dari persen)</option><option value="persen">Persen &amp; sudut pusat (dari banyak dan total)</option></select>
+    </div>
+    <div class="grid-2" style="margin-top:14px">
+      <div><label class="f-label" for="spV1">Bilangan pertama (persen atau banyak)</label><input type="number" id="spV1" value="20" /></div>
+      <div><label class="f-label" for="spV2">Bilangan kedua (total, bila perlu)</label><input type="number" id="spV2" value="120" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="spBtn" style="margin-top:14px">Hitung</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="spHasil">Sudut pusat = 72°</div><p id="spLangkah">Sudut pusat = 20% × 360° = 72°.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: sudut pusat</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (derajat atau persen sesuai soal, tanpa satuan).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="72" data-explain="Sudut pusat = 20% × 360° = 72°."><span class="qa-q">1) Sebuah bagian sebesar 20% dalam diagram lingkaran. Sudut pusatnya = …°</span><div class="qa-controls"><label class="f-label" for="e2-4" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="e2-4" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="90" data-explain="Persen = 30 ÷ 120 × 100% = 25%. Sudut pusat = 25% × 360° = 90°."><span class="qa-q">2) Dari 120 siswa, 30 siswa suka sepak bola. Sudut pusat juring sepak bola = …°</span><div class="qa-controls"><label class="f-label" for="e2-5" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="e2-5" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="30" data-explain="Persen = 108° ÷ 360° × 100% = 30%."><span class="qa-q">3) Sebuah juring bersudut pusat 108°. Persen bagian itu = …%</span><div class="qa-controls"><label class="f-label" for="e2-6" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="e2-6" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Estimasi Berdasarkan Data dan Membandingkan Diagram</h2>
+    <p>Diagram yang bagus tidak hanya dibaca — tapi dipakai untuk <strong>mengestimasi</strong>. Kalau diagram batang menunjukkan penjualan Januari 20, Februari 30, dan Maret 40, kamu bisa memperkirakan total kuartal pertama (90) dan trennya (naik 10 tiap bulan). Bandingkan juga dua diagram: mana yang bagiannya lebih besar, dan apakah perbedaannya bermakna?</p>
+  </div>
+<div class="card">
+    <h3>Latihan: pilih jawaban yang benar</h3>
+    <p class="muted">Baca soalnya, lalu ketuk jawaban yang paling tepat.</p>
+    <div class="stack">
+      <div class="model-box" data-explain="Batang memudahkan perbandingan antar kategori lewat tingginya."><p><strong>A.</strong> Diagram batang paling cocok untuk …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal A"><button class="btn btn-ghost model-opt" type="button">Menunjukkan bagian dari keseluruhan</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Membandingkan banyak tiap kategori</button><button class="btn btn-ghost model-opt" type="button">Menunjukkan perubahan waktu kontinu</button><button class="btn btn-ghost model-opt" type="button">Menghitung rata-rata</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Lingkaran menunjukkan tiap bagian sebagai juring dari keseluruhan 100%."><p><strong>B.</strong> Diagram lingkaran paling cocok untuk …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal B"><button class="btn btn-ghost model-opt" type="button">Membandingkan tinggi batang</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Menunjukkan proporsi bagian dari keseluruhan</button><button class="btn btn-ghost model-opt" type="button">Menunjukkan tren waktu</button><button class="btn btn-ghost model-opt" type="button">Menghitung modus</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Sudut pusat = 25% × 360° = 90° — seperempat lingkaran."><p><strong>C.</strong> Sebuah bagian sebesar 25% dalam diagram lingkaran. Sudut pusatnya adalah …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal C"><button class="btn btn-ghost model-opt" type="button">45°</button><button class="btn btn-ghost model-opt" type="button">180°</button><button class="btn btn-ghost model-opt" type="button">60°</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">90°</button></div><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: estimasi dari diagram</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="90" data-explain="Total = 20 + 30 + 40 = 90."><span class="qa-q">1) Diagram batang penjualan: Januari 20, Februari 30, Maret 40. Estimasi total penjualan kuartal pertama = …</span><div class="qa-controls"><label class="f-label" for="e2-7" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="e2-7" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="20" data-explain="40% × 50 = 20 siswa."><span class="qa-q">2) Dari 50 siswa, 40% suka musik. Banyak siswa yang suka musik = … siswa</span><div class="qa-controls"><label class="f-label" for="e2-8" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="e2-8" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="50" data-explain="180° ÷ 360° × 100% = 50% — setengah lingkaran."><span class="qa-q">3) Sebuah juring bersudut pusat 180°. Persen bagian itu = …%</span><div class="qa-controls"><label class="f-label" for="e2-9" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="e2-9" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Estimasi yang baik:</strong> bulatkan dulu angkanya, hitung di kepala, lalu bandingkan dengan hitungan persis. Kalau jauh berbeda, periksa lagi langkahmu.</p>
+  </div>
+</section>
+
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+<div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa membaca dan membuat diagram batang.</label></div><div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa membaca dan membuat diagram lingkaran serta menghitung sudut pusat.</label></div><div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa mengestimasi dan membandingkan data dari diagram.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Satu contoh yang kutemui hari ini:</label>
+      <textarea id="refContoh" placeholder="Contoh: diagram hobi teman sekelas, diagram hasil survei, penjualan di kantin, …"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung mengubah persen menjadi sudut pusat, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman</h3>
+    <ul><li>Diagram batang: sumbu mendatar = kategori, sumbu tegak = frekuensi; batang tertinggi = nilai terbesar.</li><li>Diagram lingkaran: seluruh lingkaran = 100% = 360°; tiap juring adalah satu bagian.</li><li>Sudut pusat = persen × 360°. Persen = banyak ÷ total × 100%.</li><li>Jumlah semua sudut pusat harus tepat 360° — itu cara memeriksa hitunganmu.</li><li>Pilih diagram sesuai pertanyaan: batang untuk perbandingan, lingkaran untuk bagian dari keseluruhan.</li></ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../d1-investigasi-data/index.html">← D.1 Investigasi Data</a> · <a href="../index.html">Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../../kelas-8/b5-bilangan-berpangkat/index.html">B.5 Bilangan Berpangkat (Kelas 8)</a></p>
+    <p>MPI Matematika SMP — D.2 Diagram Batang dan Lingkaran, Kelas 7, 8 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Aritmetika Sosial — Matematika SMP Kelas 7. Untung dan rugi, diskon, bruto tara netto, bunga tunggal, dan pajak." />
+<link rel="icon" href="data:," />
+<title>Aritmetika Sosial — Kelas 7 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">ARITMETIKA SOSIAL · KELAS 7 · 12 JP · BILANGAN</span>
+    <h1>Aritmetika Sosial</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Literasi finansial dari B.2/B.3: menentukan untung dan rugi beserta persentasenya, menghitung harga setelah diskon, menentukan bruto, tara, dan netto, serta menghitung bunga tunggal dan pajak dalam permasalahan kontekstual.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> membaca untung dan rugi dari harga beli dan harga jual, menghitung persentasenya, memburu harga terbaik setelah diskon, menimbang bruto–tara–netto, dan menghitung bunga tabungan serta pajak — semuanya lewat konteks jual beli yang nyata.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../b3-bilangan-rasional/index.html">← B.3 Bilangan Rasional</a>
+      <a class="btn btn-ghost" href="../index.html">Daftar Modul Kelas 7</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Untung & Rugi</a>
+    <a href="#sub2" data-sub="sub2">2 · Persen Untung</a>
+    <a href="#sub3" data-sub="sub3">3 · Diskon</a>
+    <a href="#sub4" data-sub="sub4">4 · Bruto & Netto</a>
+    <a href="#sub5" data-sub="sub5">5 · Bunga & Pajak</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Untung dan Rugi: Harga Beli lawan Harga Jual</h2>
+    <p>Pedagang membeli barang dengan <strong>harga beli</strong>, lalu menjualnya dengan <strong>harga jual</strong>. Kalau harga jual lebih besar, pedagang <strong>untung</strong>; kalau lebih kecil, pedagang <strong>rugi</strong>. Selisih keduanya itulah untung atau ruginya.</p>
+  </div>
+<div class="grid-3">
+    <div class="mini-card"><span class="icon-box ib-teal">Rp</span><h3>Harga Beli (HB)</h3><p>Uang yang dikeluarkan pedagang untuk mendapatkan barang. Ini modalnya.</p></div>
+    <div class="mini-card"><span class="icon-box ib-amber">Rp</span><h3>Harga Jual (HJ)</h3><p>Uang yang diterima pedagang saat barang terjual ke pembeli.</p></div>
+    <div class="mini-card"><span class="icon-box ib-coral">±</span><h3>Untung / Rugi</h3><p>Untung = HJ − HB (jika HJ &gt; HB). Rugi = HB − HJ (jika HJ &lt; HB).</p></div>
+  </div>
+  <div class="formula" style="margin-top:16px"><div class="big">Untung = HJ − HB &nbsp;·&nbsp; Rugi = HB − HJ</div><p>Ingat: untung dan rugi selalu dibandingkan terhadap harga beli, bukan harga jual.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator untung / rugi</h3>
+    <p class="muted">Isi harga beli dan harga jual, lalu lihat apakah pedagang untung, rugi, atau impas.</p>
+    <div class="grid-2">
+      <div><label class="f-label" for="urHB">Harga beli (Rp)</label><input type="number" id="urHB" value="100000" /></div>
+      <div><label class="f-label" for="urHJ">Harga jual (Rp)</label><input type="number" id="urHJ" value="120000" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="urBtn" style="margin-top:14px">Hitung</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="urHasil">Untung Rp20.000</div><p id="urLangkah">Harga jual (Rp120.000) lebih besar dari harga beli (Rp100.000). Untung = 120.000 − 100.000 = Rp20.000.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: untung atau rugi?</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (rupiah, tanpa “Rp” dan tanpa titik).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="15000" data-explain="Untung = harga jual − harga beli = 65.000 − 50.000 = Rp15.000."><span class="qa-q">1) Sebuah buku dibeli Rp50.000 lalu dijual Rp65.000. Besarnya keuntungan = Rp …</span><div class="qa-controls"><label class="f-label" for="a1-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="a1-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="20000" data-explain="Rugi = harga beli − harga jual = 200.000 − 180.000 = Rp20.000."><span class="qa-q">2) Sebuah mainan dibeli Rp200.000 lalu dijual Rp180.000. Besarnya kerugian = Rp …</span><div class="qa-controls"><label class="f-label" for="a1-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="a1-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="180000" data-explain="Harga jual = harga beli + untung = 150.000 + 30.000 = Rp180.000."><span class="qa-q">3) Pak Budi membeli sepeda Rp150.000 dan untung Rp30.000. Harga jual sepeda itu = Rp …</span><div class="qa-controls"><label class="f-label" for="a1-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="a1-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Persentase Untung dan Rugi</h2>
+    <p>Untung Rp20.000 dari modal Rp100.000 tidak sama besarnya dengan untung Rp20.000 dari modal Rp1.000.000. Karena itu pedagang memakai <strong>persentase</strong> — untung atau rugi selalu dihitung terhadap harga beli.</p>
+  </div>
+<div class="formula"><div class="big">% Untung = Untung ÷ HB × 100% &nbsp;·&nbsp; % Rugi = Rugi ÷ HB × 100%</div><p>Pembaginya selalu harga beli (modal), bukan harga jual.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator persen untung / rugi</h3>
+    <p class="muted">Isi harga beli dan harga jual — kalkulator menunjukkan untung atau rugi beserta persentasenya.</p>
+    <div class="grid-2">
+      <div><label class="f-label" for="psHB">Harga beli (Rp)</label><input type="number" id="psHB" value="100000" /></div>
+      <div><label class="f-label" for="psHJ">Harga jual (Rp)</label><input type="number" id="psHJ" value="120000" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="psBtn" style="margin-top:14px">Hitung</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="psHasil">Untung 20%</div><p id="psLangkah">Untung Rp20.000. Persentase untung = untung ÷ harga beli × 100% = 20.000 ÷ 100.000 × 100% = 20%.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan: pilih jawaban yang benar</h3>
+    <p class="muted">Baca soalnya, lalu ketuk jawaban yang paling tepat. Penjelasan muncul setelah kamu memilih.</p>
+    <div class="stack">
+      <div class="model-box" data-explain="Persentase untung = 20.000 ÷ 100.000 × 100% = 20%."><p><strong>A.</strong> Pak Andi membeli tas Rp100.000 dan menjualnya untung Rp20.000. Persentase keuntungannya …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal A"><button class="btn btn-ghost model-opt" type="button">10%</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">20%</button><button class="btn btn-ghost model-opt" type="button">25%</button><button class="btn btn-ghost model-opt" type="button">30%</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Persentase rugi = 15.000 ÷ 300.000 × 100% = 5%."><p><strong>B.</strong> Ibu Sari membeli baju Rp300.000 dan menjualnya rugi Rp15.000. Persentase kerugiannya …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal B"><button class="btn btn-ghost model-opt" type="button">3%</button><button class="btn btn-ghost model-opt" type="button">4%</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">5%</button><button class="btn btn-ghost model-opt" type="button">15%</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Rugi 10% dari Rp250.000 adalah Rp25.000, jadi harga jual = 250.000 − 25.000 = Rp225.000."><p><strong>C.</strong> Harga beli sebuah jam Rp250.000. Jika dijual dengan kerugian 10%, harga jualnya …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal C"><button class="btn btn-ghost model-opt" type="button" data-correct="true">Rp225.000</button><button class="btn btn-ghost model-opt" type="button">Rp240.000</button><button class="btn btn-ghost model-opt" type="button">Rp275.000</button><button class="btn btn-ghost model-opt" type="button">Rp200.000</button></div><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Jebakan yang sering terjadi:</strong> persen untung dihitung dari harga beli. Kalau kamu membagi dengan harga jual, hasilnya salah.</p>
+  </div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Diskon: Harga Coret di Toko</h2>
+    <p>Diskon adalah potongan harga yang diberikan toko. Kalau sebuah baju Rp80.000 didiskon 25%, potongannya Rp20.000 dan yang dibayar Rp60.000. Diskon selalu dihitung dari <strong>harga awal</strong> (harga sebelum diskon).</p>
+  </div>
+<div class="formula"><div class="big">Potongan = % diskon × Harga awal &nbsp;·&nbsp; Bayar = Harga awal − Potongan</div><p>Bisa juga langsung: bayar = (100% − % diskon) × harga awal.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator diskon</h3>
+    <p class="muted">Isi harga awal dan persen diskonnya, lalu lihat potongan dan harga yang harus dibayar.</p>
+    <div class="grid-2">
+      <div><label class="f-label" for="dkHarga">Harga awal (Rp)</label><input type="number" id="dkHarga" value="80000" /></div>
+      <div><label class="f-label" for="dkDiskon">Diskon (%)</label><input type="number" id="dkDiskon" value="25" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="dkBtn" style="margin-top:14px">Hitung</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="dkHasil">Bayar Rp60.000</div><p id="dkLangkah">Potongan = 25% × Rp80.000 = Rp20.000. Harga yang dibayar = Rp80.000 − Rp20.000 = Rp60.000.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: diskon</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (rupiah, tanpa “Rp” dan tanpa titik).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="60000" data-explain="Potongan 25% dari Rp80.000 adalah Rp20.000, jadi bayarnya 80.000 − 20.000 = Rp60.000."><span class="qa-q">1) Sepatu Rp80.000 didiskon 25%. Harga yang harus dibayar = Rp …</span><div class="qa-controls"><label class="f-label" for="a3-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="a3-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="12000" data-explain="Potongan = 10% × 120.000 = Rp12.000."><span class="qa-q">2) Tas Rp120.000 didiskon 10%. Besar potongan harganya = Rp …</span><div class="qa-controls"><label class="f-label" for="a3-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="a3-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="100000" data-explain="Yang dibayar adalah 90% dari harga awal, jadi harga awal = 90.000 ÷ 90% = Rp100.000."><span class="qa-q">3) Setelah diskon 10%, sebuah kemeja dibayar Rp90.000. Harga awal kemeja itu = Rp …</span><div class="qa-controls"><label class="f-label" for="a3-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="a3-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Bruto, Tara, dan Netto</h2>
+    <p>Di karung beras tertulis “Bruto 50 kg”. Itu bukan berat berasnya saja. <strong>Bruto</strong> adalah berat kotor (isi + kemasan), <strong>tara</strong> adalah berat kemasannya, dan <strong>netto</strong> adalah berat bersih isinya. Netto = bruto − tara.</p>
+  </div>
+<div class="grid-3">
+    <div class="mini-card"><span class="icon-box ib-teal">Bruto</span><h3>Berat kotor</h3><p>Berat isi ditambah berat kemasannya. Inilah yang ditimbang di timbangan.</p></div>
+    <div class="mini-card"><span class="icon-box ib-amber">Tara</span><h3>Berat kemasan</h3><p>Berat karung, kardus, atau botolnya saja. Sering dinyatakan dalam persen dari bruto.</p></div>
+    <div class="mini-card"><span class="icon-box ib-coral">Netto</span><h3>Berat bersih</h3><p>Berat isi sebenarnya yang kamu beli. Netto = bruto − tara.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator bruto – tara – netto</h3>
+    <p class="muted">Pilih yang ingin dicari, isi dua bilangan yang diketahui, lalu hitung.</p>
+    <div style="margin-top:4px">
+      <label class="f-label" for="btMode">Yang dicari</label>
+      <select id="btMode"><option value="netto">Netto (dari bruto dan tara %)</option><option value="bruto">Bruto (dari netto dan tara %)</option><option value="tara">Tara (dari bruto dan netto)</option></select>
+    </div>
+    <div class="grid-2" style="margin-top:14px">
+      <div><label class="f-label" for="btV1">Bilangan pertama (kg)</label><input type="number" id="btV1" value="50" /></div>
+      <div><label class="f-label" for="btV2">Bilangan kedua (kg atau %)</label><input type="number" id="btV2" value="2" /></div>
+    </div>
+    <p class="muted small" style="margin-top:8px">Mode Netto/Bruto: bilangan kedua adalah tara dalam persen. Mode Tara: kedua bilangan adalah bruto dan netto dalam kg.</p>
+    <button class="btn btn-primary" type="button" id="btBtn" style="margin-top:6px">Hitung</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="btHasil">Netto = 49 kg</div><p id="btLangkah">Tara = 2% × 50 kg = 1 kg. Netto = bruto − tara = 50 − 1 = 49 kg.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: bruto – tara – netto</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (kg, tanpa satuan).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="24" data-explain="Netto = bruto − tara = 25 − 1 = 24 kg."><span class="qa-q">1) Satu karung gula brutonya 25 kg dan taranya 1 kg. Nettonya = … kg</span><div class="qa-controls"><label class="f-label" for="a4-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="a4-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="100" data-explain="Netto adalah 98% dari bruto, jadi bruto = 98 ÷ 98% = 100 kg."><span class="qa-q">2) Netto sekarung beras 98 kg dengan tara 2%. Brutonya = … kg</span><div class="qa-controls"><label class="f-label" for="a4-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="a4-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="38" data-explain="Tara = 5% × 40 = 2 kg, jadi netto = 40 − 2 = 38 kg."><span class="qa-q">3) Bruto sekotak teh 40 kg dengan tara 5%. Nettonya = … kg</span><div class="qa-controls"><label class="f-label" for="a4-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="a4-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Bunga Tunggal dan Pajak</h2>
+    <p>Uang yang ditabung di bank bertambah karena <strong>bunga</strong>. Bunga tunggal dihitung dari modal awal saja, tidak dari bunga yang sudah terkumpul. Sementara itu, saat berbelanja kita membayar <strong>pajak</strong> — tambahan persen dari harga barang yang masuk ke kas negara.</p>
+  </div>
+<div class="formula"><div class="big">Bunga = Modal × % bunga × waktu (tahun)</div><p>Waktu dalam bulan dibagi 12 dulu. Pajak = % pajak × harga barang.</p></div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator bunga tunggal</h3>
+    <p class="muted">Isi modal awal, persen bunga per tahun, dan lama menabung dalam bulan.</p>
+    <div class="grid-3">
+      <div><label class="f-label" for="bgModal">Modal awal (Rp)</label><input type="number" id="bgModal" value="1000000" /></div>
+      <div><label class="f-label" for="bgPersen">Bunga per tahun (%)</label><input type="number" id="bgPersen" value="12" /></div>
+      <div><label class="f-label" for="bgBulan">Lama menabung (bulan)</label><input type="number" id="bgBulan" value="6" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="bgBtn" style="margin-top:14px">Hitung Bunga</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="bgHasil">Bunga Rp60.000</div><p id="bgLangkah">Bunga = modal × persen × waktu = Rp1.000.000 × 12% × 6/12 = Rp60.000. Total tabungan menjadi Rp1.060.000.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Kalkulator pajak belanja</h3>
+    <p class="muted">Isi harga barang dan persen pajaknya, lalu lihat total yang harus dibayar.</p>
+    <div class="grid-2">
+      <div><label class="f-label" for="pjHarga">Harga barang (Rp)</label><input type="number" id="pjHarga" value="500000" /></div>
+      <div><label class="f-label" for="pjPersen">Pajak (%)</label><input type="number" id="pjPersen" value="10" /></div>
+    </div>
+    <button class="btn btn-primary" type="button" id="pjBtn" style="margin-top:14px">Hitung Pajak</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="pjHasil">Total bayar Rp550.000</div><p id="pjLangkah">Pajak = 10% × Rp500.000 = Rp50.000. Total yang dibayar = Rp500.000 + Rp50.000 = Rp550.000.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: bunga dan pajak</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan (rupiah, tanpa “Rp” dan tanpa titik).</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="120000" data-explain="Bunga = 2.000.000 × 6% × 1 = Rp120.000."><span class="qa-q">1) Rina menabung Rp2.000.000 dengan bunga 6% per tahun. Bunga setelah 1 tahun = Rp …</span><div class="qa-controls"><label class="f-label" for="a5-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="a5-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="25000" data-explain="Bunga = 500.000 × 10% × 6/12 = Rp25.000."><span class="qa-q">2) Ayah menabung Rp500.000 dengan bunga 10% per tahun selama 6 bulan. Bunganya = Rp …</span><div class="qa-controls"><label class="f-label" for="a5-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="a5-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="22000" data-explain="Pajak = 11% × 200.000 = Rp22.000."><span class="qa-q">3) Sebuah laptop Rp200.000 dikenai pajak 11%. Besar pajaknya = Rp …</span><div class="qa-controls"><label class="f-label" for="a5-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="a5-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Tips bijak beruang:</strong> sebelum membeli, hitung dulu harga setelah diskon dan pajak — harga di label belum tentu harga yang kamu bayar di kasir.</p>
+  </div>
+</section>
+
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+<div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menentukan untung, rugi, dan persentasenya dari harga beli dan harga jual.</label></div><div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menghitung harga setelah diskon serta bruto, tara, dan netto.</label></div><div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menghitung bunga tunggal tabungan dan pajak belanja.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Satu contoh yang kutemui hari ini:</label>
+      <textarea id="refContoh" placeholder="Contoh: diskon 30% di toko, tara di karung beras, bunga tabunganku, …"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih tertukar membagi persen untung dengan harga jual, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman</h3>
+    <ul><li>Untung = harga jual − harga beli; rugi = harga beli − harga jual. Persen untung/rugi selalu dihitung dari harga beli.</li><li>Potongan diskon = % diskon × harga awal; harga yang dibayar = harga awal − potongan.</li><li>Netto = bruto − tara. Tara sering dinyatakan dalam persen dari bruto.</li><li>Bunga tunggal = modal × % bunga per tahun × waktu (dalam tahun). Pajak = % pajak × harga barang.</li><li>Pembeli yang cerdas selalu menghitung harga akhir — setelah diskon dan pajak — sebelum memutuskan membeli.</li></ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../b3-bilangan-rasional/index.html">← B.3 Bilangan Rasional</a> · <a href="../index.html">Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../b4-perbandingan/index.html">B.4 Perbandingan</a></p>
+    <p>MPI Matematika SMP — Aritmetika Sosial, Kelas 7, 12 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

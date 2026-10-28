@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="D.5 Ruang Sampel dan Peluang — Matematika SMP Kelas 9. Ruang sampel, peluang kejadian, kejadian pasti, dan kejadian mustahil." />
+<link rel="icon" href="data:," />
+<title>D.5 Ruang Sampel dan Peluang — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">D.5 · KELAS 9 · 8 JP</span>
+    <h1>Ruang Sampel dan Peluang</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Mengidentifikasi dan menentukan ruang sampel suatu kejadian, serta menentukan nilai peluang suatu kejadian pasti dan kejadian mustahil.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> menentukan ruang sampel pelemparan koin dan dadu; menghitung peluang suatu kejadian; dan membedakan kejadian pasti (peluang 1) dan kejadian mustahil (peluang 0).</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mengenal</a>
+    <a href="#sub2" data-sub="sub2">2 · Koin & Dadu</a>
+    <a href="#sub3" data-sub="sub3">3 · Peluang</a>
+    <a href="#sub4" data-sub="sub4">4 · Pasti & Mustahil</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Nyata</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Mengenal Ruang Sampel dan Peluang</h2><p>Peluang menjawab pertanyaan “seberapa mungkin ini terjadi?” Ruang sampel adalah semua hasil yang mungkin. Melempar koin: ruang sampelnya {angka, gambar}. Melempar dadu: {1, 2, 3, 4, 5, 6}.</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">🪙</span><h3>Koin</h3><p>Dua sisi: angka dan gambar. Ruang sampelnya 2 anggota.</p></div><div class="mini-card"><span class="icon-box ib-teal">🎲</span><h3>Dadu</h3><p>Enam sisi bernomor 1–6. Ruang sampelnya 6 anggota.</p></div><div class="mini-card"><span class="icon-box ib-coral">🎡</span><h3>Undian</h3><p>Undian berhadiah: peluang menang = tiketmu ÷ semua tiket.</p></div></div><div class="card" style="margin-top:16px"><h3>Pelempar dadu interaktif</h3><p class="muted">Lempar dadu berkali-kali dan lihat frekuensi tiap mata. Semakin banyak lemparan, frekuensi tiap mata makin merata — itulah peluang 1/6.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" type="button" id="daduBtn">🎲 Lempar Dadu</button><button class="btn btn-ghost" type="button" id="daduReset">Atur Ulang</button></div><div class="viz" style="margin-top:14px"><div class="big" id="daduHasil">Belum melempar.</div><p id="daduDetail" class="muted">Tekan tombol Lempar Dadu.</p></div><div id="daduBars" style="margin-top:12px"></div></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Memahami</span><h2 id="judul-sub2">Ruang Sampel Koin dan Dadu</h2><p>Ruang sampel bisa ditulis dengan tabel atau diagram. Dua koin: AA, AG, GA, GG — perhatikan AG dan GA itu berbeda! Dua dadu: 36 pasangan, dari (1,1) sampai (6,6).</p></div><div class="card"><h3>Kalkulator ruang sampel dan peluang</h3><p class="muted">Pilih percobaan, lalu lihat ruang sampel dan satu contoh peluangnya.</p><label class="f-label" for="spPerc">Pilih percobaan</label><select id="spPerc"><option value="dadu1">1 dadu</option><option value="dadu2">2 dadu</option><option value="koin1">1 koin</option><option value="koin2">2 koin</option><option value="koin3">3 koin</option></select><button class="btn btn-primary" type="button" id="spBtn" style="margin-top:14px">Tampilkan</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="spHasil">Ruang sampel 1 dadu = 6 anggota</div><p id="spDetail">Peluang = banyak kejadian ÷ banyak anggota ruang sampel.</p></div></div><div class="card" style="margin-top:16px"><h3>Tabel ruang sampel 2 dadu (jumlah mata)</h3><div class="table-scroll"><table><thead><tr><th>Jumlah</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th><th class="num">6</th><th class="num">7</th><th class="num">8</th><th class="num">9</th><th class="num">10</th><th class="num">11</th><th class="num">12</th></tr></thead><tbody><tr><td>Cara muncul</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">4</td><td class="num">5</td><td class="num">6</td><td class="num">5</td><td class="num">4</td><td class="num">3</td><td class="num">2</td><td class="num">1</td></tr></tbody></table></div><p class="muted" style="margin-top:10px">Jumlah 7 paling sering muncul (6 cara), jumlah 2 dan 12 paling jarang (1 cara). Itulah mengapa di permainan ular tangga, angka 7 terasa “sering keluar”.</p></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Mengaplikasi</span><h2 id="judul-sub3">Menghitung Peluang</h2><p>Peluang suatu kejadian = banyak hasil yang dimaksud dibagi banyak semua hasil yang mungkin. Peluang selalu antara 0 dan 1; bisa ditulis sebagai pecahan, desimal, atau persen.</p></div><div class="card"><div class="formula"><div class="big">P(A) = n(A) ÷ n(S)</div><p>n(A) = banyak anggota kejadian A · n(S) = banyak anggota ruang sampel.</p></div><p style="margin-top:14px"><strong>Contoh:</strong> peluang muncul mata prima (2, 3, 5) pada 1 dadu = 3 ÷ 6 = ½. Peluang muncul mata genap juga ½. Peluang muncul mata lebih dari 4 (5, 6) = 2 ÷ 6 = ⅓.</p></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Kejadian Pasti dan Kejadian Mustahil</h2><p>Kejadian pasti selalu terjadi — peluangnya 1. Kejadian mustahil tidak pernah terjadi — peluangnya 0. Semua peluang lain ada di antara 0 dan 1.</p></div><div class="card"><h3>Tebak: pasti atau mustahil?</h3><p class="muted">Melempar 1 dadu. Kejadian manakah yang PASTI terjadi?</p><div class="pill-row"><button class="btn btn-ghost" type="button" data-pasti="salah">Muncul mata 7</button><button class="btn btn-ghost" type="button" data-pasti="benar">Muncul mata kurang dari 7</button><button class="btn btn-ghost" type="button" data-pasti="salah">Muncul mata 0</button></div><div class="feedback" id="pastiFb" aria-live="polite"></div></div><div class="card" style="margin-top:16px"><h3>Latihan: hitung ruang sampel dan banyak kejadian</h3><p class="muted">Tulis jawabannya sebagai bilangan. Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="4" data-explain="Ruang sampel: AA, AG, GA, GG — ada 4 anggota."><span class="qa-q">1) Banyak anggota ruang sampel 2 koin = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="6" data-explain="Ruang sampel: 1, 2, 3, 4, 5, 6 — ada 6 anggota."><span class="qa-q">2) Banyak anggota ruang sampel 1 dadu = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="36" data-explain="6 × 6 = 36 pasangan mata dadu."><span class="qa-q">3) Banyak anggota ruang sampel 2 dadu = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="3" data-explain="Mata prima: 2, 3, 5 — ada 3 kejadian."><span class="qa-q">4) Banyak kejadian muncul mata prima pada 1 dadu = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="8" data-explain="2 × 2 × 2 = 8 kemungkinan."><span class="qa-q">5) Banyak anggota ruang sampel 3 koin = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">Peluang dalam Kehidupan Nyata</h2><p>Undian, permainan, cuaca, dan antrean — peluang membantu mengambil keputusan. Peluang hujan 80% berarti bawalah payung; peluang menang undian 1 dari 1000 berarti jangan berharap terlalu besar.</p></div><div class="card"><h3>Contoh: kantong kelereng</h3><p>Sebuah kantong berisi 3 kelereng merah dan 2 kelereng biru. Peluang mengambil kelereng merah = 3 ÷ 5 = 3/5. Peluang mengambil kelereng hijau = 0 ÷ 5 = 0 (kejadian mustahil — tidak ada kelereng hijau di kantong).</p><div class="steps"><strong>Ingat:</strong> peluang dihitung dari semua hasil yang mungkin — jangan lupa menghitung semua isi kantong sebagai penyebut.</div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menentukan ruang sampel suatu percobaan.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menghitung peluang suatu kejadian.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa membedakan kejadian pasti dan kejadian mustahil.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Ruang Sampel dan Peluang dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman D.5</h3>
+    <ul>
+['Ruang sampel adalah himpunan semua hasil yang mungkin dari suatu percobaan.', 'Peluang = banyak kejadian yang dimaksud ÷ banyak anggota ruang sampel.', 'Peluang selalu antara 0 dan 1.', 'Kejadian pasti peluangnya 1; kejadian mustahil peluangnya 0.', 'Ruang sampel 1 dadu = 6; 2 dadu = 36; 1 koin = 2; 2 koin = 4; 3 koin = 8.', 'Semakin banyak anggota ruang sampel, semakin kecil peluang tiap hasil tunggal.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../d6-frekuensi-relatif-dan-frekuensi-harapan/index.html">D.6 Frekuensi Relatif dan Frekuensi Harapan</a> (Aktif)</p>
+    <p>MPI Matematika SMP — D.5 Ruang Sampel dan Peluang, Kelas 9, 8 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

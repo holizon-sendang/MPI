@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="P.1 Bangun Ruang Sisi Datar — Matematika SMP Kelas 9. Luas permukaan dan volume kubus, balok, prisma, dan limas." />
+<link rel="icon" href="data:," />
+<title>P.1 Bangun Ruang Sisi Datar — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">P.1 · KELAS 9 · 12 JP</span>
+    <h1>Bangun Ruang Sisi Datar</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menentukan luas permukaan dan volume bangun ruang sisi datar dan menyelesaikan masalah yang terkait.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> menghitung luas permukaan dan volume kubus, balok, prisma, dan limas; memakai rumus dengan benar; dan menyelesaikan masalah kontekstual seperti akuarium, tenda, dan kotak kemasan.</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Kubus & Balok</a>
+    <a href="#sub2" data-sub="sub2">2 · Prisma</a>
+    <a href="#sub3" data-sub="sub3">3 · Limas</a>
+    <a href="#sub4" data-sub="sub4">4 · Gabungan</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Kontekstual</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Kubus dan Balok</h2><p>Kubus dan balok adalah bangun ruang sisi datar yang paling sering kita jumpai: dadu, kotak sepatu, kardus, dan akuarium. Luas permukaan adalah jumlah luas semua sisinya; volume adalah banyaknya ruang di dalamnya.</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">▦</span><h3>Dadu</h3><p>Dadu adalah kubus: 6 sisi persegi yang sama besar.</p></div><div class="mini-card"><span class="icon-box ib-teal">▭</span><h3>Kardus</h3><p>Kardus adalah balok: 6 sisi persegi panjang, sisi berhadapan sama besar.</p></div><div class="mini-card"><span class="icon-box ib-coral">🐟</span><h3>Akuarium</h3><p>Volume akuarium menentukan berapa liter air yang dibutuhkan.</p></div></div><div class="card" style="margin-top:16px"><h3>Geser ukuran balok, lihat volumenya</h3><p class="muted">Ubah panjang, lebar, dan tinggi balok di bawah ini.</p><label class="f-label" for="blkP">Panjang: <span id="blkPVal">4 cm</span></label><input type="range" id="blkP" min="1" max="10" step="1" value="4" /><label class="f-label" for="blkL" style="margin-top:10px">Lebar: <span id="blkLVal">3 cm</span></label><input type="range" id="blkL" min="1" max="10" step="1" value="3" /><label class="f-label" for="blkT" style="margin-top:10px">Tinggi: <span id="blkTVal">2 cm</span></label><input type="range" id="blkT" min="1" max="10" step="1" value="2" /><div class="result-box" style="margin-top:12px"><div class="res-big" id="blkHasil">Volume = 4 × 3 × 2 = 24 cm³</div></div></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Memahami</span><h2 id="judul-sub2">Prisma</h2><p>Prisma adalah bangun ruang dengan dua sisi sejajar yang sama (alas dan tutup) dan sisi-sisi tegak berbentuk persegi panjang. Volumenya selalu luas alas dikali tinggi prisma.</p></div><div class="card"><div class="formula"><div class="big">V prisma = Luas alas × tinggi prisma</div><p>Berlaku untuk prisma segitiga, prisma segiempat, dan prisma lainnya.</p></div><p style="margin-top:14px"><strong>Contoh:</strong> tenda kemah berbentuk prisma segitiga. Alas segitiga 4 m, tinggi segitiga 2 m, panjang tenda 3 m. Volume = (½ × 4 × 2) × 3 = 12 m³ — itulah ruang di dalam tenda.</p></div><div class="card" style="margin-top:16px"><h3>Kalkulator bangun ruang sisi datar</h3><p class="muted">Pilih bangunnya, isi ukurannya (cm), lalu tekan Hitung.</p><label class="f-label" for="calcBangun">Pilih bangun</label><select id="calcBangun"><option value="kubus">Kubus</option><option value="balok">Balok</option><option value="prisma">Prisma segitiga</option><option value="limas">Limas segiempat</option></select><div class="grid-2" style="margin-top:12px"><div id="rowS"><label class="f-label" for="calcS">Sisi / alas segitiga (cm)</label><input type="number" id="calcS" value="5" /></div><div id="rowP"><label class="f-label" for="calcP">Panjang prisma / panjang balok (cm)</label><input type="number" id="calcP" value="4" /></div><div id="rowL"><label class="f-label" for="calcL">Lebar balok (cm)</label><input type="number" id="calcL" value="3" /></div><div id="rowT"><label class="f-label" for="calcT">Tinggi (cm)</label><input type="number" id="calcT" value="6" /></div></div><button class="btn btn-primary" type="button" id="calcBtn" style="margin-top:14px">Hitung</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="calcHasil">Lp = 150 · V = 125</div><p id="calcLangkah">Kubus sisi 5 cm: Lp = 6 × 25 = 150, V = 125.</p></div></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Memahami</span><h2 id="judul-sub3">Limas</h2><p>Limas punya satu alas dan sisi-sisi segitiga yang bertemu di satu titik puncak. Volumenya sepertiga dari prisma dengan alas dan tinggi yang sama — tiga limas mengisi satu prisma!</p></div><div class="card"><div class="formula"><div class="big">V limas = ⅓ × Luas alas × tinggi</div><p>Ingat faktor ⅓ — inilah yang paling sering terlupa.</p></div><p style="margin-top:14px"><strong>Contoh:</strong> limas segiempat alas 6 cm × 6 cm, tinggi 4 cm. V = ⅓ × 36 × 4 = 48 cm³.</p></div><div class="card" style="margin-top:16px"><h3>Mengapa ⅓?</h3><p>Bayangkan sebuah kubus dibagi menjadi 6 limas segiempat yang puncaknya bertemu di tengah kubus. Setiap limas volumenya ⅙ kubus — dan rumus ⅓ × luas alas × tinggi menghasilkan angka yang sama. Coba buktikan dengan kubus sisi 6 cm di kalkulator sub-bab 2!</p></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Bangun Gabungan</h2><p>Banyak benda nyata adalah gabungan dua bangun: rumah (balok + prisma segitiga sebagai atap), atau kotak dengan tutup limas. Strateginya: pecah menjadi bangun-bangun yang sudah kamu kenal, hitung satu per satu, lalu jumlahkan.</p></div><div class="card"><h3>Contoh: rumah mini</h3><p>Bagian bawah rumah adalah balok 8 m × 6 m × 4 m. Atapnya prisma segitiga: alas segitiga 6 m, tinggi segitiga 2 m, panjang 8 m. Volume rumah = volume balok + volume prisma = (8 × 6 × 4) + (½ × 6 × 2 × 8) = 192 + 48 = 240 m³.</p><div class="steps"><strong>Langkah umum:</strong> 1) gambar dan beri nama tiap bagian, 2) tulis rumus tiap bagian, 3) hitung, 4) jumlahkan dan periksa satuannya.</div></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">Soal Kontekstual: Kemasan dan Akuarium</h2><p>Sebuah perusahaan ingin membuat kotak kemasan berbentuk balok dari karton. Berapa karton yang dibutuhkan? Berapa banyak isi yang muat? Itulah luas permukaan dan volume dalam kehidupan nyata.</p></div><div class="card"><h3>Latihan: hitung luas permukaan dan volume</h3><p class="muted">Tulis jawaban akhirnya (tanpa satuan). Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="150" data-explain="Lp = 6 × 5² = 6 × 25 = 150 cm²."><span class="qa-q">1) Luas permukaan kubus rusuk 5 cm = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="24" data-explain="V = 4 × 3 × 2 = 24 cm³."><span class="qa-q">2) Volume balok 4 cm × 3 cm × 2 cm = … cm³</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="216" data-explain="V = 6³ = 216 cm³."><span class="qa-q">3) Volume kubus rusuk 6 cm = … cm³</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="94" data-explain="Lp = 2(5×4 + 5×3 + 4×3) = 2(20 + 15 + 12) = 94 cm²."><span class="qa-q">4) Luas permukaan balok 5 cm × 4 cm × 3 cm = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="120" data-explain="V = (½ × 6 × 4) × 10 = 12 × 10 = 120 cm³."><span class="qa-q">5) Volume prisma segitiga (alas 6 cm, tinggi segitiga 4 cm, panjang 10 cm) = … cm³</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menghitung luas permukaan dan volume kubus dan balok.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menghitung volume prisma dan limas.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menyelesaikan masalah kontekstual bangun ruang sisi datar.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Bangun Ruang Sisi Datar dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman P.1</h3>
+    <ul>
+['Luas permukaan kubus = 6s²; volume kubus = s³.', 'Luas permukaan balok = 2(pl + pt + lt); volume balok = p × l × t.', 'Volume prisma = luas alas × tinggi prisma.', 'Volume limas = ⅓ × luas alas × tinggi limas.', 'Luas permukaan adalah jumlah luas semua sisi; volume adalah isi ruang di dalamnya.', 'Periksa satuan: luas dalam cm², volume dalam cm³.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../p2-lingkaran/index.html">P.2 Lingkaran</a> (Aktif)</p>
+    <p>MPI Matematika SMP — P.1 Bangun Ruang Sisi Datar, Kelas 9, 12 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

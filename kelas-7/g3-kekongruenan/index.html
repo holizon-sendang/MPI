@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="G.3 Kekongruenan — Matematika SMP Kelas 7. Syarat dua bangun kongruen, SSS SAS ASA, dan penerapannya." />
+<link rel="icon" href="data:," />
+<title>G.3 Kekongruenan — Kelas 7 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../../kelas-9/index.html">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">G.3 · KELAS 7 · 6 JP · GEOMETRI</span>
+    <h1>Kekongruenan</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menjelaskan dan menentukan syarat-syarat dua bangun saling kongruen, dan menerapkan kekongruenan dalam permasalahan yang terkait.</p>
+    <div class="tp-box">
+      <p><strong>Yang akan kamu kuasai:</strong> membedakan kongruen dan sebangun, memeriksa syarat SSS, SAS, dan ASA, menentukan sisi dan sudut yang bersesuaian, serta memakai kekongruenan pada ubin, jembatan, dan pola.</p>
+    </div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../g2-kesebangunan/index.html">← G.2 Kesebangunan</a>
+      <a class="btn btn-ghost" href="../index.html">Daftar Modul Kelas 7</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Apa itu Kongruen</a>
+    <a href="#sub2" data-sub="sub2">2 · Syarat SSS SAS ASA</a>
+    <a href="#sub3" data-sub="sub3">3 · Bersesuaian</a>
+    <a href="#sub4" data-sub="sub4">4 · Tentukan Kongruen</a>
+    <a href="#sub5" data-sub="sub5">5 · Penerapan</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis & Refleksi</a>
+  </div>
+</nav>
+
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 1 · Memahami</span>
+    <h2 id="judul-sub1">Apa Itu Kongruen? Sama Bentuk, Sama Ukuran</h2>
+    <p>Dua bangun dikatakan <strong>kongruen</strong> kalau bentuk DAN ukurannya sama persis — seperti dua lembar kertas hasil fotokopi, atau dua ubin dari cetakan yang sama. Kalau ditumpuk, keduanya menutup tepat tanpa sisa. Kongruen itu sebangun yang “kebetulan” ukurannya sama.</p>
+  </div>
+<div class="card">
+    <h3>Uji pasangan bangun</h3>
+    <p class="muted">Pilih satu pasangan, lalu lihat apakah keduanya kongruen atau hanya sebangun.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-primary" type="button" data-pair="p1">Pasangan 1</button>
+      <button class="btn btn-ghost" type="button" data-pair="p2">Pasangan 2</button>
+      <button class="btn btn-ghost" type="button" data-pair="p3">Pasangan 3</button>
+    </div>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="kgJudul">Pasangan 1: dua segitiga 3-4-5</div></div>
+    <div class="feedback show ok" id="kgFb" aria-live="polite">KONGRUEN. Ketiga sisinya sama (3 cm, 4 cm, 5 cm) — bentuk dan ukurannya sama persis, jadi bisa ditumpuk tepat.</div>
+    <p class="note" style="margin-top:14px"><strong>Pasangan 1:</strong> dua segitiga bersisi 3 cm, 4 cm, 5 cm. <strong>Pasangan 2:</strong> persegi 4×4 dan persegi 5×5. <strong>Pasangan 3:</strong> segitiga 3-4-5 dan segitiga 3-4-6.</p>
+  </div>
+  <div class="grid-3" style="margin-top:16px">
+    <div class="mini-card"><span class="icon-box ib-teal">=</span><h3>Kongruen</h3><p>Bentuk sama, ukuran sama. Ditumpuk menutup tepat.</p></div>
+    <div class="mini-card"><span class="icon-box ib-amber">~</span><h3>Sebangun</h3><p>Bentuk sama, ukuran boleh beda. Kongruen pasti sebangun, tapi sebangun belum tentu kongruen.</p></div>
+    <div class="mini-card"><span class="icon-box ib-coral">↔</span><h3>Bersesuaian</h3><p>Sisi dan sudut yang bersesuaian pada bangun kongruen selalu sama besar.</p></div>
+  </div>
+</section>
+
+<section id="sub2" aria-labelledby="judul-sub2">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 2 · Memahami</span>
+    <h2 id="judul-sub2">Syarat Dua Segitiga Kongruen: SSS, SAS, ASA</h2>
+    <p>Tidak perlu mengukur semua sisi dan sudut untuk membuktikan dua segitiga kongruen — cukup tiga ukuran yang tepat. Ada tiga syarat yang paling sering dipakai: <strong>SSS</strong> (tiga sisi), <strong>SAS</strong> (dua sisi dan sudut apitnya), dan <strong>ASA</strong> (dua sudut dan sisi di antaranya).</p>
+  </div>
+<div class="grid-3">
+    <div class="mini-card"><span class="icon-box ib-teal">SSS</span><h3>Sisi-Sisi-Sisi</h3><p>Ketiga sisi yang bersesuaian sama panjang. Kalau kerangkanya sama, bentuknya pasti sama.</p></div>
+    <div class="mini-card"><span class="icon-box ib-amber">SAS</span><h3>Sisi-Sudut-Sisi</h3><p>Dua sisi sama panjang dan sudut yang diapit kedua sisi itu sama besar.</p></div>
+    <div class="mini-card"><span class="icon-box ib-coral">ASA</span><h3>Sudut-Sisi-Sudut</h3><p>Dua sudut sama besar dan sisi yang terletak di antara kedua sudut itu sama panjang.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Contoh tiap syarat</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Syarat</th><th>Yang diketahui sama</th><th>Kesimpulan</th></tr></thead>
+        <tbody>
+          <tr><td><strong>SSS</strong></td><td>Sisi 5, 6, 7 cm lawan 5, 6, 7 cm</td><td>Kongruen</td></tr>
+          <tr><td><strong>SAS</strong></td><td>Sisi 4 cm, sudut 50°, sisi 6 cm lawan yang sama</td><td>Kongruen</td></tr>
+          <tr><td><strong>ASA</strong></td><td>Sudut 40°, sisi 5 cm, sudut 70° lawan yang sama</td><td>Kongruen</td></tr>
+          <tr><td><strong>SSA</strong></td><td>Dua sisi dan satu sudut bukan apit</td><td><strong>Belum tentu</strong> — ini jebakan!</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Hati-hati:</strong> SSA (dua sisi dan sudut yang bukan apit) tidak menjamin kongruen. Begitu juga AAA (tiga sudut sama) — itu hanya menjamin sebangun.</p>
+  </div>
+</section>
+
+<section id="sub3" aria-labelledby="judul-sub3">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 3 · Mengaplikasi</span>
+    <h2 id="judul-sub3">Menentukan Sisi dan Sudut yang Bersesuaian</h2>
+    <p>Pada segitiga yang kongruen, urutan hurufnya adalah peta. Kalau segitiga ABC kongruen dengan DEF, maka A berpasangan dengan D, B dengan E, dan C dengan F. Sisi AB berpasangan dengan DE, sudut A dengan sudut D, dan seterusnya.</p>
+  </div>
+<div class="card">
+    <h3>Pemeta sisi &amp; sudut bersesuaian</h3>
+    <p class="muted">Diketahui segitiga ABC kongruen dengan DEF. AB = 5 cm, BC = 7 cm, CA = 6 cm, sudut A = 50°, sudut B = 60°, sudut C = 70°. Pilih yang ingin dicari pasangannya.</p>
+    <div>
+      <label class="f-label" for="pmPilih">Yang dicari pasangannya</label>
+      <select id="pmPilih">
+        <option value="AB">Sisi AB (5 cm)</option>
+        <option value="BC">Sisi BC (7 cm)</option>
+        <option value="CA">Sisi CA (6 cm)</option>
+        <option value="A">Sudut A (50°)</option>
+        <option value="B">Sudut B (60°)</option>
+        <option value="C">Sudut C (70°)</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" type="button" id="pmBtn" style="margin-top:14px">Cari Pasangannya</button>
+    <div class="result-box" style="margin-top:14px" aria-live="polite"><div class="res-big" id="pmHasil">AB bersesuaian dengan DE. Karena AB = 5 cm, maka DE = 5 cm.</div><p id="pmLangkah">Segitiga ABC kongruen dengan DEF, jadi semua sisi dan sudut yang bersesuaian sama besar. Urutan hurufnya menunjukkan pasangannya: A↔D, B↔E, C↔F.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Latihan bertingkat: bersesuaian</h3>
+    <p class="muted">Diketahui segitiga PQR kongruen dengan STU. Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="7" data-explain="Sisi yang bersesuaian pada segitiga kongruen sama panjang: ST = PQ = 7 cm."><span class="qa-q">1) PQ = 7 cm bersesuaian dengan ST. Panjang ST = … cm</span><div class="qa-controls"><label class="f-label" for="k3-1" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="k3-1" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="65" data-explain="Sudut yang bersesuaian pada segitiga kongruen sama besar: sudut S = 65°."><span class="qa-q">2) Sudut P = 65° bersesuaian dengan sudut S. Besar sudut S = …°</span><div class="qa-controls"><label class="f-label" for="k3-2" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="k3-2" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="24" data-explain="Segitiga yang kongruen punya semua sisi sama, jadi kelilingnya juga sama: 24 cm."><span class="qa-q">3) Keliling segitiga PQR adalah 24 cm. Keliling segitiga STU = … cm</span><div class="qa-controls"><label class="f-label" for="k3-3" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="k3-3" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sub4" aria-labelledby="judul-sub4">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 4 · Mengaplikasi</span>
+    <h2 id="judul-sub4">Menentukan Kekongruenan dari Data</h2>
+    <p>Diberi data sisi dan sudut dua segitiga, tentukan dulu syarat mana yang terpenuhi: apakah ada tiga sisi yang sama (SSS), dua sisi dan sudut apit (SAS), atau dua sudut dan sisi di antaranya (ASA)? Kalau tidak ada yang terpenuhi, jawabannya “belum tentu kongruen”.</p>
+  </div>
+<div class="card">
+    <h3>Latihan: syarat mana yang terpenuhi?</h3>
+    <p class="muted">Baca datanya, lalu ketuk syarat yang membuktikan kedua segitiga kongruen.</p>
+    <div class="stack">
+      <div class="model-box" data-explain="Ketiga sisi yang bersesuaian sama panjang — syarat SSS terpenuhi."><p><strong>A.</strong> Segitiga pertama bersisi 5, 6, 7 cm; segitiga kedua juga bersisi 5, 6, 7 cm. Syaratnya …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal A"><button class="btn btn-ghost model-opt" type="button" data-correct="true">SSS</button><button class="btn btn-ghost model-opt" type="button">SAS</button><button class="btn btn-ghost model-opt" type="button">ASA</button><button class="btn btn-ghost model-opt" type="button">Tidak kongruen</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Dua sisi sama dan sudut yang diapit kedua sisi itu sama — syarat SAS terpenuhi."><p><strong>B.</strong> Segitiga pertama: sisi 4 cm, sudut apit 50°, sisi 6 cm. Segitiga kedua: sama persis. Syaratnya …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal B"><button class="btn btn-ghost model-opt" type="button">SSS</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">SAS</button><button class="btn btn-ghost model-opt" type="button">ASA</button><button class="btn btn-ghost model-opt" type="button">SSA</button></div><div class="feedback" aria-live="polite"></div></div>
+      <div class="model-box" data-explain="Dua sudut sama dan sisi di antara kedua sudut itu sama — syarat ASA terpenuhi."><p><strong>C.</strong> Segitiga pertama: sudut 40°, sisi di antaranya 5 cm, sudut 70°. Segitiga kedua: sama persis. Syaratnya …</p><div class="model-opts" role="group" aria-label="Pilih jawaban soal C"><button class="btn btn-ghost model-opt" type="button">SSS</button><button class="btn btn-ghost model-opt" type="button">SAS</button><button class="btn btn-ghost model-opt" type="button" data-correct="true">Sudut-sisi-sudut (ASA)</button><button class="btn btn-ghost model-opt" type="button">SSA</button></div><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Langkah kerja:</strong> 1) tulis pasangan sisi/sudut yang sama, 2) cocokkan dengan SSS/SAS/ASA, 3) kalau tidak ada yang cocok, jangan memaksa — jawab “belum tentu”.</p>
+  </div>
+</section>
+
+<section id="sub5" aria-labelledby="judul-sub5">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 5 · Mengaplikasi</span>
+    <h2 id="judul-sub5">Penerapan Kekongruenan dalam Kehidupan</h2>
+    <p>Kekongruenan ada di mana-mana: ubin lantai yang dicetak dari cetakan yang sama, potongan kue yang dibagi sama besar, rangka jembatan yang dibuat dari segitiga-segitiga kongruen supaya kuat, sampai pola batik yang diulang dengan ukuran yang sama.</p>
+  </div>
+<div class="card">
+    <h3>Latihan bertingkat: penerapan</h3>
+    <p class="muted">Tulis jawabanmu sebagai bilangan.</p>
+    <div class="stack">
+      <div class="qa-row" data-answer="25" data-explain="Bangun yang kongruen punya luas yang sama: 25 cm²."><span class="qa-q">1) Sebuah ubin berbentuk persegi dengan luas 25 cm². Ubin lain yang kongruen dengannya luasnya = … cm²</span><div class="qa-controls"><label class="f-label" for="k3-4" style="position:absolute;left:-9999px">Jawaban soal 1</label><input type="number" step="any" id="k3-4" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="9" data-explain="Sisi yang bersesuaian pada segitiga kongruen sama panjang: DE = AB = 9 cm."><span class="qa-q">2) Dua segitiga kongruen: AB = 9 cm bersesuaian dengan DE. Panjang DE = … cm</span><div class="qa-controls"><label class="f-label" for="k3-5" style="position:absolute;left:-9999px">Jawaban soal 2</label><input type="number" step="any" id="k3-5" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+      <div class="qa-row" data-answer="3" data-explain="Balok yang kongruen punya panjang yang sama: 3 m."><span class="qa-q">3) Sebuah jembatan memakai dua balok baja yang kongruen. Balok pertama panjangnya 3 m. Balok kedua panjangnya = … m</span><div class="qa-controls"><label class="f-label" for="k3-6" style="position:absolute;left:-9999px">Jawaban soal 3</label><input type="number" step="any" id="k3-6" class="qa-input" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div>
+    </div>
+    <p class="note" style="margin-top:14px"><strong>Kenapa jembatan memakai segitiga?</strong> Segitiga adalah satu-satunya bangun yang bentuknya tidak berubah kalau sisi-sisinya tetap (syarat SSS) — itulah yang membuatnya kokoh.</p>
+  </div>
+</section>
+
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+<div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menjelaskan perbedaan kongruen dan sebangun.</label></div><div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menentukan syarat SSS, SAS, dan ASA pada dua segitiga.</label></div><div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menentukan sisi dan sudut yang bersesuaian serta menerapkan kekongruenan.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Satu contoh yang kutemui hari ini:</label>
+      <textarea id="refContoh" placeholder="Contoh: ubin lantai yang sama, potongan kue yang sama besar, rangka jembatan, …"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih tertukar SAS dan SSA, mau menggambar ulang syaratnya…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman</h3>
+    <ul><li>Kongruen: bentuk dan ukuran sama persis; ditumpuk menutup tepat. Kongruen pasti sebangun, sebangun belum tentu kongruen.</li><li>Syarat segitiga kongruen: SSS (tiga sisi), SAS (dua sisi + sudut apit), ASA (dua sudut + sisi di antaranya).</li><li>SSA dan AAA tidak menjamin kongruen — SSA belum tentu, AAA hanya menjamin sebangun.</li><li>Urutan huruf pada nama segitiga menunjukkan pasangan yang bersesuaian.</li><li>Bangun yang kongruen punya keliling dan luas yang sama.</li></ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 7</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../g2-kesebangunan/index.html">← G.2 Kesebangunan</a> · <a href="../index.html">Daftar Modul Kelas 7</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../d1-investigasi-data/index.html">D.1 Investigasi Data</a></p>
+    <p>MPI Matematika SMP — G.3 Kekongruenan, Kelas 7, 6 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

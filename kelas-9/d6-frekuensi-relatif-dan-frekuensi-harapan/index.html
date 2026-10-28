@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="D.6 Frekuensi Relatif dan Frekuensi Harapan — Matematika SMP Kelas 9. Frekuensi relatif, peluang teoretik, dan frekuensi harapan." />
+<link rel="icon" href="data:," />
+<title>D.6 Frekuensi Relatif dan Frekuensi Harapan — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">D.6 · KELAS 9 · 8 JP</span>
+    <h1>Frekuensi Relatif dan Frekuensi Harapan</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menentukan frekuensi relatif, peluang teoritik, dan frekuensi harapan serta menyelesaikan permasalahan kontekstual yang terkait.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> menghitung frekuensi relatif dari percobaan; menentukan peluang teoretik; menghitung frekuensi harapan; dan menjelaskan mengapa frekuensi relatif mendekati peluang teoretik saat percobaan diperbanyak.</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mengenal</a>
+    <a href="#sub2" data-sub="sub2">2 · Frekuensi Relatif</a>
+    <a href="#sub3" data-sub="sub3">3 · Peluang Teoretik</a>
+    <a href="#sub4" data-sub="sub4">4 · Frekuensi Harapan</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Nyata</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Mengenal Frekuensi Relatif dan Frekuensi Harapan</h2><p>Melempar koin 10 kali tidak selalu menghasilkan 5 gambar — kadang 7, kadang 3. Frekuensi relatif mencatat hasil nyata percobaanmu; frekuensi harapan memperkirakan hasil sebelum percobaan dilakukan.</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">📊</span><h3>Frekuensi relatif</h3><p>Hasil nyata: berapa kali kejadian muncul dibagi banyak percobaan.</p></div><div class="mini-card"><span class="icon-box ib-teal">🎯</span><h3>Peluang teoretik</h3><p>Harapan matematis dari ruang sampel, tanpa percobaan.</p></div><div class="mini-card"><span class="icon-box ib-coral">🔮</span><h3>Frekuensi harapan</h3><p>Peluang teoretik × banyak percobaan: perkiraan jumlah kemunculan.</p></div></div><div class="card" style="margin-top:16px"><h3>Simulator lempar koin</h3><p class="muted">Pilih banyak lemparan, lalu lihat frekuensi relatif sisi gambar. Coba 10 kali, lalu 500 kali — bandingkan hasilnya dengan peluang teoretik 0,5.</p><div class="grid-2"><div><label class="f-label" for="simN">Banyak lemparan (1–1000)</label><input type="number" id="simN" value="100" /></div><div style="display:flex;align-items:flex-end"><button class="btn btn-primary" type="button" id="simBtn">Lempar Koin</button></div></div><div class="result-box" style="margin-top:14px"><div class="res-big" id="simHasil">Belum ada percobaan.</div><p id="simDetail">Frekuensi relatif = banyak gambar ÷ banyak lemparan.</p></div><div id="simBars" style="margin-top:12px"></div><div class="feedback" id="simFb" aria-live="polite"></div></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Mengaplikasi</span><h2 id="judul-sub2">Frekuensi Relatif</h2><p>Frekuensi relatif dihitung dari data percobaan yang sudah dilakukan. Contoh: dari 50 lemparan dadu, mata 6 muncul 9 kali — frekuensi relatifnya 9 ÷ 50 = 0,18, dekat dengan peluang teoretik 1/6 ≈ 0,17.</p></div><div class="card"><div class="formula"><div class="big">Frekuensi relatif = muncul ÷ percobaan</div><p>Nilainya selalu antara 0 dan 1.</p></div><p style="margin-top:14px"><strong>Contoh:</strong> sebuah spinner diputar 40 kali dan berhenti di warna merah 12 kali. Frekuensi relatif merah = 12 ÷ 40 = 0,3.</p></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Memahami</span><h2 id="judul-sub3">Peluang Teoretik</h2><p>Peluang teoretik dihitung dari ruang sampel, tanpa melakukan percobaan. Peluang muncul mata genap pada dadu = 3 ÷ 6 = ½ — ini tetap ½ meski kamu belum pernah melempar dadu sekalipun.</p></div><div class="card"><h3>Teoretik vs empiris</h3><div class="table-scroll"><table><thead><tr><th></th><th>Sumber</th><th>Contoh (koin)</th></tr></thead><tbody><tr><td>Peluang teoretik</td><td>Ruang sampel</td><td class="num">½ = 0,5</td></tr><tr><td>Frekuensi relatif</td><td>Hasil percobaan</td><td class="num">7 dari 10 = 0,7</td></tr></tbody></table></div><p class="muted" style="margin-top:10px">Frekuensi relatif berubah-ubah tiap percobaan, tetapi makin banyak percobaan, makin dekat ia ke peluang teoretik. Inilah hukum bilangan besar.</p></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Frekuensi Harapan</h2><p>Frekuensi harapan = peluang teoretik × banyak percobaan. Contoh: dadu dilempar 120 kali, frekuensi harapan muncul mata 6 = 1/6 × 120 = 20 kali. Artinya diperkirakan 20 kali — hasil nyatanya bisa 18 atau 23, dan itu wajar.</p></div><div class="card"><h3>Kalkulator frekuensi harapan</h3><p class="muted">Pilih kejadian dan banyak percobaan, lalu tekan Hitung.</p><label class="f-label" for="fhKej">Pilih kejadian</label><select id="fhKej"><option value="koin-gambar">Gambar pada koin (p = 1/2)</option><option value="dadu-6">Mata 6 pada dadu (p = 1/6)</option><option value="dadu-genap">Mata genap pada dadu (p = 1/2)</option><option value="dadu-prima">Mata prima pada dadu (p = 1/2)</option></select><div style="margin-top:12px"><label class="f-label" for="fhN">Banyak percobaan</label><input type="number" id="fhN" value="120" /></div><button class="btn btn-primary" type="button" id="fhBtn" style="margin-top:14px">Hitung Frekuensi Harapan</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="fhHasil">Frekuensi harapan = 60 kali</div><p id="fhDetail">Mata genap pada dadu, 120 percobaan: 1/2 × 120 = 60 kali.</p></div></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">Frekuensi Harapan dalam Kehidupan Nyata</h2><p>Toko mainan memperkirakan berapa boneka yang laku, panitia undian memperkirakan berapa hadiah yang keluar, dan petani memperkirakan berapa benih yang tumbuh — semuanya memakai frekuensi harapan.</p></div><div class="card"><h3>Latihan: hitung frekuensi relatif dan frekuensi harapan</h3><p class="muted">Tulis jawaban akhirnya (angka saja; desimal memakai titik, contoh 0.6). Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="20" data-explain="Fh = 1/6 × 120 = 20 kali."><span class="qa-q">1) Frekuensi harapan mata 6 dalam 120 lemparan dadu = … kali</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="0.6" data-explain="Frekuensi relatif = 30 ÷ 50 = 0,6."><span class="qa-q">2) Frekuensi relatif gambar 30 dari 50 lemparan koin = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="100" data-explain="Fh = 1/2 × 200 = 100 kali."><span class="qa-q">3) Frekuensi harapan gambar dalam 200 lemparan koin = … kali</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="0.5" data-explain="Peluang = 3 ÷ 6 = 0,5."><span class="qa-q">4) Peluang teoretik mata genap pada dadu = …</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="45" data-explain="Peluang mata prima = 3/6 = 1/2, jadi Fh = 1/2 × 90 = 45 kali."><span class="qa-q">5) Frekuensi harapan mata prima dalam 90 lemparan dadu = … kali</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menghitung frekuensi relatif dari suatu percobaan.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menghitung frekuensi harapan suatu kejadian.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa menjelaskan hubungan frekuensi relatif dan peluang teoretik.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Frekuensi Relatif dan Frekuensi Harapan dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman D.6</h3>
+    <ul>
+['Frekuensi relatif = banyak kejadian muncul ÷ banyak percobaan.', 'Peluang teoretik = banyak kejadian ÷ banyak anggota ruang sampel.', 'Frekuensi harapan = peluang teoretik × banyak percobaan.', 'Frekuensi harapan adalah perkiraan, bukan kepastian — hasil nyata bisa berbeda sedikit.', 'Semakin banyak percobaan, frekuensi relatif semakin dekat ke peluang teoretik.', 'Frekuensi relatif selalu antara 0 dan 1.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · <a href="../../index.html">Kembali ke Beranda</a></p>
+    <p>MPI Matematika SMP — D.6 Frekuensi Relatif dan Frekuensi Harapan, Kelas 9, 8 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

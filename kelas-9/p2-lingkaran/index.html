@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="P.2 Lingkaran — Matematika SMP Kelas 9. Keliling, luas, busur, sudut, dan luas juring lingkaran." />
+<link rel="icon" href="data:," />
+<title>P.2 Lingkaran — Kelas 9 · MPI Matematika SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke konten utama</a>
+<nav class="topnav" aria-label="Navigasi utama">
+  <div class="topnav-inner">
+    <a class="brand" href="../../index.html"><span class="brand-badge">∑</span> MPI Matematika SMP</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="navlinks" data-nav-links>
+      <a href="../../index.html">Beranda</a>
+      <a href="../../kelas-7/index.html">Kelas 7</a>
+      <a href="../../kelas-8/index.html">Kelas 8</a>
+      <a href="../index.html" class="active" aria-current="page">Kelas 9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero module-hero">
+  <div class="wrap">
+    <span class="eyebrow">P.2 · KELAS 9 · 10 JP</span>
+    <h1>Lingkaran</h1>
+    <p class="lead"><strong>Tujuan Pembelajaran:</strong> Menjelaskan, menentukan keliling, luas, busur, sudut, dan luas juring lingkaran.</p>
+    <div class="tp-box"><p><strong>Yang akan kamu kuasai:</strong> menentukan keliling dan luas lingkaran; menghitung panjang busur dan luas juring; membedakan sudut pusat dan sudut keliling; dan memakai lingkaran pada masalah nyata seperti roda, taman, dan kue.</p></div>
+    <div class="hero-cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="#sub1">Mulai Sub-bab 1 ↓</a>
+      <a class="btn btn-ghost" href="../index.html">← Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+    <div class="card" style="margin-top:6px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700">
+        <span id="progressText">Progres: 0 dari 6 sub-bab (0%)</span>
+        <span id="quizBestText" hidden>Skor terbaik kuis: —/10</span>
+      </div>
+      <div class="progress" style="margin-top:8px" role="progressbar" aria-label="Progres sub-bab" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <p class="muted small" style="margin:8px 0 0">Progres dan skor terbaik tersimpan di perangkatmu sendiri (localStorage), tidak dikirim ke mana pun.</p>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Navigasi sub-bab">
+  <div class="subnav-inner">
+    <a href="#sub1" data-sub="sub1">1 · Mengenal</a>
+    <a href="#sub2" data-sub="sub2">2 · Keliling & Luas</a>
+    <a href="#sub3" data-sub="sub3">3 · Busur & Juring</a>
+    <a href="#sub4" data-sub="sub4">4 · Sudut</a>
+    <a href="#sub5" data-sub="sub5">5 · Soal Nyata</a>
+    <a href="#sub6" data-sub="sub6">6 · Kuis &amp; Refleksi</a>
+  </div>
+</nav>
+<main id="utama">
+<div class="wrap">
+<section id="sub1" aria-labelledby="judul-sub1"><div class="sec-head"><span class="sec-num">Sub-bab 1 · Memahami</span><h2 id="judul-sub1">Mengenal Lingkaran</h2><p>Lingkaran ada di mana-mana: roda sepeda, jam dinding, piring, dan taman bundar. Unsur-unsurnya: titik pusat, jari-jari (pusat ke tepi), diameter (melewati pusat, dua kali jari-jari), busur, tali busur, dan juring.</p></div><div class="grid-3"><div class="mini-card"><span class="icon-box ib-amber">◉</span><h3>Jari-jari &amp; diameter</h3><p>Jari-jari r, diameter d = 2r. Diameter adalah tali busur terpanjang.</p></div><div class="mini-card"><span class="icon-box ib-teal">◐</span><h3>Juring &amp; tembereng</h3><p>Juring adalah daerah yang dibatasi dua jari-jari dan busur — seperti potongan pizza.</p></div><div class="mini-card"><span class="icon-box ib-coral">π</span><h3>Bilangan π</h3><p>π ≈ 3,14 atau 22/7 adalah perbandingan keliling dengan diameter setiap lingkaran.</p></div></div><div class="card" style="margin-top:16px"><h3>Lingkaran interaktif</h3><p class="muted">Geser jari-jarinya dan lihat lingkarannya membesar. Perhatikan keliling dan luasnya.</p><svg viewBox="0 0 200 200" width="200" height="200" style="margin:0 auto" role="img" aria-label="Lingkaran dengan jari-jari yang bisa diubah"><circle cx="100" cy="100" r="80" fill="#FEF3C7" stroke="#D97706" stroke-width="3" id="lingCircleBg" /><circle cx="100" cy="100" r="50" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="4 4" id="lingCircle" /><circle cx="100" cy="100" r="4" fill="#0F172A" /><line x1="100" y1="100" x2="150" y2="100" stroke="#0F172A" stroke-width="2" /></svg><label class="f-label" for="lingR" style="margin-top:10px">Jari-jari: <span id="lingRVal">r = 7 cm</span></label><input type="range" id="lingR" min="1" max="14" step="1" value="7" /><div class="result-box" style="margin-top:12px"><div class="res-big" id="lingHasil">Keliling = 43,96 cm · Luas = 153,86 cm²</div><p id="lingDetail"></p></div></div></section><section id="sub2" aria-labelledby="judul-sub2"><div class="sec-head"><span class="sec-num">Sub-bab 2 · Memahami</span><h2 id="judul-sub2">Keliling dan Luas Lingkaran</h2><p>Keliling adalah panjang tepi lingkaran — jarak yang ditempuh roda dalam satu putaran. Luas adalah daerah di dalam lingkaran.</p></div><div class="card"><div class="formula"><div class="big">K = 2πr &nbsp;·&nbsp; L = πr²</div><p>π = 22/7 jika r kelipatan 7, π = 3,14 jika bukan.</p></div><p style="margin-top:14px"><strong>Contoh:</strong> roda sepeda jari-jari 35 cm. Satu putaran menempuh K = 2 × 22/7 × 35 = 220 cm = 2,2 m. Untuk menempuh 1 km, roda berputar sekitar 1000 ÷ 2,2 ≈ 455 putaran.</p></div><div class="card" style="margin-top:16px"><h3>Kenapa L = πr²?</h3><p>Potong lingkaran menjadi banyak juring kecil lalu susun berselang-seling: bentuknya mendekati persegi panjang dengan panjang πr dan lebar r. Luasnya πr × r = πr². Semakin banyak potongannya, semakin tepat bentuk persegi panjangnya.</p></div></section><section id="sub3" aria-labelledby="judul-sub3"><div class="sec-head"><span class="sec-num">Sub-bab 3 · Mengaplikasi</span><h2 id="judul-sub3">Busur dan Juring</h2><p>Busur adalah bagian dari keliling lingkaran, juring adalah bagian dari luas lingkaran. Keduanya sebanding dengan sudut pusatnya: sudut 90° berarti seperempat lingkaran, sudut 180° berarti setengah lingkaran.</p></div><div class="card"><h3>Kalkulator busur dan juring</h3><p class="muted">Isi jari-jari dan sudut pusat, lalu tekan Hitung. Dipakai π = 3,14.</p><div class="grid-2"><div><label class="f-label" for="busR">Jari-jari r (cm)</label><input type="number" id="busR" value="14" /></div><div><label class="f-label" for="busSudut">Sudut pusat (°)</label><input type="number" id="busSudut" value="90" /></div></div><button class="btn btn-primary" type="button" id="busBtn" style="margin-top:14px">Hitung Busur &amp; Juring</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="busHasil">Busur = 21,98 cm · Juring = 153,86 cm²</div><p id="busDetail">Busur = 90/360 × keliling; juring = 90/360 × luas.</p></div></div><div class="card" style="margin-top:16px"><h3>Contoh: potongan kue</h3><p>Kue tart jari-jari 21 cm dipotong menjadi 6 bagian sama besar. Sudut tiap potong = 360° ÷ 6 = 60°. Panjang busur tiap potong = 60/360 × 2 × 22/7 × 21 = 22 cm. Luas tiap potong = 60/360 × 22/7 × 21² = 231 cm².</p></div></section><section id="sub4" aria-labelledby="judul-sub4"><div class="sec-head"><span class="sec-num">Sub-bab 4 · Mengaplikasi</span><h2 id="judul-sub4">Sudut Pusat dan Sudut Keliling</h2><p>Sudut pusat titik sudutnya di pusat lingkaran; sudut keliling titik sudutnya di tepi lingkaran. Jika keduanya menghadap busur yang sama, sudut keliling besarnya setengah sudut pusat.</p></div><div class="card"><h3>Tebak sudut keliling</h3><p class="muted">Sudut pusat AOB = 100° dan sudut keliling ACB menghadap busur AB yang sama. Berapa besar sudut ACB?</p><div class="pill-row"><button class="btn btn-ghost" type="button" data-sudut="salah">100°</button><button class="btn btn-ghost" type="button" data-sudut="benar">50°</button><button class="btn btn-ghost" type="button" data-sudut="salah">200°</button></div><div class="feedback" id="sudutFb" aria-live="polite"></div></div><div class="card" style="margin-top:16px"><h3>Aturan penting lainnya</h3><ul><li>Sudut keliling yang menghadap diameter adalah sudut siku-siku (90°).</li><li>Sudut-sudut keliling yang menghadap busur yang sama besarnya sama.</li><li>Jumlah sudut berhadapan pada segi empat tali busur adalah 180°.</li></ul></div></section><section id="sub5" aria-labelledby="judul-sub5"><div class="sec-head"><span class="sec-num">Sub-bab 5 · Mengaplikasi</span><h2 id="judul-sub5">Lingkaran dalam Kehidupan Nyata</h2><p>Taman bundar, kolam, roda, dan jam dinding — semua memakai keliling dan luas lingkaran. Perhatikan: soal sering memberi diameter, padahal rumus memakai jari-jari. Bagi dua dulu!</p></div><div class="card"><h3>Latihan: hitung dengan π = 22/7 bila r kelipatan 7</h3><p class="muted">Tulis jawaban akhirnya (angka saja). Pembahasan muncul setelah kamu menjawab.</p><div class="stack"><div class="qa-row" data-answer="44" data-explain="K = 2 × 22/7 × 7 = 44 cm."><span class="qa-q">1) Keliling lingkaran r = 7 cm = … cm</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="154" data-explain="L = 22/7 × 49 = 154 cm²."><span class="qa-q">2) Luas lingkaran r = 7 cm = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="616" data-explain="L = 22/7 × 196 = 616 cm²."><span class="qa-q">3) Luas lingkaran r = 14 cm = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="11" data-explain="Busur = 90/360 × 2 × 22/7 × 7 = ¼ × 44 = 11 cm."><span class="qa-q">4) Panjang busur r = 7 cm, sudut 90° = … cm</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div><div class="qa-row" data-answer="154" data-explain="Juring = 90/360 × 22/7 × 196 = ¼ × 616 = 154 cm²."><span class="qa-q">5) Luas juring r = 14 cm, sudut 90° = … cm²</span><div class="qa-controls"><input type="number" step="any" class="qa-input" aria-label="Jawaban" /><button class="btn btn-primary qa-check" type="button">Cek</button></div><p class="qa-explain"></p><div class="feedback" aria-live="polite"></div></div></div></div></section>
+<section id="sub6" aria-labelledby="judul-sub6">
+  <div class="sec-head">
+    <span class="sec-num">Sub-bab 6 · Merefleksi</span>
+    <h2 id="judul-sub6">Kuis dan Refleksi</h2>
+    <p>Sepuluh soal campuran dari semua sub-bab. Jawab satu soal, lihat umpan baliknya, baru lanjut ke soal berikutnya. Skor terbaikmu tersimpan di perangkat ini.</p>
+  </div>
+  <div class="card" id="quizCard">
+    <div id="quizBox">
+      <div class="quiz-meta"><span id="quizProgress">Soal 1 dari 10</span><span id="quizScoreLive">Skor sementara: 0</span></div>
+      <p class="quiz-q" id="quizQuestion"></p>
+      <div id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+      <div class="feedback" id="quizFb" aria-live="polite"></div>
+      <button class="btn btn-primary" type="button" id="quizNext" disabled style="margin-top:12px">Soal Berikutnya →</button>
+    </div>
+    <div id="quizResult" class="quiz-result" hidden>
+      <div class="score-ring" id="quizRing" style="--p:0%"><div class="score-ring-inner"><div><strong style="font-size:1.6rem" id="quizScore">0/10</strong><br><span class="muted small">skor akhir</span></div></div></div>
+      <h3 id="quizMsg" style="margin-top:14px">Bagus!</h3>
+      <p class="muted" id="quizBestLine"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" type="button" id="quizRetry">Ulangi Kuis</button>
+        <a class="btn btn-ghost" href="#refleksi">Lanjut ke Refleksi ↓</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px" id="refleksi">
+    <h3>Refleksi diri</h3>
+    <p class="muted">Centang yang sudah kamu kuasai, lalu tulis contoh dan bagian yang masih sulit. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+    <div class="check-line"><input type="checkbox" id="refCheck1" /><label for="refCheck1">Saya bisa menghitung keliling dan luas lingkaran.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck2" /><label for="refCheck2">Saya bisa menghitung panjang busur dan luas juring.</label></div>
+    <div class="check-line"><input type="checkbox" id="refCheck3" /><label for="refCheck3">Saya bisa membedakan sudut pusat dan sudut keliling.</label></div>
+    <div style="margin-top:14px">
+      <label class="f-label" for="refContoh">Contoh Lingkaran dalam kehidupanku sehari-hari:</label>
+      <textarea id="refContoh" placeholder="Tulis contohmu di sini…"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <label class="f-label" for="refSulit">Bagian yang masih sulit bagiku (dan apa yang mau kulakukan):</label>
+      <textarea id="refSulit" placeholder="Contoh: masih bingung langkah eliminasi, mau latihan 5 soal lagi…"></textarea>
+    </div>
+    <button class="btn btn-primary" type="button" id="refSave" style="margin-top:14px">Simpan Refleksi</button>
+    <p class="muted small" id="refStatus" aria-live="polite" style="margin-top:8px"></p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Rangkuman P.2</h3>
+    <ul>
+['Keliling lingkaran K = 2πr = πd.', 'Luas lingkaran L = πr².', 'Gunakan π = 22/7 untuk r kelipatan 7, dan π = 3,14 untuk yang lain.', 'Panjang busur = sudut/360° × keliling lingkaran.', 'Luas juring = sudut/360° × luas lingkaran.', 'Sudut keliling = ½ × sudut pusat yang menghadap busur yang sama.']
+    </ul>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn btn-primary" href="../index.html">← Kembali ke Daftar Modul Kelas 9</a>
+      <a class="btn btn-ghost" href="../../index.html">Beranda</a>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">← Daftar Modul Kelas 9</a> · <a href="../../index.html">Beranda</a> · Modul berikutnya: <a href="../p3-bangun-ruang-sisi-lengkung/index.html">P.3 Bangun Ruang Sisi Lengkung</a> (Aktif)</p>
+    <p>MPI Matematika SMP — P.2 Lingkaran, Kelas 9, 10 JP. Kurikulum Merdeka Fase D, ATP MGMP Lampung Tengah 2026/2027. © <span data-year>2026</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

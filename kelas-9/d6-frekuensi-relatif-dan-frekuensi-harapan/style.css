@@ -1,0 +1,51 @@
+/* D.6 Frekuensi Relatif dan Frekuensi Harapan — style.css (khusus modul ini saja)
+   Base: ../../assets/css/main.css. Aksen Kelas 9 = amber/oranye. */
+body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
+.subnav{position:sticky;top:57px;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.subnav-inner{max-width:var(--wrap);margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.85rem;font-weight:700;padding:9px 13px;min-height:var(--tap);display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);white-space:nowrap}
+.subnav a:hover{border-color:var(--teal);color:var(--teal)}
+.subnav a.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.subnav a.done::after{content:"✓";font-weight:800}
+.subnav a.done{border-color:var(--teal)}
+.module-hero{padding-top:clamp(24px,5vw,40px)}
+.tp-box{background:var(--teal);color:#fff;border-radius:16px;padding:16px 18px}
+.tp-box p{margin:0;opacity:.95}
+.tp-box strong{font-size:1.05rem}
+.qa-row{display:flex;flex-direction:column;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.qa-row:last-child{border-bottom:0}
+.qa-q{font-weight:700;font-size:1.05rem;font-variant-numeric:tabular-nums}
+.qa-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.qa-controls input{max-width:180px;flex:1 1 140px}
+.qa-explain{font-size:.93rem;color:var(--muted);display:none}
+.qa-explain.show{display:block}
+.qa-row.ok .qa-q{color:var(--teal)}
+.qa-row.no .qa-q{color:var(--coral)}
+.quiz-q{font-size:clamp(1.15rem,3.4vw,1.4rem);font-weight:800;line-height:1.3;margin:8px 0 16px;font-variant-numeric:tabular-nums}
+.quiz-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:700;color:var(--muted)}
+.quiz-result{text-align:center}
+.check-line{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.check-line:last-child{border-bottom:0}
+.check-line input{width:24px;height:24px;flex:0 0 auto;accent-color:var(--teal);margin-top:2px}
+.stack{display:grid;gap:16px}
+.stack>*{min-width:0}
+.viz{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.viz .big{font-size:clamp(1.4rem,5vw,2rem);font-weight:800;color:var(--teal);font-variant-numeric:tabular-nums}
+.net-diagram{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px}
+.net-cell{min-width:64px;min-height:64px;border:2px solid var(--teal);border-radius:10px;background:var(--card);display:grid;place-items:center;font-weight:700;font-size:.85rem;padding:6px;text-align:center}
+.net-cell.round{border-radius:50%}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap}
+.pill-row .btn[aria-pressed="true"]{outline:3px solid var(--teal);outline-offset:2px}
+.dice{font-size:3rem;line-height:1}
+.bar-row{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:.9rem}
+.bar-row .bar-label{width:110px;text-align:right;font-weight:700}
+.bar-row .bar-track{flex:1;height:18px;background:var(--bg2);border-radius:99px;overflow:hidden}
+.bar-row .bar-fill{height:100%;background:var(--teal);border-radius:99px}
+@media (min-width:768px){
+  .qa-row{flex-direction:row;align-items:flex-start}
+  .qa-q{flex:1 1 42%}
+  .qa-controls{flex:1 1 58%}
+  .qa-explain{flex-basis:100%}
+}
+@media (max-width:480px){.subnav{top:53px}.subnav-inner{padding:8px 16px}}
