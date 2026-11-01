@@ -209,3 +209,7 @@ footer{padding:28px 0 44px;color:var(--muted);font-size:.88rem;border-top:1px so
   .topnav,.hero-cta,.no-print{display:none!important}
   body{background:#fff}
 }
+
+/* Anchor sub-bab: beri jarak dari nav yang menempel (topnav + subnav),
+   supaya judul bagian tidak tertutup pil saat loncat lewat #sub1..#sub6. */
+section[id^="sub"]{scroll-margin-top:140px}
