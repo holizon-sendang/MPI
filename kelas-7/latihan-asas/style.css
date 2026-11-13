@@ -1,0 +1,88 @@
+/* Latihan ASAS Kelas 7 — style.css (khusus halaman ini saja)
+   Base: ../../assets/css/main.css. Palet Biru Samudra tidak diubah di sini. */
+
+/* Navigasi bagian: menempel di bawah topnav, bisa digeser horizontal di HP */
+.subnav{position:sticky;top:57px;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.subnav-inner{max-width:var(--wrap);margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.85rem;font-weight:700;padding:9px 13px;min-height:var(--tap);display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);white-space:nowrap}
+.subnav a:hover{border-color:var(--teal);color:var(--teal)}
+.subnav a.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.subnav a.done::after{content:"✓";font-weight:800}
+.subnav a.done{border-color:var(--teal)}
+
+/* Header latihan */
+.module-hero{padding-top:clamp(24px,5vw,40px)}
+.tp-box{background:var(--teal);color:#fff;border-radius:16px;padding:16px 18px}
+.tp-box p{margin:0;opacity:.95}
+.tp-box strong{font-size:1.05rem}
+
+/* Tumpukan soal */
+.stack{display:grid;gap:16px}
+.stack>*{min-width:0}
+
+/* Satu soal */
+.soal{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--card2)}
+.soal-q{font-weight:700;font-size:1.02rem;line-height:1.5;font-variant-numeric:tabular-nums}
+.soal.ok{border-color:var(--teal)}
+.soal.ok .soal-q{color:var(--teal)}
+.soal.no{border-color:var(--coral)}
+.soal.no .soal-q{color:var(--coral)}
+.soal .pembahasan{font-size:.93rem;color:var(--muted);display:none;margin:10px 0 0}
+.soal .pembahasan.show{display:block}
+.soal .kunci{font-size:.93rem;font-weight:700;display:none;margin:10px 0 0}
+.soal .kunci.show{display:block}
+.skor-line{font-weight:800;font-size:1.05rem;margin:14px 0 0}
+.skor-line:empty{display:none}
+
+/* Pilihan ganda: tombol pilihan seperti kuis modul */
+.pg-opts{display:grid;gap:10px;margin-top:12px}
+.pg-opts .opt-btn{margin-bottom:0}
+.opt-btn[aria-pressed="true"]{outline:3px solid var(--teal);outline-offset:2px}
+
+/* Benar / Salah */
+.bs-opts{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.bs-opts .btn{min-width:120px}
+.bs-opts .btn[aria-pressed="true"]{outline:3px solid var(--teal);outline-offset:2px}
+.bs-opts .btn.picked-benarsalah{background:var(--teal);color:#fff;border-color:var(--teal)}
+.bs-opts .btn.picked-benarsalah.btn-ghost{color:#fff}
+
+/* Menjodohkan */
+.match-row{display:flex;flex-direction:column;gap:8px}
+.match-row select{max-width:340px}
+.match-jawaban{font-weight:700}
+
+/* Isian singkat */
+.isian-row{display:flex;flex-direction:column;gap:8px}
+.isian-row input{max-width:340px}
+
+/* Uraian */
+.uraian-jawab{margin-top:12px}
+.uraian-skor{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-top:12px}
+.uraian-skor label{font-weight:700;font-size:.88rem}
+.uraian-skor input{max-width:110px}
+.pembahasan-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:12px;display:none}
+.pembahasan-box.show{display:block}
+.pembahasan-box p{margin:0 0 .5em}
+.pembahasan-box p:last-child{margin-bottom:0}
+
+/* Hasil akhir */
+.quiz-result{text-align:center}
+.check-line{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.check-line:last-child{border-bottom:0}
+.check-line input{width:24px;height:24px;flex:0 0 auto;accent-color:var(--teal);margin-top:2px}
+
+@media (min-width:768px){
+  .pg-opts{grid-template-columns:1fr 1fr}
+  .match-row{flex-direction:row;align-items:center}
+  .match-row .soal-q{flex:1 1 auto}
+  .isian-row{flex-direction:row;align-items:center}
+  .isian-row .soal-q{flex:1 1 auto}
+}
+@media (max-width:480px){
+  .subnav{top:53px}
+  .subnav-inner{padding:8px 16px}
+}
+@media (min-width:1440px){
+  .subnav a{font-size:.95rem;padding:12px 18px}
+}

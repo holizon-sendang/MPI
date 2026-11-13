@@ -20,13 +20,13 @@ ke satu materi dan tiap modul bisa dirawat tanpa mengganggu modul lain.
 
 ```
 MPI/
-├── index.html                  # Hub utama: pilih kelas, cari/filter 30 modul
+├── index.html                  # Hub utama: pilih kelas, cari/filter 30 modul + 1 latihan ASAS
 ├── README.md                   # File ini
 ├── assets/
 │   ├── css/main.css            # CSS bersama (mobile-first, responsif)
 │   └── js/main.js              # JS bersama (menu HP, filter, progres)
 ├── kelas-7/
-│   ├── index.html              # Daftar 11 modul Kelas 7
+│   ├── index.html              # Daftar 11 modul + 1 latihan ASAS Kelas 7
 │   ├── b1-bilangan-bulat/      # Modul aktif (prototipe / template)
 │   │   ├── index.html
 │   │   ├── script.js
@@ -56,6 +56,10 @@ MPI/
 │   │   ├── script.js
 │   │   └── style.css
 │   ├── g2-kesebangunan/        # Modul aktif
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── latihan-asas/           # Latihan ASAS Kelas 7 (40 soal, skor maks 100)
 │   │   ├── index.html
 │   │   ├── script.js
 │   │   └── style.css
@@ -104,12 +108,13 @@ Yang dipisah per halaman adalah antar TP, bukan antar sub-bab.
 
 ### Daftar modul
 
-**Semua 30 modul sudah aktif** (per 28 Okt 2026). Total 98 file:
-30 folder modul × 3 file + hub + 3 halaman kelas + CSS/JS bersama + README.
+**Semua 30 modul sudah aktif** (per 28 Okt 2026), ditambah **1 latihan ASAS Kelas 7** (per 14 Nov 2026, diselipkan di antara B.4 Perbandingan dan A.1 Bentuk Aljabar). Total 101 file:
+30 folder modul × 3 file + 1 folder latihan ASAS × 3 file + hub + 3 halaman kelas + CSS/JS bersama + README.
 
 **Kelas 7 (11):** B.1 Bilangan Bulat *(10 JP)*, B.2 Bilangan Bulat dalam
 Kehidupan Sehari-hari *(14 JP)*, B.3 Bilangan Rasional *(22 JP)*,
 Aritmetika Sosial *(12 JP, modul khusus)*, B.4 Perbandingan *(14 JP)*,
+**Latihan ASAS** *(40 soal, 120 menit, skor maks 100 — di antara B.4 dan A.1)*,
 A.1 Bentuk Aljabar *(18 JP)*, G.1 Garis dan Sudut *(8 JP)*, G.2
 Kesebangunan *(6 JP)*, G.3 Kekongruenan *(6 JP)*, D.1 Investigasi Data
 *(8 JP)*, D.2 Diagram Batang dan Lingkaran *(8 JP)*.

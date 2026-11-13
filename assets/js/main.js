@@ -104,6 +104,25 @@
     });
   } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
 
+  /* Progres Latihan ASAS Kelas 7 (skor /100, 6 bagian) */
+  try {
+    var bestA = localStorage.getItem('mpi-asas-best');
+    document.querySelectorAll('[data-asas-best]').forEach(function (el) {
+      if (bestA !== null) {
+        el.textContent = 'Skor terbaik ASAS: ' + bestA + '/100';
+        el.style.display = '';
+      }
+    });
+    var visitedA = JSON.parse(localStorage.getItem('mpi-asas-visited') || '[]');
+    document.querySelectorAll('[data-asas-progress]').forEach(function (el) {
+      var pctA = Math.round((visitedA.length / 6) * 100);
+      el.textContent = visitedA.length === 0
+        ? 'Latihan ASAS: Belum mulai'
+        : 'Progres ASAS: ' + visitedA.length + ' dari 6 bagian (' + pctA + '%)';
+      el.style.display = '';
+    });
+  } catch (e) { /* localStorage tidak tersedia: abaikan, halaman tetap jalan */ }
+
   /* Progres modul lain (27 modul): satu pola untuk semuanya */
   var MODUL_LAIN = [
     { key: 'arithsos', label: 'Aritmetika Sosial' },
