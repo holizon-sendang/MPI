@@ -49,3 +49,8 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
   .qa-explain{flex-basis:100%}
 }
 @media (max-width:480px){.subnav{top:53px}.subnav-inner{padding:8px 16px}}
+
+/* Ilustrasi SVG statis port dari MPI Kelas 9 mendalam (mpi-mtk-ix-hz) — G.5 */
+.ilustrasi-jaring{margin:16px auto;text-align:center}
+.ilustrasi-jaring svg.jaring-svg{display:block;width:50%;max-width:340px;height:auto;margin:0 auto}
+.ilustrasi-jaring figcaption{margin-top:8px;font-size:.88rem;color:var(--muted)}

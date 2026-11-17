@@ -49,3 +49,7 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
   .qa-explain{flex-basis:100%}
 }
 @media (max-width:480px){.subnav{top:53px}.subnav-inner{padding:8px 16px}}
+/* Ilustrasi port dari modul P.2 Kelas 9 mendalam: 50% lebar konten, rata tengah */
+.ilustrasi{width:50%;max-width:340px;margin:16px auto;text-align:center}
+.ilustrasi svg{width:100%;height:auto;display:block}
+.ilustrasi figcaption{font-size:.9rem;color:var(--muted);margin-top:8px;line-height:1.45}

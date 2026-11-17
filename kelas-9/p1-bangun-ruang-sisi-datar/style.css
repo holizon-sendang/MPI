@@ -49,3 +49,8 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
   .qa-explain{flex-basis:100%}
 }
 @media (max-width:480px){.subnav{top:53px}.subnav-inner{padding:8px 16px}}
+/* Ilustrasi SVG (port dari MPI Matematika Kelas 9 mendalam, mpi-mtk-ix-hz):
+   tampil 50% lebar konten (maks. 340px), rata tengah, aman di HP 360px. */
+.fig-ilustrasi{width:50%;max-width:340px;margin:16px auto;text-align:center}
+.fig-ilustrasi svg{width:100%;height:auto}
+.fig-ilustrasi figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}

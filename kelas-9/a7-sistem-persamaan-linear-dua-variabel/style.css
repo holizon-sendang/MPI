@@ -49,3 +49,12 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
   .qa-explain{flex-basis:100%}
 }
 @media (max-width:480px){.subnav{top:53px}.subnav-inner{padding:8px 16px}}
+
+/* ===== Ilustrasi SVG (port dari MPI Matematika Kelas 9, A.7) ===== */
+.ilustrasi{margin:16px auto;max-width:340px;width:50%;text-align:center}
+.ilustrasi svg{display:block;width:100%;height:auto}
+.ilustrasi figcaption{margin-top:6px;font-size:.85rem;color:var(--muted)}
+.ilustrasi-trio{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:16px 0 4px}
+.ilustrasi-trio figure{flex:1 1 140px;max-width:170px;margin:0 auto;text-align:center}
+.ilustrasi-trio svg{display:block;width:100%;height:auto}
+.ilustrasi-trio figcaption{margin-top:6px;font-size:.85rem;color:var(--muted)}

@@ -49,3 +49,8 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
   .qa-explain{flex-basis:100%}
 }
 @media (max-width:480px){.subnav{top:53px}.subnav-inner{padding:8px 16px}}
+
+/* Ilustrasi SVG port dari modul P.3 Kelas 9 mendalam (mpi-mtk-ix-hz) */
+.ilus{margin:16px auto;text-align:center}
+.ilus svg{width:50%;max-width:340px;height:auto;display:block;margin:0 auto}
+.ilus figcaption{margin-top:8px;font-size:.9rem;color:var(--muted)}
