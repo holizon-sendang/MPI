@@ -145,4 +145,289 @@
     var st = $('refStatus'); if (st) st.textContent = 'Refleksi tersimpan di perangkat ini pada ' + new Date().toLocaleString('id-ID') + '.';
     markVisited('sub6');
   });
+
+  /* ---------- Percobaan Tuang Pasir 3D (port dari MPI Matematika Kelas 9 mendalam,
+     mpi-mtk-ix-hz/kelas-9/p1-luas-volume) ----------
+  /* Satu limas dituang berulang kali ke prisma beralas & bertinggi sama; prisma penuh
+     pada tuangan ke-3. Semua nama di dalam blok ini lokal (callback DOMContentLoaded),
+     tidak ada yang bertabrakan dengan kode target, jadi tanpa awalan sim3d_. */
+/* ================= PERCOBAAN TUANG PASIR 3D (Sub-bab 4) =================
+   Sebuah limas (alas & tinggi sama dengan prisma kaca di sebelahnya)
+   dituang berulang kali; permukaan pasir di dalam prisma naik ⅓ setiap
+   tuangan dan prisma tepat penuh pada tuangan ke-3. */
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+    var kanvas = document.querySelector(".tuang-kanvas");
+    if (!kanvas) { return; }
+    var ctx = kanvas.getContext("2d");
+    var tombol = document.querySelector(".btn-tuang");
+    var tombolUlang = document.querySelector(".btn-tuang-ulang");
+    var statusEl = document.querySelector(".tuang-status");
+
+    var HB = 1.1;          /* setengah sisi alas persegi */
+    var T = 2.6;           /* tinggi prisma & limas */
+    var POS_DIAM = [3.35, 0, 0];
+    var POS_ATAS = [-0.5, 4.55, 0];
+    var MIRING_ATAS = -2.6;
+
+    var st = {
+      tuang: 0,            /* tuangan selesai */
+      level: 0,            /* tinggi pasir saat ini (satuan dunia) */
+      anim: null,          /* {mulai} saat animasi berjalan */
+      partikel: [],
+      yaw: -0.55, pitch: 0.32
+    };
+
+    var TEKS_AWAL = "Prisma masih kosong (0 dari 3 tuangan). Limas di samping beralas dan bertinggi sama persis dengan prisma — tuang dan buktikan sendiri.";
+    var TEKS_ISI = [
+      "",
+      "Tuangan ke-1 selesai: prisma baru terisi ⅓. Masih jauh dari penuh — satu limas memang belum cukup.",
+      "Tuangan ke-2 selesai: prisma terisi ⅔. Tinggal satu tuangan lagi…",
+      "✓ PENUH! Tepat 3 tuangan limas untuk memenuhi 1 prisma yang alas dan tingginya sama. Jadi isi limas adalah ⅓ dari isi prisma: V limas = ⅓ × V prisma."
+    ];
+
+    function vAdd(a, b) { return [a[0] + b[0], a[1] + b[1], a[2] + b[2]]; }
+    function vScale(a, s) { return [a[0] * s, a[1] * s, a[2] * s]; }
+    function vCross(a, b) { return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]; }
+    function vDot(a, b) { return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]; }
+    function rotSumbu(v, sumbu, rad) {
+      var c = Math.cos(rad), s = Math.sin(rad);
+      var silang = vCross(sumbu, v);
+      var d = vDot(sumbu, v);
+      return [
+        v[0] * c + silang[0] * s + sumbu[0] * d * (1 - c),
+        v[1] * c + silang[1] * s + sumbu[1] * d * (1 - c),
+        v[2] * c + silang[2] * s + sumbu[2] * d * (1 - c)
+      ];
+    }
+    function rotZ(v, rad) {
+      var c = Math.cos(rad), s = Math.sin(rad);
+      return [v[0] * c - v[1] * s, v[0] * s + v[1] * c, v[2]];
+    }
+    function halus(x) { x = Math.max(0, Math.min(1, x)); return x * x * (3 - 2 * x); }
+    function campur(a, b, k) { return a + (b - a) * k; }
+
+    /* Keadaan limas pada waktu animasi p (0..1); tanpa animasi: diam di samping. */
+    function keadaanLimas() {
+      if (!st.anim) { return { pos: POS_DIAM, miring: 0, menuang: false }; }
+      var p = Math.min(1, (performance.now() - st.anim.mulai) / 2400);
+      var m;
+      if (p < 0.3) { m = halus(p / 0.3); }
+      else if (p < 0.78) { m = 1; }
+      else { m = 1 - halus((p - 0.78) / 0.22); }
+      return {
+        pos: [campur(POS_DIAM[0], POS_ATAS[0], m), campur(POS_DIAM[1], POS_ATAS[1], m), 0],
+        miring: MIRING_ATAS * m,
+        menuang: p >= 0.3 && p <= 0.75,
+        p: p
+      };
+    }
+    function levelSaatIni() {
+      if (!st.anim) { return st.level; }
+      var p = Math.min(1, (performance.now() - st.anim.mulai) / 2400);
+      var naik = halus((p - 0.3) / 0.45);
+      return (st.anim.dari + naik) / 3 * T;
+    }
+
+    var ALAS = [[-HB, 0, -HB], [HB, 0, -HB], [HB, 0, HB], [-HB, 0, HB]];
+    var PUNCAK = [0, T, 0];
+
+    function titikLimas(lokal, keadaan) {
+      return vAdd(rotZ(lokal, keadaan.miring), keadaan.pos);
+    }
+
+    function perbaruiUI() {
+      if (statusEl) {
+        if (st.anim) { statusEl.textContent = "Menuang limas ke-" + (st.tuang + 1) + "… perhatikan permukaan pasirnya naik."; }
+        else if (st.tuang === 0) { statusEl.textContent = TEKS_AWAL; }
+        else { statusEl.textContent = TEKS_ISI[st.tuang]; }
+      }
+      if (tombol) {
+        if (st.tuang >= 3) { tombol.textContent = "Sudah Penuh ✓"; tombol.disabled = true; }
+        else {
+          tombol.textContent = "▶ Tuang Limas ke-" + (st.tuang + 1);
+          tombol.disabled = !!st.anim;
+        }
+      }
+    }
+
+    function gambar() {
+      var W = kanvas.width, H = kanvas.height;
+      ctx.clearRect(0, 0, W, H);
+      var keadaan = keadaanLimas();
+      var level = levelSaatIni();
+      function putar(v) {
+        return rotSumbu(rotSumbu(v, [0, 1, 0], st.yaw), [1, 0, 0], st.pitch);
+      }
+      /* titik dunia */
+      var wadahBawah = ALAS.map(function (t) { return t; });
+      var wadahAtas = ALAS.map(function (t) { return [t[0], T, t[2]]; });
+      var pasirAtas = ALAS.map(function (t) { return [t[0], level, t[2]]; });
+      var limasAlas = ALAS.map(function (t) { return titikLimas(t, keadaan); });
+      var limasPuncak = titikLimas(PUNCAK, keadaan);
+
+      /* pas-kan ke kanvas dari kotak pembungkus prisma + limas */
+      var semua = wadahBawah.concat(wadahAtas, limasAlas, [limasPuncak]).map(putar);
+      var minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+      semua.forEach(function (pv) {
+        if (pv[0] < minX) { minX = pv[0]; }
+        if (pv[0] > maxX) { maxX = pv[0]; }
+        if (pv[1] < minY) { minY = pv[1]; }
+        if (pv[1] > maxY) { maxY = pv[1]; }
+      });
+      var skala = Math.min((W - 110) / Math.max(0.001, maxX - minX), (H - 100) / Math.max(0.001, maxY - minY), 120);
+      var pusX = (minX + maxX) / 2, pusY = (minY + maxY) / 2;
+      function layar(v) {
+        var pv = putar(v);
+        return [W / 2 + (pv[0] - pusX) * skala, H / 2 - (pv[1] - pusY) * skala, pv[2]];
+      }
+
+      var wajah = [];
+      function tambahWajah(titik, r, g, b, alfa, garis) {
+        var pts = titik.map(layar);
+        var z = 0;
+        pts.forEach(function (p) { z += p[2]; });
+        wajah.push({ pts: pts, z: z / pts.length, warna: "rgba(" + r + "," + g + "," + b + "," + alfa + ")", garis: garis || null });
+      }
+      /* pasir di dalam prisma */
+      if (level > 0.02) {
+        for (var s = 0; s < 4; s++) {
+          var a1 = ALAS[s], a2 = ALAS[(s + 1) % 4];
+          tambahWajah([a1, a2, [a2[0], level, a2[2]], [a1[0], level, a1[2]]], 245, 158, 11, 0.9);
+        }
+        tambahWajah(pasirAtas, 253, 230, 138, 0.95);
+      }
+      /* kaca prisma: alas + 4 sisi tembus pandang */
+      tambahWajah(wadahBawah, 191, 219, 254, 0.5);
+      for (var k = 0; k < 4; k++) {
+        var b1 = wadahBawah[k], b2 = wadahBawah[(k + 1) % 4], t2 = wadahAtas[(k + 1) % 4], t1 = wadahAtas[k];
+        tambahWajah([b1, b2, t2, t1], 219, 234, 254, 0.13);
+      }
+      /* limas */
+      var urutan = [0, 1, 2, 3];
+      urutan.forEach(function (i) {
+        tambahWajah([limasAlas[i], limasAlas[(i + 1) % 4], limasPuncak], 254, 243, 199, 0.95, "#D97706");
+      });
+      tambahWajah(limasAlas, 254, 243, 199, 0.45, "#D97706");
+
+      wajah.sort(function (p, q) { return p.z - q.z; });
+      wajah.forEach(function (w) {
+        ctx.beginPath();
+        w.pts.forEach(function (p, i) { if (i === 0) { ctx.moveTo(p[0], p[1]); } else { ctx.lineTo(p[0], p[1]); } });
+        ctx.closePath();
+        ctx.fillStyle = w.warna;
+        ctx.fill();
+        if (w.garis) { ctx.strokeStyle = w.garis; ctx.lineWidth = 2; ctx.stroke(); }
+      });
+
+      /* rusuk prisma */
+      ctx.strokeStyle = "#2563EB";
+      ctx.lineWidth = 2.5;
+      function garis3(a, b) {
+        var pa = layar(a), pb = layar(b);
+        ctx.beginPath(); ctx.moveTo(pa[0], pa[1]); ctx.lineTo(pb[0], pb[1]); ctx.stroke();
+      }
+      for (var e = 0; e < 4; e++) {
+        garis3(wadahBawah[e], wadahBawah[(e + 1) % 4]);
+        garis3(wadahAtas[e], wadahAtas[(e + 1) % 4]);
+        garis3(wadahBawah[e], wadahAtas[e]);
+      }
+      /* penanda ⅓ dan ⅔ pada rusuk depan */
+      ctx.fillStyle = "#1E3A8A";
+      ctx.font = "700 17px system-ui, sans-serif";
+      ctx.textAlign = "right";
+      [1, 2].forEach(function (n) {
+        var yTanda = T * n / 3;
+        var titik = layar([-HB, yTanda, HB]);
+        ctx.beginPath();
+        ctx.moveTo(titik[0] - 12, titik[1]);
+        ctx.lineTo(titik[0] + 2, titik[1]);
+        ctx.strokeStyle = "#1E3A8A";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.fillText(n === 1 ? "⅓" : "⅔", titik[0] - 16, titik[1] + 6);
+      });
+      ctx.textAlign = "left";
+
+      /* partikel pasir */
+      if (keadaan.menuang) {
+        for (var j = 0; j < 3; j++) {
+          st.partikel.push({
+            x: limasPuncak[0] + (Math.random() - 0.5) * 0.3,
+            y: limasPuncak[1] - 0.1,
+            z: limasPuncak[2] + (Math.random() - 0.5) * 0.3,
+            v: 0
+          });
+        }
+      }
+      st.partikel = st.partikel.filter(function (pt) { return pt.y > level + 0.05; });
+      st.partikel.forEach(function (pt) {
+        pt.v += 0.012;
+        pt.y -= pt.v;
+        var p = layar([pt.x, pt.y, pt.z]);
+        ctx.beginPath();
+        ctx.arc(p[0], p[1], 3, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(217,119,6,0.9)";
+        ctx.fill();
+      });
+    }
+
+    function bingkai() {
+      gambar();
+      if (st.anim) {
+        var p = (performance.now() - st.anim.mulai) / 2400;
+        if (p >= 1) {
+          st.tuang += 1;
+          st.level = st.tuang / 3 * T;
+          st.anim = null;
+          st.partikel = [];
+          perbaruiUI();
+          gambar();
+          return;
+        }
+        requestAnimationFrame(bingkai);
+      }
+    }
+
+    if (tombol) {
+      tombol.addEventListener("click", function () {
+        if (st.anim || st.tuang >= 3) { return; }
+        st.anim = { mulai: performance.now(), dari: st.tuang };
+        perbaruiUI();
+        requestAnimationFrame(bingkai);
+      });
+    }
+    if (tombolUlang) {
+      tombolUlang.addEventListener("click", function () {
+        st.tuang = 0;
+        st.level = 0;
+        st.anim = null;
+        st.partikel = [];
+        perbaruiUI();
+        gambar();
+      });
+    }
+    var seret = null;
+    kanvas.addEventListener("pointerdown", function (ev) {
+      seret = { x: ev.clientX, y: ev.clientY };
+      try { kanvas.setPointerCapture(ev.pointerId); } catch (e) {}
+    });
+    kanvas.addEventListener("pointermove", function (ev) {
+      if (!seret) { return; }
+      st.yaw += (ev.clientX - seret.x) * 0.01;
+      st.pitch += (ev.clientY - seret.y) * 0.01;
+      if (st.pitch > 1.2) { st.pitch = 1.2; }
+      if (st.pitch < -1.2) { st.pitch = -1.2; }
+      seret = { x: ev.clientX, y: ev.clientY };
+      if (!st.anim) { gambar(); }
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach(function (nama) {
+      kanvas.addEventListener(nama, function () { seret = null; });
+    });
+
+    perbaruiUI();
+    gambar();
+  });
+}
 })();

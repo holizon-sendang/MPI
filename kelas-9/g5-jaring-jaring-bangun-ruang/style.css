@@ -54,3 +54,20 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
 .ilustrasi-jaring{margin:16px auto;text-align:center}
 .ilustrasi-jaring svg.jaring-svg{display:block;width:50%;max-width:340px;height:auto;margin:0 auto}
 .ilustrasi-jaring figcaption{margin-top:8px;font-size:.88rem;color:var(--muted)}
+
+/* Simulator lipatan 3D — port dari MPI Kelas 9 mendalam (mpi-mtk-ix-hz) — G.5
+   Variabel disesuaikan ke main.css MPI utama (--line, --teal-dark, --amber, --muted).
+   Canvas responsif: lebar 100% (88% untuk bangun lain), tidak overflow di HP 360px. */
+.sim3d{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.sim3d-kanvas{display:block;width:100%;max-width:100%;height:auto;touch-action:none;cursor:grab;border-radius:8px;background:linear-gradient(180deg,#F8FAFF,#EFF6FF)}
+.sim3d-kanvas:active{cursor:grabbing}
+.btn-baris{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn-lipat{background:var(--teal-dark);color:#fff}
+.sim3d-label{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);margin-top:10px}
+.sim3d-geser{flex:1;accent-color:var(--amber);min-height:28px}
+.sim3d-status{font-size:.9rem;margin-top:6px;min-height:1.25em}
+.sim3d-judul{font-size:.95rem;margin-bottom:6px}
+.sim3d-kanvas-b{display:block;width:88%;max-width:100%;margin-inline:auto;height:auto;touch-action:none;cursor:grab;border-radius:8px;background:linear-gradient(180deg,#F8FAFF,#EFF6FF)}
+.sim3d-kanvas-b:active{cursor:grabbing}
+.sim3d-status-b{font-size:.9rem;margin-top:6px;min-height:1.25em}
+.sim3d-geser-b{flex:1;accent-color:var(--amber);min-height:28px}

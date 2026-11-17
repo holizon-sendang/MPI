@@ -86,7 +86,18 @@
       <text x="120" y="168" text-anchor="middle" font-size="11.5" fill="#0F172A">panjang selimut = keliling alas (2πr)</text>
     </svg>
 <figcaption>Jaring-jaring tabung: 2 lingkaran + 1 persegi panjang (selimut).</figcaption>
-</figure><div class="card" style="margin-top:16px"><h3>Kalkulator tabung, kerucut, dan bola</h3><p class="muted">Pilih bangunnya, isi jari-jari dan tinggi (cm), lalu tekan Hitung. Dipakai π = 3,14.</p><label class="f-label" for="brBangun">Pilih bangun</label><select id="brBangun"><option value="tabung">Tabung</option><option value="kerucut">Kerucut</option><option value="bola">Bola</option></select><div class="grid-2" style="margin-top:12px"><div><label class="f-label" for="brR">Jari-jari r (cm)</label><input type="number" id="brR" value="7" /></div><div id="rowT"><label class="f-label" for="brT">Tinggi t (cm)</label><input type="number" id="brT" value="10" /></div></div><button class="btn btn-primary" type="button" id="brBtn" style="margin-top:14px">Hitung</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="brHasil">Lp = 747,70 · V = 1538,60</div><p id="brLangkah">Tabung r = 7 cm, t = 10 cm dengan π = 3,14.</p></div></div><figure class="ilus">
+</figure>
+<p>Simulasi 3D — lipat jaring-jaring di atas menjadi tabung:</p>
+<div class="sim3d">
+  <canvas class="sim-tabung-kanvas" id="sim-tabung" width="600" height="600" aria-label="Simulasi lipatan 3D jaring-jaring tabung: persegi panjang sebagai selimut digulung dan dua lingkaran menutup kedua ujungnya menjadi tabung"></canvas>
+  <div class="btn-baris">
+    <button class="btn btn-amber" id="btn-lipat-tabung">▶ Lipat Jadi Tabung</button>
+  </div>
+  <label class="sim3d-label">Proses lipatan <input type="range" class="sim-tabung-geser" id="geser-tabung" min="0" max="100" step="1" value="0"></label>
+  <p class="sim3d-status" id="status-tabung"></p>
+  <p class="sim3d-keterangan">Simulasi ini memakai tabung dengan jari-jari <b>r = 7 cm</b> dan tinggi <b>t = 10 cm</b>. Panjang persegi panjang selimutnya tepat <b>keliling alas = 2 × 22/7 × 7 = 44 cm</b>, sehingga kedua tepinya bertemu persis saat digulung. Seret gambar untuk memutar pandangan.</p>
+</div>
+<div class="card" style="margin-top:16px"><h3>Kalkulator tabung, kerucut, dan bola</h3><p class="muted">Pilih bangunnya, isi jari-jari dan tinggi (cm), lalu tekan Hitung. Dipakai π = 3,14.</p><label class="f-label" for="brBangun">Pilih bangun</label><select id="brBangun"><option value="tabung">Tabung</option><option value="kerucut">Kerucut</option><option value="bola">Bola</option></select><div class="grid-2" style="margin-top:12px"><div><label class="f-label" for="brR">Jari-jari r (cm)</label><input type="number" id="brR" value="7" /></div><div id="rowT"><label class="f-label" for="brT">Tinggi t (cm)</label><input type="number" id="brT" value="10" /></div></div><button class="btn btn-primary" type="button" id="brBtn" style="margin-top:14px">Hitung</button><div class="result-box" style="margin-top:14px"><div class="res-big" id="brHasil">Lp = 747,70 · V = 1538,60</div><p id="brLangkah">Tabung r = 7 cm, t = 10 cm dengan π = 3,14.</p></div></div><figure class="ilus">
 <svg class="jaring-svg p3-setengah" viewBox="0 0 280 160" role="img" aria-label="Ilustrasi tabung berjari-jari 7 cm dan tinggi 10 cm">
       <ellipse cx="88" cy="40" rx="44" ry="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
       <path d="M44,40 L44,112 A44,12 0 0 0 132,112 L132,40" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
@@ -107,7 +118,18 @@
       <text x="205" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1E3A8A">alas</text>
     </svg>
 <figcaption>Jaring-jaring kerucut: 1 juring (selimut) + 1 lingkaran alas.</figcaption>
-</figure><div class="card"><div class="formula"><div class="big">V kerucut = ⅓πr²t &nbsp;·&nbsp; Lp = πr(r + s)</div><p>s = garis pelukis = √(r² + t²).</p></div><p style="margin-top:14px"><strong>Contoh:</strong> topi ulang tahun berbentuk kerucut r = 7 cm, t = 24 cm. Garis pelukis s = √(49 + 576) = √625 = 25 cm. Luas kertas yang dibutuhkan = πr(r + s) = 22/7 × 7 × 32 = 704 cm².</p><figure class="ilus">
+</figure>
+<p>Simulasi 3D — lipat jaring-jaring di atas menjadi kerucut:</p>
+<div class="sim3d">
+  <canvas class="sim-kerucut-kanvas" id="sim-kerucut" width="600" height="600" aria-label="Simulasi lipatan 3D jaring-jaring kerucut: juring lingkaran sebagai selimut dan lingkaran sebagai alas dilipat menjadi kerucut"></canvas>
+  <div class="btn-baris">
+    <button class="btn btn-amber" id="btn-lipat-kerucut">▶ Lipat Jadi Kerucut</button>
+  </div>
+  <label class="sim3d-label">Proses lipatan <input type="range" class="sim-kerucut-geser" id="geser-kerucut" min="0" max="100" step="1" value="0"></label>
+  <p class="sim3d-status" id="status-kerucut"></p>
+  <p class="sim3d-keterangan">Simulasi ini memakai kerucut dengan jari-jari alas <b>r = 6 cm</b>, tinggi <b>t = 8 cm</b>, dan garis pelukis <b>s = 10 cm</b> (karena 6² + 8² = 10²). Sudut juring selimutnya <b>216°</b>, dari θ = (r/s) × 360° = (6/10) × 360°. Seret gambar untuk memutar pandangan.</p>
+</div>
+<div class="card"><div class="formula"><div class="big">V kerucut = ⅓πr²t &nbsp;·&nbsp; Lp = πr(r + s)</div><p>s = garis pelukis = √(r² + t²).</p></div><p style="margin-top:14px"><strong>Contoh:</strong> topi ulang tahun berbentuk kerucut r = 7 cm, t = 24 cm. Garis pelukis s = √(49 + 576) = √625 = 25 cm. Luas kertas yang dibutuhkan = πr(r + s) = 22/7 × 7 × 32 = 704 cm².</p><figure class="ilus">
 <svg class="jaring-svg p3-setengah" viewBox="0 0 240 170" role="img" aria-label="Gambar soal Masalah 2: topi berbentuk kerucut berjari-jari 7 cm dan tinggi 24 cm">
         <path d="M90,16 L40,126 A50,12 0 0 0 140,126 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5"/>
         <ellipse cx="90" cy="126" rx="50" ry="12" fill="#FDE68A" stroke="#D97706" stroke-width="2"/>

@@ -54,3 +54,12 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
 .fig-ilustrasi{width:50%;max-width:340px;margin:16px auto;text-align:center}
 .fig-ilustrasi svg{width:100%;height:auto}
 .fig-ilustrasi figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+
+/* Percobaan tuang pasir 3D (port dari MPI Matematika Kelas 9 mendalam, mpi-mtk-ix-hz):
+   canvas responsif (70,5% lebar, maks. 100%), tidak overflow di HP 360px. */
+.tuang-kanvas{display:block;width:70.5%;max-width:100%;margin-inline:auto;height:auto;touch-action:none;cursor:grab;border-radius:8px;background:linear-gradient(180deg,#F8FAFF,#EFF6FF)}
+.tuang-kanvas:active{cursor:grabbing}
+.tuang-status{font-size:.95rem;margin-top:8px;min-height:1.3em}
+.btn-baris{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.btn-sekunder{background:var(--card);color:var(--teal-dark);border:2px solid var(--teal)}
+.btn-tuang[disabled]{opacity:.55;cursor:default}

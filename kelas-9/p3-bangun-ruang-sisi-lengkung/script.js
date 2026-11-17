@@ -140,3 +140,491 @@
     markVisited('sub6');
   });
 })();
+
+/* ================= SIMULATOR LIPAT 3D (port dari mpi-mtk-ix-hz P.3) =================
+   Dua simulator lipat 3D dari modul P.3 Kelas 9 mendalam: sim-kerucut dan
+   sim-tabung. Kode disalin utuh; semua fungsi/variabel berada di dalam
+   callback DOMContentLoaded masing-masing sehingga tidak bertabrakan dengan
+   kode target (tidak ada rename). Elemen yang dipakai: #sim-kerucut,
+   #btn-lipat-kerucut, #geser-kerucut, #status-kerucut, #sim-tabung,
+   #btn-lipat-tabung, #geser-tabung, #status-tabung. */
+/* ================= SIMULASI LIPAT 3D KERUCUT (Sub-bab 3) =================
+   Jaring kerucut (juring selimut + lingkaran alas) dilipat menjadi kerucut
+   dengan interpolasi titik-per-titik antara posisi datar dan posisi kerucut.
+   Pola mengikuti simulator lipat 3D modul G.5: tombol animasi, slider proses,
+   seret untuk memutar, dan auto-fit longgar pada setiap frame. */
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+    var kanvas = document.getElementById("sim-kerucut");
+    if (!kanvas) { return; }
+    var ctx = kanvas.getContext("2d");
+    var tombol = document.getElementById("btn-lipat-kerucut");
+    var geserEl = document.getElementById("geser-kerucut");
+    var statusEl = document.getElementById("status-kerucut");
+    var labelLipat = tombol ? tombol.textContent : "";
+    var PESAN_AWAL = "Jaring-jaring kerucut: juring lingkaran (selimut) + lingkaran (alas).";
+    var PESAN_TENGAH = "Sedang melipat… juring melengkung mengikuti alas.";
+    var PESAN_JADI = "Kerucut terbentuk! Juring menjadi selimut dan lingkaran menjadi alasnya.";
+
+    /* Geometri kerucut contoh modul: r = 6 cm, t = 8 cm, s = 10 cm.
+       Sudut juring = (r/s) × 360° = 216°, setengahnya 108°. */
+    var R = 6, T = 8, S = 10;
+    var SETENGAH = 108 * Math.PI / 180;
+    var NA = 24, NR = 4; /* segmen sudut dan cincin radial juring */
+    var NB = 24, NF = 3; /* segmen sudut dan cincin lingkaran alas */
+
+    function vCross(a, b) { return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]; }
+    function vDot(a, b) { return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]; }
+    function rotSumbu(v, sumbu, rad) {
+      var c = Math.cos(rad), s = Math.sin(rad);
+      var silang = vCross(sumbu, v);
+      var d = vDot(sumbu, v);
+      return [
+        v[0] * c + silang[0] * s + sumbu[0] * d * (1 - c),
+        v[1] * c + silang[1] * s + sumbu[1] * d * (1 - c),
+        v[2] * c + silang[2] * s + sumbu[2] * d * (1 - c)
+      ];
+    }
+    function lerp(a, b, p) { return a + (b - a) * p; }
+    function lerpV(a, b, p) { return [lerp(a[0], b[0], p), lerp(a[1], b[1], p), lerp(a[2], b[2], p)]; }
+
+    /* Satu titik juring: rho = jarak miring dari puncak (0..s), phi = sudut juring. */
+    function titikJuring(rho, phi) {
+      var datar = [rho * Math.sin(phi), 0, rho * Math.cos(phi)];
+      var psi = phi * (S / R);
+      var q = rho * (R / S);
+      var jadi = [q * Math.sin(psi), T - rho * (T / S), q * Math.cos(psi)];
+      return { datar: datar, jadi: jadi };
+    }
+    /* Satu titik lingkaran alas: beta = sudut keliling, f = pecahan jejari (0..1).
+       Saat datar pusatnya di (0, 0, s + r) sehingga tepi terdekatnya menyentuh
+       titik tengah busur juring di (0, 0, s). */
+    function titikAlas(beta, f) {
+      var datar = [R * f * Math.sin(beta), 0, (S + R) + R * f * Math.cos(beta)];
+      var jadi = [R * f * Math.sin(beta), 0, R * f * Math.cos(beta)];
+      return { datar: datar, jadi: jadi };
+    }
+
+    var gridJuring = [], gridAlas = [], i, j;
+    for (i = 0; i <= NR; i++) {
+      var barisJ = [];
+      for (j = 0; j <= NA; j++) {
+        barisJ.push(titikJuring(S * i / NR, -SETENGAH + 2 * SETENGAH * j / NA));
+      }
+      gridJuring.push(barisJ);
+    }
+    for (i = 0; i <= NF; i++) {
+      var barisA = [];
+      for (j = 0; j <= NB; j++) {
+        barisA.push(titikAlas(2 * Math.PI * j / NB, i / NF));
+      }
+      gridAlas.push(barisA);
+    }
+    var FACES = [];
+    for (i = 0; i < NR; i++) {
+      for (j = 0; j < NA; j++) {
+        FACES.push({ a: gridJuring[i][j], b: gridJuring[i][j + 1], c: gridJuring[i + 1][j + 1], d: gridJuring[i + 1][j], amber: true });
+      }
+    }
+    for (i = 0; i < NF; i++) {
+      for (j = 0; j < NB; j++) {
+        FACES.push({ a: gridAlas[i][j], b: gridAlas[i][j + 1], c: gridAlas[i + 1][j + 1], d: gridAlas[i + 1][j], amber: false });
+      }
+    }
+
+    /* Pemusatan tampilan: jaring datar dipusatkan pada rentang z-nya
+       (dari s·cos108° sampai s + 2r), kerucut pada setengah tingginya. */
+    var PUSAT_DATAR = [0, 0, (S + 2 * R + S * Math.cos(SETENGAH)) / 2];
+    var PUSAT_JADI = [0, T / 2, 0];
+    var lebarNet = 2 * S * Math.sin(SETENGAH);
+    var dalamNet = (S + 2 * R) - S * Math.cos(SETENGAH);
+    var skalaDasar = Math.min(600 / lebarNet, 420 / dalamNet);
+    var st = { prog: 0, target: 0, yaw: -0.5, pitch: 0.38, raf: 0 };
+
+    function posisi(titik, p) {
+      var mentah = lerpV(titik.datar, titik.jadi, p);
+      var geser = lerpV(PUSAT_DATAR, PUSAT_JADI, p);
+      return [mentah[0] - geser[0], mentah[1] - geser[1], mentah[2] - geser[2]];
+    }
+
+    function perbaruiStatus() {
+      if (statusEl) {
+        if (st.prog >= 0.995) { statusEl.textContent = PESAN_JADI; }
+        else if (st.prog <= 0.005) { statusEl.textContent = PESAN_AWAL; }
+        else { statusEl.textContent = PESAN_TENGAH; }
+      }
+      if (tombol) { tombol.textContent = st.target >= 1 ? "↺ Buka Lagi" : labelLipat; }
+    }
+
+    function gambar() {
+      var W = kanvas.width, H = kanvas.height;
+      ctx.clearRect(0, 0, W, H);
+      function putar(v) {
+        return rotSumbu(rotSumbu(v, [0, 1, 0], st.yaw), [1, 0, 0], st.pitch);
+      }
+      var mentah = [];
+      var minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+      FACES.forEach(function (f, idx) {
+        var pts = [f.a, f.b, f.c, f.d].map(function (t) { return putar(posisi(t, st.prog)); });
+        var zRata = 0;
+        pts.forEach(function (pv) {
+          zRata += pv[2];
+          if (pv[0] < minX) { minX = pv[0]; }
+          if (pv[0] > maxX) { maxX = pv[0]; }
+          if (pv[1] < minY) { minY = pv[1]; }
+          if (pv[1] > maxY) { maxY = pv[1]; }
+        });
+        /* Normal dari dua diagonal segi empat — tetap sah pada cincin puncak
+           juring dan cincin pusat alas yang sudut-sudutnya menyatu. */
+        var diag1 = [pts[2][0] - pts[0][0], pts[2][1] - pts[0][1], pts[2][2] - pts[0][2]];
+        var diag2 = [pts[3][0] - pts[1][0], pts[3][1] - pts[1][1], pts[3][2] - pts[1][2]];
+        var n = vCross(diag2, diag1);
+        var panjang = Math.sqrt(vDot(n, n));
+        var nz = panjang > 1e-9 ? n[2] / panjang : 0;
+        mentah.push({ sudut: pts, dalam: zRata / 4, nz: nz, idx: idx, amber: f.amber });
+      });
+      /* Pas-kan & pusatkan hasil render saat ini ke kanvas pada setiap proses
+         lipatan. Margin lega (230px horizontal, 210px vertikal) dan pembesaran
+         dibatasi 1,15x skala jaring datar — pelajaran dari perbaikan ukuran
+         simulator G.5 — supaya bangun selalu terlihat utuh di semua sisi. */
+      var rentangX = Math.max(0.001, maxX - minX);
+      var rentangY = Math.max(0.001, maxY - minY);
+      var skala = Math.min((W - 230) / rentangX, (H - 210) / rentangY, skalaDasar * 1.15);
+      var pusX = (minX + maxX) / 2, pusY = (minY + maxY) / 2;
+      var wajah = mentah.map(function (w) {
+        return {
+          sudut: w.sudut.map(function (pv) {
+            return [W / 2 + (pv[0] - pusX) * skala, H / 2 - (pv[1] - pusY) * skala];
+          }),
+          dalam: w.dalam, nz: w.nz, idx: w.idx, amber: w.amber
+        };
+      });
+      wajah.sort(function (p, q) { return (p.dalam + p.idx * 0.002) - (q.dalam + q.idx * 0.002); });
+      wajah.forEach(function (w) {
+        var t = (w.nz + 1) / 2;
+        var r, g, b, garis;
+        if (w.amber) {
+          r = Math.round(217 + (254 - 217) * t);
+          g = Math.round(119 + (243 - 119) * t);
+          b = Math.round(6 + (199 - 6) * t);
+          garis = "#92400E";
+        } else {
+          r = Math.round(147 + (219 - 147) * t);
+          g = Math.round(197 + (234 - 197) * t);
+          b = Math.round(253 + (254 - 253) * t);
+          garis = "#1E3A8A";
+        }
+        ctx.beginPath();
+        w.sudut.forEach(function (s, k) { if (k === 0) { ctx.moveTo(s[0], s[1]); } else { ctx.lineTo(s[0], s[1]); } });
+        ctx.closePath();
+        ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ",0.92)";
+        ctx.fill();
+        ctx.strokeStyle = garis;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      });
+    }
+
+    function animasi() {
+      cancelAnimationFrame(st.raf);
+      var dari = st.prog, ke = st.target, t0 = null;
+      function langkah(ts) {
+        if (!t0) { t0 = ts; }
+        var p = Math.min(1, (ts - t0) / 1800);
+        var e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        st.prog = dari + (ke - dari) * e;
+        if (geserEl) { geserEl.value = st.prog * 100; }
+        gambar();
+        perbaruiStatus();
+        if (p < 1) { st.raf = requestAnimationFrame(langkah); }
+      }
+      st.raf = requestAnimationFrame(langkah);
+    }
+
+    if (tombol) {
+      tombol.addEventListener("click", function () {
+        st.target = st.target >= 1 ? 0 : 1;
+        perbaruiStatus();
+        animasi();
+      });
+    }
+    if (geserEl) {
+      geserEl.addEventListener("input", function () {
+        cancelAnimationFrame(st.raf);
+        st.prog = parseFloat(geserEl.value) / 100;
+        st.target = st.prog >= 0.995 ? 1 : 0;
+        gambar();
+        perbaruiStatus();
+      });
+    }
+    var seret = null;
+    kanvas.addEventListener("pointerdown", function (ev) {
+      seret = { x: ev.clientX, y: ev.clientY };
+      try { kanvas.setPointerCapture(ev.pointerId); } catch (e) {}
+    });
+    kanvas.addEventListener("pointermove", function (ev) {
+      if (!seret) { return; }
+      st.yaw += (ev.clientX - seret.x) * 0.01;
+      st.pitch += (ev.clientY - seret.y) * 0.01;
+      if (st.pitch > 1.2) { st.pitch = 1.2; }
+      if (st.pitch < -1.2) { st.pitch = -1.2; }
+      seret = { x: ev.clientX, y: ev.clientY };
+      gambar();
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach(function (nama) {
+      kanvas.addEventListener(nama, function () { seret = null; });
+    });
+
+    gambar();
+    perbaruiStatus();
+  });
+}
+
+/* ================= SIMULASI LIPAT 3D TABUNG (Sub-bab 3) =================
+   Jaring tabung (persegi panjang selimut + lingkaran tutup dan alas) dilipat
+   menjadi tabung: selimut ditekuk isometrik dengan kelengkungan κ = p/r,
+   kedua lingkaran berotasi kaku mengitari titik tempelnya. Pola mengikuti
+   simulator kerucut di atas dan simulator lipat 3D modul G.5: tombol animasi,
+   slider proses, seret untuk memutar, dan auto-fit longgar setiap frame. */
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+    var kanvas = document.getElementById("sim-tabung");
+    if (!kanvas) { return; }
+    var ctx = kanvas.getContext("2d");
+    var tombol = document.getElementById("btn-lipat-tabung");
+    var geserEl = document.getElementById("geser-tabung");
+    var statusEl = document.getElementById("status-tabung");
+    var labelLipat = tombol ? tombol.textContent : "";
+    var PESAN_AWAL = "Jaring-jaring tabung: 1 persegi panjang (selimut) + 2 lingkaran (tutup dan alas).";
+    var PESAN_TENGAH = "Sedang melipat… persegi panjang menggulung, kedua lingkaran menutup ujungnya.";
+    var PESAN_JADI = "Tabung terbentuk! Persegi panjang menjadi selimut, kedua lingkaran menjadi tutup dan alas.";
+
+    /* Geometri tabung contoh modul: r = 7 cm, t = 10 cm, keliling alas 44 cm.
+       Bidang jaring: u mendatar (persegi panjang u∈[−22,22]), v tegak
+       (persegi panjang v∈[0,10]); lingkaran tutup menempel di (0,10) dengan
+       pusat datar (0,17), lingkaran alas menempel di (0,0) dengan pusat (0,−7). */
+    var R = 7, T = 10, PANJANG = 44;
+    var NU = 28, NV = 4; /* kolom dan baris mesh persegi panjang */
+    var NB = 24, NF = 3; /* segmen sudut dan cincin kedua lingkaran */
+
+    function vCross(a, b) { return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]; }
+    function vDot(a, b) { return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]; }
+    function rotSumbu(v, sumbu, rad) {
+      var c = Math.cos(rad), s = Math.sin(rad);
+      var silang = vCross(sumbu, v);
+      var d = vDot(sumbu, v);
+      return [
+        v[0] * c + silang[0] * s + sumbu[0] * d * (1 - c),
+        v[1] * c + silang[1] * s + sumbu[1] * d * (1 - c),
+        v[2] * c + silang[2] * s + sumbu[2] * d * (1 - c)
+      ];
+    }
+    function lerp(a, b, p) { return a + (b - a) * p; }
+    function lerpV(a, b, p) { return [lerp(a[0], b[0], p), lerp(a[1], b[1], p), lerp(a[2], b[2], p)]; }
+
+    /* Satu titik selimut pada proses p: tekuk isometrik kelengkungan κ = p/r.
+       Pada p=1 hasilnya silinder jejari r berpusat sumbu di (0, ·, −r). */
+    function titikSelimut(u, v, p) {
+      var kappa = p / R;
+      if (kappa < 1e-9) { return [u, v, 0]; }
+      return [Math.sin(u * kappa) / kappa, v, (Math.cos(u * kappa) - 1) / kappa];
+    }
+    /* Satu titik lingkaran: beta = sudut keliling, f = pecahan jejari (0..1).
+       Tutup: dy diukur dari titik tempel (0,10), dy∈[0,14]; rotasi −90°·p
+       mengitari sumbu X melalui titik tempel, menutup ke arah −z.
+       Alas: dy diukur dari titik tempel (0,0), dy∈[−14,0]; rotasi +90°·p,
+       juga menutup ke arah −z (pusat silinder). Pada p=1 pusat tutup tepat
+       di (0,10,−7) dan pusat alas tepat di (0,0,−7). */
+    function titikTutup(beta, f, p) {
+      var dx = R * f * Math.sin(beta);
+      var dy = R + R * f * Math.cos(beta);
+      var th = -Math.PI / 2 * p;
+      return [dx, T + dy * Math.cos(th), dy * Math.sin(th)];
+    }
+    function titikAlas(beta, f, p) {
+      var dx = R * f * Math.sin(beta);
+      var dy = -R + R * f * Math.cos(beta);
+      var th = Math.PI / 2 * p;
+      return [dx, dy * Math.cos(th), dy * Math.sin(th)];
+    }
+
+    var gridSelimut = [], gridTutup = [], gridAlas = [], i, j;
+    for (i = 0; i <= NV; i++) {
+      var barisS = [];
+      for (j = 0; j <= NU; j++) {
+        barisS.push({ u: -PANJANG / 2 + PANJANG * j / NU, v: T * i / NV });
+      }
+      gridSelimut.push(barisS);
+    }
+    for (i = 0; i <= NF; i++) {
+      var barisT = [], barisA = [];
+      for (j = 0; j <= NB; j++) {
+        barisT.push({ beta: 2 * Math.PI * j / NB, f: i / NF });
+        barisA.push({ beta: 2 * Math.PI * j / NB, f: i / NF });
+      }
+      gridTutup.push(barisT);
+      gridAlas.push(barisA);
+    }
+    var FACES = [];
+    for (i = 0; i < NV; i++) {
+      for (j = 0; j < NU; j++) {
+        FACES.push({ a: gridSelimut[i][j], b: gridSelimut[i][j + 1], c: gridSelimut[i + 1][j + 1], d: gridSelimut[i + 1][j], jenis: "selimut", amber: true });
+      }
+    }
+    for (i = 0; i < NF; i++) {
+      for (j = 0; j < NB; j++) {
+        FACES.push({ a: gridTutup[i][j], b: gridTutup[i][j + 1], c: gridTutup[i + 1][j + 1], d: gridTutup[i + 1][j], jenis: "tutup", amber: false });
+        FACES.push({ a: gridAlas[i][j], b: gridAlas[i][j + 1], c: gridAlas[i + 1][j + 1], d: gridAlas[i + 1][j], jenis: "alas", amber: false });
+      }
+    }
+
+    /* Pemusatan tampilan: jaring datar berpusat pada (0, 5, 0) (rentang v dari
+       −14 sampai 24), tabung jadi pada pusat sumbunya (0, 5, −7). */
+    var PUSAT_DATAR = [0, T / 2, 0];
+    var PUSAT_JADI = [0, T / 2, -R];
+    var skalaDasar = Math.min(600 / PANJANG, 420 / (2 * R + T + 2 * R));
+    var st = { prog: 0, target: 0, yaw: -0.45, pitch: 0.32, raf: 0 };
+
+    function posisi(param, jenis, p) {
+      var mentah;
+      if (jenis === "selimut") { mentah = titikSelimut(param.u, param.v, p); }
+      else if (jenis === "tutup") { mentah = titikTutup(param.beta, param.f, p); }
+      else { mentah = titikAlas(param.beta, param.f, p); }
+      var geser = lerpV(PUSAT_DATAR, PUSAT_JADI, p);
+      return [mentah[0] - geser[0], mentah[1] - geser[1], mentah[2] - geser[2]];
+    }
+
+    function perbaruiStatus() {
+      if (statusEl) {
+        if (st.prog >= 0.995) { statusEl.textContent = PESAN_JADI; }
+        else if (st.prog <= 0.005) { statusEl.textContent = PESAN_AWAL; }
+        else { statusEl.textContent = PESAN_TENGAH; }
+      }
+      if (tombol) { tombol.textContent = st.target >= 1 ? "↺ Buka Lagi" : labelLipat; }
+    }
+
+    function gambar() {
+      var W = kanvas.width, H = kanvas.height;
+      ctx.clearRect(0, 0, W, H);
+      function putar(v) {
+        return rotSumbu(rotSumbu(v, [0, 1, 0], st.yaw), [1, 0, 0], st.pitch);
+      }
+      var mentah = [];
+      var minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+      FACES.forEach(function (f, idx) {
+        var pts = [f.a, f.b, f.c, f.d].map(function (t) { return putar(posisi(t, f.jenis, st.prog)); });
+        var zRata = 0;
+        pts.forEach(function (pv) {
+          zRata += pv[2];
+          if (pv[0] < minX) { minX = pv[0]; }
+          if (pv[0] > maxX) { maxX = pv[0]; }
+          if (pv[1] < minY) { minY = pv[1]; }
+          if (pv[1] > maxY) { maxY = pv[1]; }
+        });
+        /* Normal dari dua diagonal segi empat — tetap sah pada cincin pusat
+           kedua lingkaran yang sudut-sudutnya menyatu. */
+        var diag1 = [pts[2][0] - pts[0][0], pts[2][1] - pts[0][1], pts[2][2] - pts[0][2]];
+        var diag2 = [pts[3][0] - pts[1][0], pts[3][1] - pts[1][1], pts[3][2] - pts[1][2]];
+        var n = vCross(diag2, diag1);
+        var panjang = Math.sqrt(vDot(n, n));
+        var nz = panjang > 1e-9 ? n[2] / panjang : 0;
+        mentah.push({ sudut: pts, dalam: zRata / 4, nz: nz, idx: idx, amber: f.amber });
+      });
+      /* Pas-kan & pusatkan hasil render saat ini ke kanvas pada setiap proses
+         lipatan. Margin lega (230px horizontal, 210px vertikal) dan pembesaran
+         dibatasi 1,15x skala jaring datar — pelajaran dari perbaikan ukuran
+         simulator G.5 — supaya bangun selalu terlihat utuh di semua sisi. */
+      var rentangX = Math.max(0.001, maxX - minX);
+      var rentangY = Math.max(0.001, maxY - minY);
+      var skala = Math.min((W - 230) / rentangX, (H - 210) / rentangY, skalaDasar * 1.15);
+      var pusX = (minX + maxX) / 2, pusY = (minY + maxY) / 2;
+      var wajah = mentah.map(function (w) {
+        return {
+          sudut: w.sudut.map(function (pv) {
+            return [W / 2 + (pv[0] - pusX) * skala, H / 2 - (pv[1] - pusY) * skala];
+          }),
+          dalam: w.dalam, nz: w.nz, idx: w.idx, amber: w.amber
+        };
+      });
+      wajah.sort(function (p, q) { return (p.dalam + p.idx * 0.002) - (q.dalam + q.idx * 0.002); });
+      wajah.forEach(function (w) {
+        var t = (w.nz + 1) / 2;
+        var r, g, b, garis;
+        if (w.amber) {
+          r = Math.round(217 + (254 - 217) * t);
+          g = Math.round(119 + (243 - 119) * t);
+          b = Math.round(6 + (199 - 6) * t);
+          garis = "#92400E";
+        } else {
+          r = Math.round(147 + (219 - 147) * t);
+          g = Math.round(197 + (234 - 197) * t);
+          b = Math.round(253 + (254 - 253) * t);
+          garis = "#1E3A8A";
+        }
+        ctx.beginPath();
+        w.sudut.forEach(function (s, k) { if (k === 0) { ctx.moveTo(s[0], s[1]); } else { ctx.lineTo(s[0], s[1]); } });
+        ctx.closePath();
+        ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ",0.92)";
+        ctx.fill();
+        ctx.strokeStyle = garis;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      });
+    }
+
+    function animasi() {
+      cancelAnimationFrame(st.raf);
+      var dari = st.prog, ke = st.target, t0 = null;
+      function langkah(ts) {
+        if (!t0) { t0 = ts; }
+        var p = Math.min(1, (ts - t0) / 1800);
+        var e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        st.prog = dari + (ke - dari) * e;
+        if (geserEl) { geserEl.value = st.prog * 100; }
+        gambar();
+        perbaruiStatus();
+        if (p < 1) { st.raf = requestAnimationFrame(langkah); }
+      }
+      st.raf = requestAnimationFrame(langkah);
+    }
+
+    if (tombol) {
+      tombol.addEventListener("click", function () {
+        st.target = st.target >= 1 ? 0 : 1;
+        perbaruiStatus();
+        animasi();
+      });
+    }
+    if (geserEl) {
+      geserEl.addEventListener("input", function () {
+        cancelAnimationFrame(st.raf);
+        st.prog = parseFloat(geserEl.value) / 100;
+        st.target = st.prog >= 0.995 ? 1 : 0;
+        gambar();
+        perbaruiStatus();
+      });
+    }
+    var seret = null;
+    kanvas.addEventListener("pointerdown", function (ev) {
+      seret = { x: ev.clientX, y: ev.clientY };
+      try { kanvas.setPointerCapture(ev.pointerId); } catch (e) {}
+    });
+    kanvas.addEventListener("pointermove", function (ev) {
+      if (!seret) { return; }
+      st.yaw += (ev.clientX - seret.x) * 0.01;
+      st.pitch += (ev.clientY - seret.y) * 0.01;
+      if (st.pitch > 1.2) { st.pitch = 1.2; }
+      if (st.pitch < -1.2) { st.pitch = -1.2; }
+      seret = { x: ev.clientX, y: ev.clientY };
+      gambar();
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach(function (nama) {
+      kanvas.addEventListener(nama, function () { seret = null; });
+    });
+
+    gambar();
+    perbaruiStatus();
+  });
+}

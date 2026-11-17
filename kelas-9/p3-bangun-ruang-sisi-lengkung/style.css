@@ -54,3 +54,13 @@ body{--teal:#D97706;--teal-dark:#92400E;--teal-soft:#FEF3C7}
 .ilus{margin:16px auto;text-align:center}
 .ilus svg{width:50%;max-width:340px;height:auto;display:block;margin:0 auto}
 .ilus figcaption{margin-top:8px;font-size:.9rem;color:var(--muted)}
+
+/* Simulator lipat 3D (port dari modul P.3 Kelas 9 mendalam) */
+.btn-baris{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.sim3d{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.sim-kerucut-kanvas,.sim-tabung-kanvas{display:block;width:88%;max-width:360px;margin-inline:auto;height:auto;touch-action:none;cursor:grab;border-radius:8px;background:linear-gradient(180deg,#F8FAFF,#EFF6FF)}
+.sim-kerucut-kanvas:active,.sim-tabung-kanvas:active{cursor:grabbing}
+.sim3d-label{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);margin-top:10px}
+.sim-kerucut-geser,.sim-tabung-geser{flex:1;accent-color:var(--amber);min-height:28px}
+.sim3d-status{font-size:.9rem;margin-top:6px;min-height:1.25em}
+.sim3d-keterangan{font-size:.9rem;margin-top:6px}
